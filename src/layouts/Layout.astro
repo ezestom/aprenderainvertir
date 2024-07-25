@@ -1,0 +1,47 @@
+---
+import "@fontsource-variable/onest";
+import { ViewTransitions } from "astro:transitions";
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="description"
+			content={"Aprende a invertir y así conseguir tu libertad financiera."}
+		/>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/public/finance.svg" />
+		<ViewTransitions />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+		<style is:global>
+			:root {
+				--lightblue: #99ccff;
+				--darkblue: #0066cccc;
+				--lightred: #ffaa99;
+				--darkred: #cc2200cc;
+				--lightyellow: #ffff99;
+				--darkyellow: #cccc00cc;
+				--lightgreen: #99ff99;
+				--darkgreen: #00cc00cc;
+				--lightviolet: #dd99ff;
+				--darkviolet: #8800cccc;
+			}
+			body {
+				font-family: "Onest Variable", sans-serif, system-ui;
+				background-color: #f0f0f0;
+				scroll-behavior: smooth;
+			}
+		</style>
+	</body>
+</html>

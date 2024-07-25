@@ -1,0 +1,66 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+import Content from "./Content.astro";
+import Nav2 from "./Nav2.astro";
+import back from "../../icons/back.svg";
+import Flap from "./Flap.astro";
+
+interface PageContentProps {
+	header: string;
+	title: string;
+}
+const { headerImage, title } = Astro.props;
+---
+
+<Layout title={title}>
+	<Nav2 />
+	<Content>
+		<section
+			class="py-12 mb-4 text-pretty text-sm md:text-base leading-normal text-black/60">
+			<a
+				href="/#introduction"
+				id="back"
+				class="fixed z-50 right-5 top-11">
+				<img
+					src={back.src}
+					alt="back arrow"
+					class="size-20 -rotate-[110deg] hover:scale-105 transition"
+				/>
+			</a>
+
+			<Image
+				src={headerImage}
+				alt="Header"
+				class="h-[300px] md:h-[450px] w-full rounded-3xl object-cover"
+			/>
+			<h1
+				class="mb-2 mt-16 scroll-mt-16 text-balance text-3xl font-bold leading-none text-[--darkblue] first:mt-0 sm:text-[2.75rem] xl:mt-12 xl:scroll-mt-32">
+				{title}
+			</h1>
+
+			<slot />
+		</section>
+	</Content>
+	<Flap />
+
+	<style>
+		/* #imageContainer {
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		position: relative;
+		border-radius: 1.5rem;
+	}
+	#imageContainer::after {
+		content: "";
+		width: 100%;
+		height: 100%;
+		inset: 0;
+		position: absolute;
+		background: inherit;
+		filter: blur(15px) contrast(200%);
+		z-index: -1;
+	} */
+	</style>
+</Layout>

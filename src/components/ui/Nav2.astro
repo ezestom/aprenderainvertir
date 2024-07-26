@@ -49,9 +49,9 @@ const NAVBAR = [
 						src={finance.src}
 						alt="finance image"
 						title="finance image"
-						class="block w-[7.5rem] rotate-[33deg] h-[7.5rem] object-contain
+						class="block w-[7.5rem] h-[7.5rem] object-contain
 						 group-active:scale-105 group-active:delay-100 group-active:translate-y-1 group-active:translate-x-1"
-					/><span class="sr-only">Soy inversor</span>
+					/>
 				</div>
 				<div
 					class="whitespace-nowrap text-center w-full font-bold text-xl text-[--darkblue]">
@@ -59,13 +59,13 @@ const NAVBAR = [
 				</div>
 			</a>
 			<div
-				class="relative flex max-h-full w-full max-w-[16rem] flex-grow flex-col gap-0.5 py-4 md:left-auto">
+				class="relative flex max-h-full w-full max-w-[16rem] flex-grow flex-col gap-0.5 py-4 md:left-auto font-normal">
 				{
 					NAVBAR.map(({ name, href }) => (
 						<a
 							href={href}
 							class="mx-auto block w-full max-w-[12.5rem]">
-							<div class="whitespace-nowrap text-start w-full font-bold text-base text-[--darkblue] relative group">
+							<div class="whitespace-nowrap text-start w-full text-base text-[--darkblue] relative group opacity-75 hover:opacity-100 transition">
 								<>
 									<span class="opacity-0 group-hover:opacity-100 absolute left-0">
 										#

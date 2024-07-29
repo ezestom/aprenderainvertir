@@ -1,0 +1,112 @@
+---
+import PageContent from "../components/ui/PageContent.astro";
+import header from "../img/links.png";
+import Links from "../components/ui/Link.astro";
+---
+
+<PageContent
+	title="Cómo Evitar Estafas en el Sistema Financiero"
+	headerImage={header}>
+	<h1>Links útiles</h1>
+	<ul>
+		<li>
+			<Links
+				href="https://www.mae.com.ar/titulos-emisiones"
+				target="_blank"
+				nameLink="MAE"
+			/>
+			<p>
+				En esta página van a encontrar gran información sobre los
+				títulos emitidos en Argentina. Incluso la documentación, como es
+				el caso del prospecto de emisión (vamos a usar el P.E. resumido,
+				llamado “Aviso de Resultado”) y los hechos relevantes informados
+				por los entes o empresas. También puedo ordenar las ONs por
+				fecha de emisión para encontrar las nuevas que salieron al
+				mercado y sus respectivos tickers.
+			</p>
+		</li>
+		<li>
+			<Links
+				href="https://open.bymadata.com.ar/#/dashboard"
+				target="_blank"
+				nameLink="BYMA DATA"
+			/>
+			<p>
+				En esta página la sección de renta fija les muestra los
+				instrumentos (Títulos Públicos y Obligaciones Negociables) e
+				información de la emisión, los precios y las variaciones
+				(cotizaciones históricas). A su vez permite filtrar los
+				instrumentos, facilitando la búsqueda. También brinda
+				información de la “denominación mínima” de nominales que se
+				pueden adquirir.
+			</p>
+		</li>
+		<li>
+			<Links
+				href="https://www.puentenet.com/puente/actionCalculadora"
+				target="_blank"
+				nameLink="PuenteNet"
+			/>
+			<p>
+				Cuenta con herramientas para el control de instrumentos de renta
+				fija, como es el caso de la Calculadora de Bonos:
+			</p>
+			<p>
+				Y la posibilidad de armar el Flujo de Fondos de una o varias ONs
+				en una misma tabla:
+				<strong>
+					<a
+						href="https://www.puentenet.com/herramientas/flujo-de-fondos"
+						target="_blank"
+						>https://www.puentenet.com/herramientas/flujo-de-fondos</a
+					>
+				</strong>
+			</p>
+		</li>
+		<li>
+			<Links
+				href="https://bonds.mercapabbaco.com/bort"
+				target="_blank"
+				nameLink="Abbaco"
+			/>
+			<p>
+				Podemos ver información sobre bonos que emite el Estado y ONs de
+				empresas: cotización, TIR, MD, paridad, fecha vencimiento, FF
+				para 100 VN, etc. Además, en la pestaña CURVAS de rendimiento,
+				están todas agrupadas por emisor, sector, moneda. Y por último
+				en la herramienta COMPARAR podrás agregar y comparar diferentes
+				instrumentos por criterios de valuación, condiciones de emisión,
+				TIR y paridad. Acá podemos cargar todas las ONs y bonos que nos
+				interesa hacerle seguimiento (usando su ticker en dólares).
+			</p>
+		</li>
+		<li>
+			<Links
+				href="https://www.iamc.com.ar/IAMC/"
+				target="_blank"
+				nameLink="IAMC"
+			/>
+			<p>
+				Principalmente utilizada con el fin de revisar datos de mercado.
+				Cuenta con distintos informes donde analiza el uso de
+				instrumentos de financiamiento, y en el caso de los activos de
+				renta fija, expone diariamente la TIR y Duration de cada uno, en
+				sus informes mensuales.
+			</p>
+		</li>
+		<li>
+			<Links
+				href="https://www.fixscr.com/calificaciones"
+				target="_blank"
+				nameLink="Calificadora de Riesgo: FIXSCR"
+			/>
+			<p>
+				Calificadora de riesgo a nivel Nacional, pertenece a Fitch
+				Ratings. Califica el riesgo de la empresa emisora y de cada
+				emisión en particular. Filtrar por País: Argentina; y por
+				Entidad: ejemplo IRSA, YPF, Ciudad de Buenos Aires (emisión sub
+				soberana).
+			</p>
+		</li>
+	</ul>
+</PageContent>

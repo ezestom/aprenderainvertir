@@ -26,7 +26,9 @@ const { title } = Astro.props;
 		<slot />
 		<style is:global>
 			:root {
-				--lightblue: #99ccff;
+				/* --lightblue: #99ccff;
+				 */
+				--lightblue: #cce6ff;
 				--darkblue: #0066cccc;
 				--lightred: #ffaa99;
 				--darkred: #cc2200cc;
@@ -41,6 +43,25 @@ const { title } = Astro.props;
 				font-family: "Onest Variable", sans-serif, system-ui;
 				scroll-behavior: smooth;
 				background-color: #fafafa;
+			}
+			h1 {
+				@apply mb-2 mt-16 scroll-mt-16 text-balance text-3xl font-bold leading-none text-[--darkblue] first:mt-0 sm:text-[2.5rem] xl:mt-12 xl:scroll-mt-32;
+			}
+			h2 {
+				@apply text-sm leading-normal text-[--darkblue] sm:text-lg lg:text-xl font-bold;
+			}
+			strong,
+			h3 {
+				@apply font-semibold text-[--darkred];
+			}
+			h3 {
+				@apply font-bold py-1 text-[1.15rem];
+			}
+			li,p {
+				@apply mb-4 text-pretty;
+			}
+			strong > a {
+				@apply whitespace-nowrap  rounded-md bg-[--lightblue]  py-0.5 px-2 text-[--darkblue] transition-colors duration-300 ease-in-out hover:bg-[--darkblue] hover:text-[--lightblue];
 			}
 		</style>
 	</body>

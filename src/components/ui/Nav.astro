@@ -8,23 +8,36 @@ const NAVBAR = [
 		href: "/#introduction",
 	},
 	{
-		name: "Bolsa de valores",
+		name: "Bolsa de Valores",
 		href: "/bolsa-de-valores",
 	},
 	{
-		name: "Mitos de la bolsa",
+		name: "Mitos de la Bolsa",
 		href: "/mitos-de-la-bolsa",
 	},
 	{
-		name: "Evitemos estafas",
+		name: "Evitemos Estafas",
 		href: "/evitemos-estafas",
 	},
 	{
-		name: "Perfiles del inversor",
+		name: "Perfiles del Inversor",
 		href: "/perfiles-del-inversor",
 	},
 	{
-		name: "Comenzar a invertir",
+		name:"Renta Fija ó Variable",
+		href: "/renta-fija-o-renta-variable",
+
+	},
+	{
+		name: "Instrumentos Financieros",
+		href: "/instrumentos-financieros",
+	},
+	{
+		name: "Fondo Común de Inversión",
+		href: "/fondo-comun-de-inversion",
+	},
+	{
+		name: "Comenzar a Invertir",
 		href: "/comenzar-a-invertir",
 	},
 ];
@@ -41,25 +54,25 @@ const NAVBAR = [
 			<a
 				href="/#top"
 				id="toNav"
-				class="mx-auto block w-full max-w-[12.5rem] rounded-3xl hover:bg-[--lightblue] p-3 duration-300 ease-in-out group transition-all"
-				><div class="relative flex w-full justify-center">
+				class="mx-auto block w-full rounded-xl hover:bg-[--lightblue] duration-300 ease-in-out group transition-all"
+				><div class="relative flex w-full justify-center py-1">
 					<img
 						transition:persist
 						transition:name="finance"
 						src={finance.src}
 						alt="finance image"
 						title="finance image"
-						class="block w-[7.5rem] h-[7.5rem] object-contain
-						 group-active:scale-105 group-active:delay-100 group-active:translate-y-1 group-active:translate-x-1"
+						class="block size-[10rem] object-contain
+						 group-active:scale-90 group-active:delay-100 group-active:translate-y-1 group-active:translate-x-1"
 					/>
 				</div>
-				<div
+				<!-- <div
 					class="whitespace-nowrap text-center w-full font-bold text-xl text-[--darkblue]">
-					<span class="text-[--darkblue]">Soy inversor</span>
-				</div>
+					
+				</div> -->
 			</a>
 			<div
-				class="relative flex max-h-full w-full max-w-[16rem] flex-grow flex-col gap-0.5 py-4 md:left-auto font-normal">
+				class="relative flex max-h-full w-full max-w-[16rem] flex-grow flex-col gap-0.5 py-2 md:left-auto font-normal">
 				{
 					NAVBAR.map(({ name, href }) => (
 						<a
@@ -158,7 +171,7 @@ const NAVBAR = [
 		animation: fadeIn linear both;
 		animation-timeline: view();
 		animation-range: 65% 75%;
-		background-color: rgba(0, 0, 0, 0.1);
+		background-color: rgba(0, 0, 0, 0.05);
 	}
 
 	@keyframes fadeIn {

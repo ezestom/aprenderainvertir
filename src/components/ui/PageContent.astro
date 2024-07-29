@@ -5,9 +5,10 @@ import Content from "./Content.astro";
 import Nav2 from "./Nav2.astro";
 import back from "../../icons/back.svg";
 import Flap from "./Flap.astro";
+import AsideRight from "./AsideRight.astro";
 
 interface PageContentProps {
-	header: string;
+	headerImage: string;
 	title: string;
 }
 const { headerImage, title } = Astro.props;
@@ -17,30 +18,26 @@ const { headerImage, title } = Astro.props;
 	<Nav2 />
 	<Content>
 		<section
-			class="py-12 mb-4 text-pretty text-sm md:text-base leading-normal text-black/60">
-			<a
-				href="/#introduction"
-				id="back"
-				class="fixed z-50 right-5 top-11">
-				<img
-					src={back.src}
-					alt="back arrow"
-					class="size-20 -rotate-[110deg] hover:scale-105 transition"
-				/>
-			</a>
-
+			class="py-12 mb-4 text-pretty text-sm md:text-base leading-normal text-black/60 relative">
 			<Image
+				style={{ background: "rgba(0,0,0,0.05)" }}
 				src={headerImage}
 				alt="Header"
-				class="h-[300px] md:h-[450px] w-full rounded-3xl object-cover"
+				class="h-[300px] md:h-[350px] w-full rounded-3xl object-contain"
 			/>
-			<h1
-				class="mb-2 mt-16 scroll-mt-16 text-balance text-3xl font-bold leading-none text-[--darkblue] first:mt-0 sm:text-[2.75rem] xl:mt-12 xl:scroll-mt-32">
+			<h1 class="flex justify-between text-pretty items-center mb-6">
 				{title}
+				<button
+					onclick="window.history.back()"
+					id="back"
+					class="flex w-fit items-center rounded-md bg-[--lightblue] text-[--darkblue] hover:bg-[--darkblue] group hover:text-[--lightblue opacity-65  py-4 rounded-xl hover:scale-105 active:scale-90 max-w-20 hover:opacity-100 text-sm flex flex-col items-center justify-center">
+					<span class="group-hover:text-[--lightblue]">Atrás</span>
+					<img src={back.src} alt="back arrow" class="" />
+				</button>
 			</h1>
-
 			<slot />
 		</section>
 	</Content>
+	<!-- <AsideRight /> -->
 	<Flap />
 </Layout>

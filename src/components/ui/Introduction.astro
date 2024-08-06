@@ -7,17 +7,18 @@ import { Image } from "astro:assets";
 <section id="introduction">
 	<Content>
 		<section
-			class="py-12 mb-4 text-pretty text-sm md:text-base leading-normal text-black/60">
+			class="py-16 mb-4 text-pretty text-sm md:text-base leading-normal text-black/60">
 			<Image
 				style={{ background: "rgba(0,0,0,0.05)" }}
 				src={intro}
 				alt="Header"
-				class="h-[300px] md:h-[450px] w-full rounded-3xl object-cover"
+				class="h-[300px] md:h-[350px] w-full rounded-3xl object-contain"
 			/>
 			<h1
 				id="introduction"
-				class="mb-2 mt-16 scroll-mt-16 text-balance text-3xl font-bold leading-none text-[--darkblue] first:mt-0 sm:text-[2.5rem] xl:mt-12 xl:scroll-mt-32">
-				Descubre el Poder de Invertir: Tu Puerta al Futuro Financiero.
+				class="flex justify-start text-start text-pretty border-b border-[--lightblue] mb-6 flex-col py-4">
+				Descubre el Poder de Invertir:
+				<span class="text-3xl">Tu Puerta al Futuro Financiero.</span>
 			</h1>
 			<p class="mb-4 text-pretty">
 				Invertir es mucho más que simplemente colocar dinero en activos;

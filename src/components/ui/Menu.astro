@@ -1,0 +1,146 @@
+---
+import open from "../../icons/openNav.svg";
+import close from "../../icons/closeNav.svg";
+---
+
+<div
+	class="[view-transition-name:menu] fixed top-4 right-4 z-50 text-[--darkblue] hidden md:block">
+	<div
+		class="before:rotate-[180deg] before:absolute before:w-3 before:h-3 before:-left-3 before:transition-all before:opacity-0 before:top-2 before:z-10 before:rounded-full before:shadow-[-0.5rem_0.5rem_#2563eb] before:rounded-br flex justify-end w-9 h-9 relative bg-[--lightblue] transition-all rounded-md before:translate-y-4 ml-auto group text-[--darkblue]">
+		<input type="checkbox" id="nav-toggle" class="cursor-pointer hidden" />
+		<label for="nav-toggle" class="cursor-pointer">
+			<img
+				src={open.src}
+				alt="Open menu"
+				id="open"
+				class="w-7 top-1 left-1 transition-all absolute group-hover:scale-105 group-active:scale-90 opacity-100"
+			/>
+			<img
+				src={close.src}
+				alt="Close menu"
+				id="close"
+				class="w-7 top-1 left-1 transition-all absolute group-hover:scale-105 group-active:scale-90 opacity-0 scale-100"
+			/>
+		</label>
+	</div>
+	<nav
+		id="menu"
+		class="bg-[--lightblue] rounded-3xl rounded-tr-none transition-transform duration-300 p-2.5 menu-closed absolute top-8 right-0 w-[200px] z-40">
+		<ul>
+			<li>
+				<button
+					class="group transition-colors px-3.5 w-full flex items-center gap-2">
+					<img
+						src={open.src}
+						alt=""
+						class="absolute w-5 opacity-0 group-hover:opacity-100 group-hover:scale-[1.15] transition-all"
+					/>
+					<img
+						src={close.src}
+						alt=""
+						class="w-5 group-hover:scale-110 opacity-100 group-hover:opacity-0 transition-all"
+					/>
+					<span
+						class="w-10 whitespace-nowrap text-[--darkblue] font-semibold group-hover:text-[--lightblue] transition-colors text-sm"
+						>Light mode</span
+					>
+				</button>
+			</li>
+			<li>
+				<a
+					href="https://github.com/cosmoart/Freesets"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="transition-colors group w-full px-3.5 flex items-center">
+					<img
+						src={open.src}
+						alt=""
+						class="absolute w-5 opacity-0 group-hover:opacity-100 group-hover:scale-[1.15] transition-all"
+					/>
+					<img
+						src={close.src}
+						alt=""
+						class="w-5 group-hover:scale-110 opacity-100 group-hover:opacity-0 transition-all"
+					/>
+					<span
+						class="w-10 whitespace-nowrap text-[--darkblue] font-semibold group-hover:text-[--lightblue] transition-colors text-sm"
+						>Contribute</span
+					>
+				</a>
+			</li>
+			<li>
+				<a
+					href="https://github.com/cosmoart/Freesets"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="transition-colors group w-full px-3.5 flex items-center">
+					<img
+						src={open.src}
+						alt=""
+						class="absolute w-5 opacity-0 group-hover:opacity-100 group-hover:scale-[1.15] transition-all"
+					/>
+					<img
+						src={close.src}
+						alt=""
+						class="w-5 group-hover:scale-110 opacity-100 group-hover:opacity-0 transition-all"
+					/>
+					<span
+						class="w-10 whitespace-nowrap text-[--darkblue] font-semibold group-hover:text-[--lightblue] transition-colors text-sm"
+						>Donar</span
+					>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</div>
+
+<script>
+	const toggleMenu = () => {
+		const navToggle: HTMLInputElement | null =
+			document.querySelector("#nav-toggle");
+		const menu: HTMLElement | null = document.querySelector("#menu");
+		const open: HTMLImageElement | null = document.querySelector("#open");
+		const close: HTMLImageElement | null = document.querySelector("#close");
+
+		if (navToggle && menu && open && close) {
+			if (navToggle.checked) {
+				menu.classList.remove("menu-closed");
+				menu.classList.add("menu-open");
+				open.style.opacity = "0"; // Oculta imagen de apertura
+				close.style.opacity = "1"; // Muestra imagen de cierre
+			} else {
+				menu.classList.remove("menu-open");
+				menu.classList.add("menu-closed");
+				open.style.opacity = "1"; // Muestra imagen de apertura
+				close.style.opacity = "0"; // Oculta imagen de cierre
+			}
+		}
+	};
+
+	document.addEventListener("DOMContentLoaded", () => {
+		const navToggle: HTMLInputElement | null =
+			document.querySelector("#nav-toggle");
+		if (navToggle) {
+			navToggle.addEventListener("change", toggleMenu);
+		}
+	});
+</script>
+
+<style>
+	/* Agrega estas clases en tu archivo CSS o en el bloque de estilos */
+	.menu-open {
+		transform: translateY(0);
+		opacity: 1;
+		transition: all 0.2s ease-in-out;
+		pointer-events: all;
+	}
+
+	.menu-closed {
+		transform: translateY(
+			-10px
+		); /* Ajusta el valor según tus necesidades */
+		transition: all 0.2s ease-in-out;
+		opacity: 0;
+		pointer-events: none;
+	}
+</style>

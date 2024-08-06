@@ -4,13 +4,10 @@ import header from "../../../img/tools.png";
 ---
 
 <PageContent title="TIR - Paridad - Duración" headerImage={header}>
-	<h2>Medidas de Análisis:</h2>
-	<h2>Tasa Interna de Retorno (TIR)</h2>
+	<h3>Medidas de Análisis:</h3>
 
-	<h3>
-		TIR (Tasa Interna de Retorno) o YTM (Yield to Maturity / Rendimiento al
-		Vencimiento)
-	</h3>
+	<h2>TIR (Tasa Interna de Retorno)</h2>
+	<h3>o YTM (Yield to Maturity / Rendimiento al Vencimiento)</h3>
 	<p>
 		La TIR es una de las medidas más utilizadas por los inversores en el
 		mundo de los bonos a nivel internacional. Es una herramienta clave en el
@@ -105,11 +102,134 @@ import header from "../../../img/tools.png";
 		</li>
 	</ul>
 
-	<h3>Conclusión</h3>
+	<h3>Conclusión sobre la TIR</h3>
 	<p>
-		La TIR es una herramienta esencial tanto para medir la rentabilidad como
-		para comparar el nivel de riesgo entre diferentes bonos. Entender la
-		relación inversa entre el precio del bono y la TIR es crucial para la
-		toma de decisiones informadas en el mercado de bonos.
+		La TIR es una herramienta crucial para los inversores, ya que ofrece una
+		medida estandarizada de rentabilidad y riesgo. Permite comparar bonos
+		con diferentes características y evaluar la rentabilidad esperada en
+		relación con otras oportunidades de inversión. Entender su relación
+		inversa con el precio del bono ayuda en la toma de decisiones
+		estratégicas en el mercado de bonos.
+	</p>
+
+	<h2>Paridad Técnica</h2>
+
+	<h3>¿Qué es la Paridad de un Bono?</h3>
+	<p>
+		La paridad de un bono es una medida que nos ayuda a entender si un bono
+		está caro o barato en el mercado comparado con su valor matemáticamente
+		correcto (valor esperado del bono).
+	</p>
+
+	<p>
+		<strong>Paridad &lt; 100%:</strong> el bono cotiza a un precio menor al esperado.
+		Esto significa que el mercado está pagando menos del valor real del bono,
+		el bono está barato.
+	</p>
+
+	<h4>A la Par</h4>
+	<p>
+		<strong>Paridad = 100%:</strong> el precio del bono es igual al valor esperado.
+		El mercado valora el bono correctamente.
+	</p>
+
+	<p>
+		<strong>Paridad &gt; 100%:</strong> el bono cotiza a un precio mayor al esperado.
+		En este caso, el bono está caro y el mercado está pagando más de lo que realmente
+		vale.
+	</p>
+
+	<h4>Bajo la Par</h4>
+	<p>
+		Un bono que se cotiza bajo la par tiene un precio menor al valor nominal
+		del bono.
+	</p>
+
+	<h4>Sobre la Par</h4>
+	<p>
+		Un bono que se cotiza sobre la par tiene un precio mayor al valor
+		nominal del bono.
+	</p>
+
+	<h3>Importancia de la Paridad</h3>
+	<p>
+		La paridad nos ayuda a identificar oportunidades de inversión. Un bono
+		"bajo la par" puede ser una buena oportunidad de compra, ya que pagamos
+		menos por un bono que, al vencimiento, se nos devolverá su valor
+		completo.
+	</p>
+	<p>
+		Sin embargo, debemos tener cuidado con bonos que estén muy baratos, ya
+		que pueden conllevar un riesgo mayor.
+	</p>
+
+	<h3>Conclusión sobre la Paridad</h3>
+	<p>
+		La paridad proporciona una visión clara sobre si un bono está
+		sobrevalorado o subvalorado en el mercado. Conocer la paridad de un bono
+		ayuda a los inversores a identificar oportunidades de compra y a tomar
+		decisiones informadas sobre el valor relativo de un bono. Es una
+		herramienta clave para evaluar si el precio actual del bono representa
+		una buena inversión en función de su valor esperado.
+	</p>
+
+	<h2>Duración Modificada (DM)</h2>
+
+	<h3>¿Qué es la Duración Modificada (DM)?</h3>
+	<p>
+		La Duración Modificada (DM) mide la sensibilidad del precio de un bono
+		ante variaciones en la TIR (Tasa Interna de Retorno). En términos
+		simples, la DM nos dice cuánto varía el precio de un bono cuando la TIR
+		varía un 1%. Es una medida clave para evaluar el riesgo de un bono.
+	</p>
+	<p>
+		<strong>Fórmula de la DM:</strong> Variación % en el precio = - DM x variación
+		% de la TIR
+	</p>
+
+	<h3>Ejemplo de Cálculo</h3>
+	<p>
+		Supongamos que tenemos un bono con una TIR del 10% y una DM de 3,16. Si
+		la TIR baja del 10% al 9%, la variación en el precio del bono se calcula
+		así:
+	</p>
+	<p>Variación % en el precio = - 3,16 x (- 1%) = + 3,16%</p>
+	<p>
+		Esto significa que el precio del bono subirá un 3,16% si la TIR baja un
+		1%.
+	</p>
+	<p>
+		En otro caso, si tenemos un bono con una TIR del 10% y una DM de 7, si
+		la TIR baja del 10% al 9%, la variación en el precio del bono será:
+	</p>
+	<p>Variación % en el precio = - 7 x (- 1%) = + 7%</p>
+	<p>Si la TIR sube del 10% al 11%, la variación en el precio será:</p>
+	<p>Variación % en el precio = - 7 x (+ 1%) = - 7%</p>
+
+	<h3>Importancia de la DM</h3>
+	<p>
+		La DM es fundamental al armar una cartera de bonos. Dependiendo de tu
+		perfil de inversor, deberás seleccionar bonos con DM alta o baja:
+	</p>
+	<ul>
+		<li>
+			<strong>Conservadores:</strong> Deberían seleccionar bonos con DM baja,
+			ya que son menos volátiles y menos sensibles a variaciones en las tasas.
+		</li>
+		<li>
+			<strong>Agresivos:</strong> Deberían seleccionar bonos con DM alta, ya
+			que son más volátiles y pueden ofrecer mayores ganancias debido a las
+			variaciones en los precios.
+		</li>
+	</ul>
+
+	<h3>Conclusión sobre la Duración Modificada (DM)</h3>
+	<p>
+		La Duración Modificada es una herramienta esencial para medir la
+		sensibilidad del precio de un bono a los cambios en la TIR. Entender la
+		DM ayuda a los inversores a evaluar el riesgo y la volatilidad de sus
+		inversiones en bonos. Elegir bonos con la DM adecuada según el perfil de
+		riesgo del inversor es crucial para una estrategia de inversión efectiva
+		y equilibrada.
 	</p>
 </PageContent>

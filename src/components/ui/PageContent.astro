@@ -3,9 +3,9 @@ import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import Content from "./Content.astro";
 import Nav2 from "./Nav2.astro";
-import back from "../../icons/back.svg";
+import Menu from "@components/ui/Menu.astro";
 import Flap from "./Flap.astro";
-import AsideRight from "./AsideRight.astro";
+import { Breadcrumbs } from "./Breadcrumbs/Breadcrumbs";
 
 interface PageContentProps {
 	headerImage: string;
@@ -17,22 +17,27 @@ const { headerImage, title } = Astro.props;
 <Layout title={title}>
 	<Nav2 />
 	<Content>
+		<Menu />
 		<section
-			class="py-12 mb-4 text-pretty text-sm md:text-base leading-normal text-black/60 relative">
+			class="py-12 text-pretty text-sm md:text-base leading-normal text-black/60 relative">
+			<Breadcrumbs client:load />
 			<Image
 				style={{ background: "rgba(0,0,0,0.05)" }}
 				src={headerImage}
 				alt="Header"
 				class="h-[300px] md:h-[350px] w-full rounded-3xl object-contain"
 			/>
-			<h1 class="flex justify-between text-pretty items-center mb-6">
-				{title}
+			<h1
+				class="flex justify-between text-pretty items-center border-b border-[--lightblue] py-2 mb-6">
+				<span class="flex gap-1 items-center">
+					{title}
+				</span>
 				<button
 					onclick="window.history.back()"
 					id="back"
-					class="flex w-fit items-center rounded-md bg-[--lightblue] text-[--darkblue] hover:bg-[--darkblue] group hover:text-[--lightblue opacity-65  py-4 rounded-xl hover:scale-105 active:scale-90 max-w-20 hover:opacity-100 text-sm flex flex-col items-center justify-center">
-					<span class="group-hover:text-[--lightblue]">Atrás</span>
-					<img src={back.src} alt="back arrow" class="" />
+					class="w-fit text-[--darkblue] hover:bg-[--lightblue] group p-4 rounded-md my-2 active:scale-90 text-sm flex flex-col items-center justify-center aspect-square font-semibold">
+					<span>Atrás </span>
+					←
 				</button>
 			</h1>
 			<slot />

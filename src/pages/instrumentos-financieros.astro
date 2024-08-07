@@ -1,7 +1,7 @@
 ---
 import Links from "@components/ui/Link.astro";
 import PageContent from "../components/ui/PageContent.astro";
-import header from "../img/tools.png";
+import header from "../img/instrumentos.png";
 ---
 
 <PageContent title="Instrumentos Financieros en Argentina" headerImage={header}>
@@ -102,7 +102,11 @@ import header from "../img/tools.png";
 				</p>
 			</li>
 			<li>
-				<h3>Cauciones Bursátiles</h3>
+				<Links
+					href="/instrumentos-financieros/cauciones-bursátiles"
+					target="_self"
+					nameLink="Cauciones Bursátiles"
+				/>
 				<p>
 					<strong>Descripción:</strong> Préstamos de corto plazo garantizados
 					por valores negociables, como acciones o bonos. El prestamista
@@ -163,7 +167,8 @@ import header from "../img/tools.png";
 				</p>
 			</li>
 		</li>
-		<h3>Resumen</h3>
+		<h3>Conclusión</h3>
+
 		<p>
 			Estos instrumentos ofrecen una variedad de opciones para los
 			inversores en Argentina, cada uno con sus características y perfiles

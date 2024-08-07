@@ -4,28 +4,32 @@ import close from "../../icons/closeNav.svg";
 ---
 
 <div
-	class="[view-transition-name:menu] fixed top-4 right-4 z-50 text-[--darkblue] hidden md:block">
+	class="[view-transition-name:menu] mx-auto right-12 absolute z-50 text-[--darkblue] hidden md:block">
 	<div
-		class="before:rotate-[180deg] before:absolute before:w-3 before:h-3 before:-left-3 before:transition-all before:opacity-0 before:top-2 before:z-10 before:rounded-full before:shadow-[-0.5rem_0.5rem_#2563eb] before:rounded-br flex justify-end w-9 h-9 relative bg-[--lightblue] transition-all rounded-md before:translate-y-4 ml-auto group text-[--darkblue]">
-		<input type="checkbox" id="nav-toggle" class="cursor-pointer hidden" />
-		<label for="nav-toggle" class="cursor-pointer">
+		class="size-9 relative bg-[--lightblue] transition-all rounded-md group text-[--darkblue] shadow-md">
+		<label for="nav-toggle" class="cursor-pointer group">
+			<input
+				type="checkbox"
+				id="nav-toggle"
+				class="cursor-pointer hidden"
+			/>
 			<img
 				src={open.src}
 				alt="Open menu"
 				id="open"
-				class="w-7 top-1 left-1 transition-all absolute group-hover:scale-105 group-active:scale-90 opacity-100"
+				class="transition-all absolute group-hover:scale-105 group-active:scale-90 opacity-100"
 			/>
 			<img
 				src={close.src}
 				alt="Close menu"
 				id="close"
-				class="w-7 top-1 left-1 transition-all absolute group-hover:scale-105 group-active:scale-90 opacity-0 scale-100"
+				class="transition-all absolute group-hover:scale-105 group-active:scale-90 opacity-0 scale-100"
 			/>
 		</label>
 	</div>
 	<nav
 		id="menu"
-		class="bg-[--lightblue] rounded-3xl rounded-tr-none transition-transform duration-300 p-2.5 menu-closed absolute top-8 right-0 w-[200px] z-40">
+		class="bg-[--lightblue] rounded-md p-4 rounded-tr-none transition-transform duration-300 menu-closed absolute top-8 right-0 w-[200px] z-40 shadow-md">
 		<ul>
 			<li>
 				<button

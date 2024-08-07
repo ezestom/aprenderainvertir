@@ -3,9 +3,9 @@ import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import Content from "./Content.astro";
 import Nav2 from "./Nav2.astro";
-import Menu from "@components/ui/Menu.astro";
 import Flap from "./Flap.astro";
 import { Breadcrumbs } from "./Breadcrumbs/Breadcrumbs";
+import AsideRight from "./AsideRight.astro";
 
 interface PageContentProps {
 	headerImage: string;
@@ -17,7 +17,7 @@ const { headerImage, title } = Astro.props;
 <Layout title={title}>
 	<Nav2 />
 	<Content>
-		<Menu />
+		<!-- <AsideRight /> -->
 		<section
 			class="py-12 text-pretty text-sm md:text-base leading-normal text-black/60 relative">
 			<Breadcrumbs client:load />
@@ -25,7 +25,8 @@ const { headerImage, title } = Astro.props;
 				style={{ background: "rgba(0,0,0,0.05)" }}
 				src={headerImage}
 				alt="Header"
-				class="h-[300px] md:h-[350px] w-full rounded-3xl object-contain"
+				class="h-[300px] md:h-[350px] w-full rounded-3xl object-contain shadow-md"
+				id="headerImage"
 			/>
 			<h1
 				class="flex justify-between text-pretty items-center border-b border-[--lightblue] py-2 mb-6">

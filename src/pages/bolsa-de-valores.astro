@@ -1,5 +1,5 @@
 ---
-import { YoutubeVideo } from "@components/ui/YoutubeVideo/YoutubeVideo.jsx";
+import NormalVideo from "@components/ui/NormalVideo.astro";
 import PageContent from "../components/ui/PageContent.astro";
 import header from "../img/bolsa.png";
 ---
@@ -94,31 +94,11 @@ import header from "../img/bolsa.png";
 		</li>
 	</ol>
 
-	<!-- arreglar el componente YoutubeVideo -->
-
-	<!-- <YoutubeVideo
-		client:only
-		url_1="https://www.youtube.com/embed/3IrCDHTJZDk?si=HHJvasj57QtA-NcU"
-		url_2="https://www.youtube.com/embed/3IrCDHTJZDk?si=HHJvasj57QtA-NcU"
-		title="Memorias de Tiburón"
-		subtitle="✅ ¿Qué es la BOLSA y cómo funciona? Introducción a la BOLSA en 10 MINUTOS"
-	/> -->
-
-	<picture class="">
-		<h2 class="pt-8">🦈 Memorias de Tiburón</h2>
-		<p>
-			✅ ¿Qué es la BOLSA y cómo funciona? Introducción a la BOLSA en 10
-			MINUTOS.
-		</p>
-		<iframe
-			style="width: 100%; aspect-ratio: 16/9; border-radius: 1.5rem; margin-bottom: 2rem;"
-			src="https://www.youtube.com/embed/3IrCDHTJZDk?si=HHJvasj57QtA-NcU"
-			title="YouTube video player"
-			frameborder="0"
-			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-			referrerpolicy="strict-origin-when-cross-origin"
-			allowfullscreen></iframe>
-	</picture>
+	<NormalVideo
+		title="🦈 Memorias de Tiburón"
+		description="✅ ¿Qué es la BOLSA y cómo funciona? Introducción a la BOLSA en 10 MINUTOS."
+		src="https://www.youtube.com/embed/3IrCDHTJZDk?si=HHJvasj57QtA-NcU"
+	/>
 
 	<h2>Principales Bolsas del Mundo</h2>
 

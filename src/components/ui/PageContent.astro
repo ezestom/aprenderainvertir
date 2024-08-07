@@ -25,22 +25,23 @@ const { headerImage, title } = Astro.props;
 				style={{ background: "rgba(0,0,0,0.05)" }}
 				src={headerImage}
 				alt="Header"
-				class="h-[300px] md:h-[350px] w-full rounded-3xl object-contain shadow-md"
+				class="h-[300px] md:h-[350px] w-full rounded-md object-contain shadow-md"
 				id="headerImage"
 			/>
 			<h1
-				class="flex justify-between text-pretty items-center border-b border-[--lightblue] py-2 mb-6">
+				class="flex justify-between text-pretty items-center rounded-md p-2  my-6 bg-[--lightblue] shadow-md">
 				<span class="flex gap-1 items-center">
 					{title}
 				</span>
 				<button
 					onclick="window.history.back()"
 					id="back"
-					class="w-fit text-[--darkblue] hover:bg-[--lightblue] group p-4 rounded-md my-2 active:scale-90 text-sm flex flex-col items-center justify-center aspect-square font-semibold">
+					class="w-fit text-[--darkblue] bg-gray-100 hover:shadow-md p-2 rounded-md my-2 active:scale-90 text-sm flex flex-col items-center justify-center">
 					<span>Atrás </span>
-					←
+					<span>↩</span>
 				</button>
 			</h1>
+			<!-- <span class="border-b border-[--lightblue] border-dashed w-full h-full">	</span> -->
 			<slot />
 		</section>
 	</Content>

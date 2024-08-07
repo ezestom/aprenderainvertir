@@ -1,5 +1,5 @@
 ---
-import Links from "@components/ui/Link.astro";
+import Link from "@components/ui/Link.astro";
 import PageContent from "../components/ui/PageContent.astro";
 import header from "../img/instrumentos.png";
 ---
@@ -7,8 +7,8 @@ import header from "../img/instrumentos.png";
 <PageContent title="Instrumentos Financieros en Argentina" headerImage={header}>
 	<ol>
 		<li>
-			<Links
-				href="/instrumentos-financieros/links-útiles"
+			<Link
+				href="/instrumentos-financieros/link-útiles"
 				target="_self"
 				nameLink="Links útiles"
 			/>
@@ -31,7 +31,11 @@ import header from "../img/instrumentos.png";
 				</p>
 			</li>
 			<li>
-				<h3>CEDEARs (Certificados de Depósito Argentinos)</h3>
+				<Link
+					href="/instrumentos-financieros/cedears"
+					target="_self"
+					nameLink="CEDEARs (Certificados de Depósito Argentinos)"
+				/>
 				<p>
 					<strong>Descripción:</strong> Certificados que representan acciones
 					de empresas extranjeras negociadas en la Bolsa de Comercio de
@@ -55,7 +59,7 @@ import header from "../img/instrumentos.png";
 				</p>
 			</li>
 			<li>
-				<Links
+				<Link
 					href="/instrumentos-financieros/bonos"
 					target="_self"
 					nameLink="Bonos"
@@ -102,7 +106,7 @@ import header from "../img/instrumentos.png";
 				</p>
 			</li>
 			<li>
-				<Links
+				<Link
 					href="/instrumentos-financieros/cauciones-bursátiles"
 					target="_self"
 					nameLink="Cauciones Bursátiles"

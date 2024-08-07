@@ -2,6 +2,7 @@
 import Content from "./Content.astro";
 import intro from "../../img/intro.png";
 import { Image } from "astro:assets";
+import { LinkVideo } from "@components/ui/LinkVideo/LinkVideo.jsx";
 ---
 
 <section id="introduction">
@@ -12,15 +13,15 @@ import { Image } from "astro:assets";
 				style={{ background: "rgba(0,0,0,0.05)" }}
 				src={intro}
 				alt="Header"
-				class="h-[300px] md:h-[350px] w-full rounded-3xl object-contain"
+				class="h-[300px] md:h-[350px] w-full rounded-md object-contain shadow-md"
 			/>
-			<h1
+			<h2
 				id="introduction"
-				class="flex justify-start text-start text-pretty border-b border-[--lightblue] mb-6 flex-col py-4">
+				class="justify-between text-pretty items-start rounded-md p-4 my-6 bg-[--lightblue] shadow-md flex flex-col">
 				Descubre el Poder de Invertir:
-				<span class="text-3xl">Tu Puerta al Futuro Financiero.</span>
-			</h1>
-			<p class="mb-4 text-pretty">
+				<span class="text-2xl">Tu Puerta al Futuro Financiero.</span>
+			</h2>
+			<p>
 				Invertir es mucho más que simplemente colocar dinero en activos;
 				es una herramienta poderosa para construir riqueza, alcanzar tus
 				metas y asegurar tu futuro financiero. A nivel global, la
@@ -32,54 +33,57 @@ import { Image } from "astro:assets";
 				directamente en el mercado, debido a diversos factores
 				económicos y culturales.
 			</p>
-			<h2
-				class="my-2 text-pretty text-sm leading-normal text-[--darkblue] sm:text-lg lg:text-xl font-bold">
-				¿Qué es la inversión?
-			</h2>
-			<p class="mb-4 text-pretty">
+			<h2>¿Qué es la inversión?</h2>
+			<p>
 				La inversión consiste en asignar capital (dinero o activos) con
 				el objetivo de generar un retorno o ganancia en el futuro. Las
 				inversiones pueden tomar muchas formas, incluyendo acciones,
 				bonos, bienes raíces, fondos mutuos, y más.
 			</p>
 
-			<h2
-				class="my-2 text-pretty text-sm leading-normal text-[--darkblue] sm:text-lg lg:text-xl font-bold">
-				¿Por qué deberías considerar invertir?
-			</h2>
+			<h3>¿Por qué deberías considerar invertir?</h3>
 
 			<ul>
-				<li class="mb-4 text-pretty">
+				<li>
 					<strong>Construcción de Riqueza a Largo Plazo:</strong> La inversión
 					te permite generar rendimientos que se acumulan con el tiempo,
 					ayudándote a alcanzar objetivos a largo plazo como la compra
 					de una casa, la educación de tus hijos o una jubilación cómoda.
 				</li>
-				<li class="mb-4 text-pretty">
+				<li>
 					<strong>Diversificación de Ingresos:</strong> No depender exclusivamente
 					de un salario es crucial para tu estabilidad financiera. Invertir
 					te ayuda a diversificar tus fuentes de ingresos, protegiéndote
 					contra la pérdida de empleo o la inflación.
 				</li>
-				<li class="mb-4 text-pretty">
+				<li>
 					<strong>Desarrollo Personal y Profesional:</strong> Aprender
 					sobre inversiones no solo mejora tu conocimiento financiero,
 					sino que también desarrolla habilidades analíticas y estratégicas
 					que pueden beneficiar otras áreas de tu vida.
 				</li>
-				<li class="mb-4 text-pretty">
-					<strong>Protección Contra la Inflación:</strong> La inflación
-					puede disminuir el valor de tu dinero con el tiempo. Invertir
-					en activos que superen la tasa de inflación te ayuda a mantener
-					y aumentar tu poder adquisitivo.
+				<li>
+					<strong class="flex items-center">
+						Protección contra
+						<LinkVideo
+							client:only
+							buttonName="la Inflación (resumen, en video) :"
+							youtubeUrl="https://www.youtube.com/embed/TOVvFXR3jA8?si=6dxamM2GhxF_4BpQ"
+							title={"🦈 Memorias de Tiburón"}
+							description={"✅ ¿Qué es la BOLSA y cómo funciona? Introducción a la BOLSA en 10 MINUTOS."}
+						/>
+					</strong>La inflación puede disminuir el valor de tu dinero
+					con el tiempo. Invertir en activos que superen la tasa de
+					inflación te ayuda a mantener y aumentar tu poder
+					adquisitivo.
 				</li>
-				<li class="mb-4 text-pretty">
+				<li>
 					<strong>Empoderamiento Financiero:</strong> Ser un inversor informado
 					te da control sobre tu futuro financiero. Puedes tomar decisiones
 					basadas en tus objetivos y tolerancia al riesgo, adaptándote
 					a las condiciones del mercado para maximizar tus oportunidades.
 				</li>
-				<li class="mb-4 text-pretty">
+				<li>
 					<strong>Impacto Positivo:</strong> Invertir en empresas y proyectos
 					que se alinean con tus valores te permite contribuir a causas
 					que te importan, como tecnologías sostenibles o empresas que
@@ -87,11 +91,8 @@ import { Image } from "astro:assets";
 				</li>
 			</ul>
 
-			<h2
-				class="my-2 text-pretty text-sm leading-normal text-[--darkblue] sm:text-lg lg:text-xl font-bold">
-				Conclusión
-			</h2>
-			<p class="mb-4 text-pretty">
+			<h3>Conclusión</h3>
+			<p>
 				<strong>La inversión </strong>es una herramienta poderosa para
 				alcanzar tus metas financieras, pero requiere conocimiento,
 				disciplina y una comprensión clara de tu tolerancia al riesgo y
@@ -102,34 +103,31 @@ import { Image } from "astro:assets";
 				inversiones.
 			</p>
 
-			<h2
-				class="my-2 text-pretty text-sm leading-normal text-[--darkblue] sm:text-lg lg:text-xl font-bold">
-				Cómo Empezar:
-			</h2>
+			<h3>Cómo Empezar:</h3>
 			<ul>
-				<li class="mb-4 text-pretty">
+				<li>
 					<strong>Educación Continua:</strong> La base del éxito en inversiones
 					es el conocimiento. Lee, investiga y mantente actualizado sobre
 					las tendencias del mercado.
 				</li>
-				<li class="mb-4 text-pretty">
+				<li>
 					<strong>Diversificación:</strong> No pongas todos tus recursos
 					en una sola inversión. Diversificar tu portafolio te ayuda a
 					reducir riesgos y equilibrar rendimientos.
 				</li>
-				<li class="mb-4 text-pretty">
+				<li>
 					<strong>Paciencia y Disciplina:</strong> La inversión efectiva
 					requiere tiempo y paciencia. Mantén la calma ante las fluctuaciones
 					del mercado y sigue tu plan con disciplina.
 				</li>
-				<li class="mb-4 text-pretty">
+				<li>
 					<strong>Asesoramiento Profesional:</strong> Considera obtener
 					asesoramiento financiero para desarrollar una estrategia adaptada
 					a tus objetivos y perfil de riesgo.
 				</li>
 			</ul>
 
-			<p class="mb-4 text-pretty">
+			<p>
 				Invertir es un camino hacia un futuro financiero más sólido y
 				seguro. <strong
 					>Empieza hoy mismo a aprender y a explorar el mundo de las

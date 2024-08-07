@@ -1,4 +1,5 @@
 ---
+import NormalVideo from "@components/ui/NormalVideo.astro";
 import PageContent from "../components/ui/PageContent.astro";
 import header from "../img/rentas.png";
 ---
@@ -31,23 +32,11 @@ import header from "../img/rentas.png";
 			o el Tesoro Nacional, que ofrecen un rendimiento fijo en un plazo corto.
 		</li>
 	</ul>
-
-	<picture class="">
-		<h2 class="pt-8">🦈 Memorias de Tiburón</h2>
-		<p> 
-			✅ ¿Qué es la RENTA FIJA y cómo INVERTIR en ella? Todo lo que tienes
-			que saber sobre los BONOS.
-		</p>
-		<iframe
-			style="width: 100%; aspect-ratio: 16/9; border-radius: 1.5rem; margin-bottom: 2rem;"
-			src="https://www.youtube.com/embed/p9i44ml0vok?si=8xqEoOSyt9mGX9ud"
-			title="YouTube video player"
-			frameborder="0"
-			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-			referrerpolicy="strict-origin-when-cross-origin"
-			allowfullscreen>
-		</iframe>
-	</picture>
+	<NormalVideo
+		title="🦈 Memorias de Tiburón"
+		description="✅ ¿Qué es la RENTA FIJA y cómo INVERTIR en ella? Todo lo que tienes	que saber sobre los BONOS."
+		src="https://www.youtube.com/embed/p9i44ml0vok?si=8xqEoOSyt9mGX9ud"
+	/>
 
 	<h2>Renta Variable</h2>
 	<strong>Descripción:</strong>

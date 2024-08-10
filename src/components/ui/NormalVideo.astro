@@ -7,14 +7,15 @@ interface NormalVideoProps {
 const { title, description, videoid } = Astro.props;
 ---
 
-<picture class="">
+<picture class="py-2">
 	<h2 class="pt-8">{title}</h2>
 	<p>
 		{description}
 	</p>
 	<div
 		class="w-full aspect-video rounded-md overflow-hidden shadow-xl border-0 mb-6"
-		style={{ background: "rgba(0,0,0,0.05)" }}>
+		style={{ background: "rgba(0,0,0,0.05)" }}
+		id="video-container">
 		<lite-youtube
 			videoid={videoid}
 			videoStartAt="0"
@@ -23,3 +24,18 @@ const { title, description, videoid } = Astro.props;
 		></lite-youtube>
 	</div>
 </picture>
+
+<style>
+	#video-container {
+		animation: reveal linear both;
+		animation-timeline: view();
+		animation-range: entry 20% cover 40%;
+	}
+
+	@keyframes reveal {
+		from {
+			scale: 0.8;
+			translate: 0 10%;
+		}
+	}
+</style>

@@ -29,7 +29,7 @@ const { headerImage, title } = Astro.props;
 				id="headerImage"
 			/>
 			<h1
-				class="flex justify-between text-pretty items-center rounded-md p-2  my-6 bg-[--lightblue] shadow-md">
+				class="flex justify-between text-pretty items-center rounded-md px-4 py-2 my-6 bg-[--lightblue] shadow-md">
 				<span class="flex gap-1 items-center">
 					{title}
 				</span>
@@ -41,7 +41,6 @@ const { headerImage, title } = Astro.props;
 					<span>↩</span>
 				</button>
 			</h1>
-			<!-- <span class="border-b border-[--lightblue] border-dashed w-full h-full">	</span> -->
 			<slot />
 		</section>
 	</Content>

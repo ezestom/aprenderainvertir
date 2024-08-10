@@ -2,8 +2,7 @@
 import Content from "./Content.astro";
 import intro from "../../img/intro.png";
 import { Image } from "astro:assets";
-import { LinkVideo } from "@components/ui/LinkVideo/LinkVideo.jsx";
-import Fader from "@components/ui/Fader.astro";
+import NormalVideo from "./NormalVideo.astro";
 ---
 
 <section id="introduction">
@@ -16,6 +15,7 @@ import Fader from "@components/ui/Fader.astro";
 				alt="Header"
 				class="h-[300px] md:h-[350px] w-full rounded-md object-contain shadow-md"
 			/>
+
 			<h2
 				id="introduction"
 				class="justify-between text-pretty items-start rounded-md p-4 my-6 bg-[--lightblue] shadow-md flex flex-col">
@@ -64,19 +64,10 @@ import Fader from "@components/ui/Fader.astro";
 					que pueden beneficiar otras áreas de tu vida.
 				</li>
 				<li>
-					<strong class="flex items-center">
-						Protección contra
-						<LinkVideo
-							client:only
-							buttonName="la Inflación (resumen, en video) :"
-							youtubeUrl="https://www.youtube.com/embed/TOVvFXR3jA8?si=6dxamM2GhxF_4BpQ"
-							title={"🦈 Memorias de Tiburón"}
-							description={"✅ ¿Qué es la BOLSA y cómo funciona? Introducción a la BOLSA en 10 MINUTOS."}
-						/>
-					</strong>La inflación puede disminuir el valor de tu dinero
-					con el tiempo. Invertir en activos que superen la tasa de
-					inflación te ayuda a mantener y aumentar tu poder
-					adquisitivo.
+					<strong> Protección contra la inflación: </strong>La
+					inflación puede disminuir el valor de tu dinero con el
+					tiempo. Invertir en activos que superen la tasa de inflación
+					te ayuda a mantener y aumentar tu poder adquisitivo.
 				</li>
 				<li>
 					<strong>Empoderamiento Financiero:</strong> Ser un inversor informado
@@ -103,6 +94,11 @@ import Fader from "@components/ui/Fader.astro";
 				largo plazo son claves para el éxito en el mundo de las
 				inversiones.
 			</p>
+			<NormalVideo
+				videoid="TOVvFXR3jA8"
+				title={"🦈 Memorias de Tiburón"}
+				description={"✅ ¿Qué es la INFLACIÓN? ¿Cómo se crea? | Todo sobre la INFLACIÓN en 5 minutos."}
+			/>
 
 			<h3>Cómo Empezar:</h3>
 			<ul>

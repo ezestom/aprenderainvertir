@@ -1,7 +1,5 @@
 import { useState } from "react";
 import close from "../../../icons/x.svg";
-import "./LinkVideo.css";
-
 export function LinkVideo({ buttonName, youtubeUrl, title, description }) {
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -18,32 +16,40 @@ export function LinkVideo({ buttonName, youtubeUrl, title, description }) {
 
 	return (
 		<article className="">
-			<strong className="px-1">
-				<button onClick={openDialog}>{buttonName}</button>
+			<strong className="px-1 ">
+				<button className="inline-flex" onClick={openDialog}>{buttonName}</button>
 			</strong>
 			{isOpen && (
 				<dialog
 					open
 					className="z-50 fixed h-screen w-screen top-0 left-0 bg-[#fafafa] ">
-					<iframe
-						className="m-auto bottom-0 top-0 left-0 right-0 absolute w-full md:w-[75%] xl:w-[50%]  aspect-video rounded-md shadow-md border-0"
-						style={{ background: "rgba(0,0,0,0.05)" }}
-						src={youtubeUrl + "&autoplay=1&vq=hd1080"}
-						title="YouTube video player"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						allowFullScreen></iframe>
+					<aside class="mx-auto w-full max-w-[70ch] scroll-mt-16 lg:scroll-mt-32 2xl:right-auto px-4 md:px-10 flex flex-col  ">
+						<div className="pt-12  mx-auto flex items-start justify-between text-center">
+							<div className="">
+								<h2 className="pb-2 m-0">{title}</h2>
+								<p className="text-gray-500 text-base font-normal mb-0">
+									{description}
+								</p>
+							</div>
+							<div>
+								<button
+									className="bg-[--lightblue]  rounded-md z-100 hover:scale-105 transition-transform duration-300 ease-in-out ml-2 active:scale-95"
+									onClick={closeDialog}>
+									<img src={close.src} alt="close button" />
+								</button>
+							</div>
+						</div>
 
-					<div className="fixed w-full top-10 mx-auto flex flex-col items-center justify-center text-center">
-						<button
-							className="bg-[--lightblue] rounded-md z-80 hover:scale-105 transition close-button "
-							onClick={closeDialog}>
-							<img src={close.src} alt="close button" />
-						</button>
-						<h2 className="py-2 m-0">{title}</h2>
-						<p className="text-gray-500 text-base font-normal mb-0">
-							{description}
-						</p>
-					</div>
+						<div
+							className="w-full aspect-video rounded-md overflow-hidden shadow-xl border-0 mt-12"
+							style={{ background: "rgba(0,0,0,0.05)" }}>
+							<lite-youtube
+								videoid={youtubeUrl}
+								videoStartAt="5"
+								posterquality="maxresdefault"
+								params="autoplay=1&mute=0&loop=0&controls=1&modestbranding=0&playsinline=0&rel=0&enablejsapi=1"></lite-youtube>
+						</div>
+					</aside>
 				</dialog>
 			)}
 		</article>

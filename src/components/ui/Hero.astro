@@ -12,9 +12,9 @@
 					las inversiones en la bolsa de valores.
 				</span>
 				<span>
-					Crea tu camino con una sólida base, invierte con
-					estrategias claves y herramientas necesarias para lograr tus
-					objetivos reales.
+					Crea tu camino con una sólida base, invierte con estrategias
+					claves y herramientas necesarias para lograr tus objetivos
+					reales.
 				</span>
 			</p>
 			<div class="attributes">
@@ -34,12 +34,14 @@
 			position: relative;
 			animation: fadeOut linear both;
 			animation-timeline: view();
-			animation-range: 75% 85%;
+			animation-range: 50% 95%;
+			border-radius: 0.375rem;
 		}
 		@keyframes fadeOut {
 			to {
-				opacity: 0.15;
-				z-index: 0;
+				opacity: 0.75;
+				z-index: -10;
+				scale: 0.65;
 			}
 		}
 		@layer foundation {
@@ -69,13 +71,12 @@
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background: rgba(0, 0, 0, 0.25); /* Fondo oscuro con opacidad */
 				z-index: -2; /* Coloca el pseudo-elemento detrás de la imagen */
 			}
 
 			header::after {
 				content: "";
-				position: fixed;
+				position: absolute;
 				top: 0;
 				left: 0;
 				width: 100%;
@@ -90,7 +91,6 @@
 			.content {
 				padding-top: 10rem;
 				align-self: center;
-				/* max-width: calc(100% - 2rem); */
 				width: 800px;
 				margin: 0 auto 8rem;
 				position: relative;
@@ -105,7 +105,7 @@
 				font-weight: 700;
 				box-shadow: rgb(75 85 99 / 0.1);
 				padding: 4rem;
-				border-radius: 1.5rem;
+				border-radius: 0.375rem;
 				background-color: rgba(0, 0, 0, 0.25);
 			}
 
@@ -140,7 +140,7 @@
 				font-size: var(--font-size);
 				border: 1px solid hsl(var(--hue) 100% 80%);
 				padding: 0.5rem 1rem;
-				border-radius: 6px;
+				border-radius: 0.375rem;
 				position: absolute;
 				bottom: 0%;
 				left: 50%;

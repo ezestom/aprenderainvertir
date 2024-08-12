@@ -36,35 +36,3 @@ import Menu from "./Menu.astro";
 		</div>
 	</div>
 </aside>
-
-<script></script>
-
-<style>
-	#aside-container::after {
-		transition: opacity 300ms ease-in-out;
-		background: #fafafa;
-	}
-	
-	#aside-content {
-		position: relative; /* Necesario para posicionar el pseudo-elemento correctamente */
-	}
-	
-	#aside-content::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-image: url("../../icons/finance.svg");
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		opacity: 0.05; /* Ajusta este valor para cambiar la transparencia de la imagen */
-		z-index: 0;
-	}
-	#aside-content-child {
-		background: rgba(0, 0, 0, 0.05);
-		border-radius: 1.5rem;
-	}
-</style>

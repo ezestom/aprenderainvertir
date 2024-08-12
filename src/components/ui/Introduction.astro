@@ -3,12 +3,14 @@ import Content from "./Content.astro";
 import intro from "../../img/intro.png";
 import { Image } from "astro:assets";
 import NormalVideo from "./NormalVideo.astro";
+import Nav from "./Nav.astro";
 ---
 
 <section id="introduction">
+	<Nav />
 	<Content>
-		<section
-			class="py-16 mb-4 text-pretty text-sm md:text-base leading-normal text-black/60">
+		<article
+			class="mt-10 xl:-mt-[767px] pb-12 text-pretty text-sm md:text-base leading-normal text-black/60">
 			<Image
 				style={{ background: "rgba(0,0,0,0.05)" }}
 				src={intro}
@@ -16,12 +18,11 @@ import NormalVideo from "./NormalVideo.astro";
 				class="h-[300px] md:h-[350px] w-full rounded-md object-contain shadow-md"
 			/>
 
-			<h2
-				id="introduction"
-				class="justify-between text-pretty items-start rounded-md p-4 my-6 bg-[--lightblue] shadow-md flex flex-col">
+			<h1
+				class="flex items-start rounded-md px-4 py-4 my-6 from-[--darkblue] to-blue-400 bg-gradient-to-b shadow-md flex-col">
 				Descubre el Poder de Invertir:
 				<span class="text-2xl">Tu Puerta al Futuro Financiero.</span>
-			</h2>
+			</h1>
 			<p>
 				Invertir es mucho más que simplemente colocar dinero en activos;
 				es una herramienta poderosa para construir riqueza, alcanzar tus
@@ -131,7 +132,24 @@ import NormalVideo from "./NormalVideo.astro";
 					inversiones. ¡Tu futuro financiero te está esperando!</strong
 				>
 			</p>
-		</section>
+		</article>
 		<!-- <Fader /> -->
 	</Content>
 </section>
+
+<style>
+	section::before {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100%;
+		background-image: url("../../icons/finance.svg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		opacity: 0.02; /* Ajusta este valor para cambiar la transparencia de la imagen */
+		z-index: -1;
+	}
+</style>

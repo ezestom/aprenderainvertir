@@ -1,246 +1,241 @@
 ---
-
+import instrumentos from "../../img/hero-instrumentos-children.png";
 ---
 
-<section>
-	<header class="shadow-md">
-		<div class="content mx-4">
-			<p>
-				<span>
-					Aprende a invertir y conseguir tu libertad financiera,
-					disfruta de este blog en donde encontraras la introducción a
-					las inversiones en la bolsa de valores.
-				</span>
-				<span>
-					Crea tu camino con una sólida base, invierte con estrategias
-					claves y herramientas necesarias para lograr tus objetivos
-					reales.
-				</span>
-			</p>
-			<div class="attributes">
-				<!-- Content, Design, Speaking, Creative, Engineering  -->
-				<div class="attribute">Bolsa de valores</div>
-				<div class="attribute">CEDEARs</div>
-				<div class="attribute">Acciones</div>
-				<div class="attribute">Cauciones</div>
-				<div class="attribute">Bonos</div>
-				<div class="attribute">Inversiones</div>
-			</div>
+<header class="shadow-md">
+	<div class="content mx-4">
+		<img src={instrumentos.src} class="max-w-[50%] grayscale" alt="" />
+		<p>
+			<span>
+				Aprende a invertir y conseguir tu libertad financiera, disfruta
+				de este blog en donde encontraras la introducción a las
+				inversiones en la bolsa de valores.
+			</span>
+			<span>
+				Crea tu camino con una sólida base, invierte con estrategias
+				claves y herramientas necesarias para lograr tus objetivos
+				reales.
+			</span>
+		</p>
+		<div class="attributes">
+			<!-- Content, Design, Speaking, Creative, Engineering  -->
+			<div class="attribute">Bolsa de valores</div>
+			<div class="attribute">CEDEARs</div>
+			<div class="attribute">Acciones</div>
+			<div class="attribute">Cauciones</div>
+			<div class="attribute">Bonos</div>
+			<div class="attribute">Inversiones</div>
 		</div>
-	</header>
+	</div>
+</header>
 
-	<style>
-		section {
-			position: relative;
-			/* animation: fadeOut linear both;
+<style>
+	section {
+		position: relative;
+		/* animation: fadeOut linear both;
 			animation-timeline: view();
 			animation-range: 50% 75%;
 			z-index: 20; */
+	}
+	@keyframes fadeOut {
+		to {
+			/* opacity: 110; */
 		}
-		@keyframes fadeOut {
-			to {
-				/* opacity: 110; */
-			}
+	}
+	@layer foundation {
+		*,
+		*:after,
+		*:before {
+			box-sizing: border-box;
 		}
-		@layer foundation {
-			*,
-			*:after,
-			*:before {
-				box-sizing: border-box;
-			}
 
+		header {
+			position: relative; /* Necesario para posicionar el pseudo-elemento */
+			min-height: 100dvh;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			overflow: hidden;
+			border-radius: 0.375rem;
+		}
+
+		header::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -2;
+		}
+
+		header::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url("../../img/wallstreet2.jpg");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			opacity: 0.5; /* Ajusta la opacidad según sea necesario */
+			z-index: -1; /* Coloca el pseudo-elemento detrás del contenido del header */
+		}
+		.content {
+			align-self: center;
+			width: 800px;
+			position: relative;
+		}
+
+		p {
+			display: grid;
+			gap: 2rem;
+			margin: 0;
+			line-height: 1;
+			font-size: clamp(1rem, 2vw + 1rem, 2.5rem);
+			font-weight: 700;
+			box-shadow: rgb(75 85 99 / 0.1);
+			padding: 2rem 4rem;
+			border-radius: 0.375rem;
+			background-color: rgba(0, 0, 0, 0.25);
+		}
+
+		p > span:first-of-type {
+			font-size: clamp(1rem, 0.15vw + 1rem, 3rem);
+			font-weight: 400;
+			position: relative;
+			opacity: 0.75;
+		}
+	}
+
+	@layer attributes {
+		.attributes {
+			position: absolute;
+			bottom: 25%;
+			left: 50%;
+		}
+		.attribute {
+			--font-size: clamp(1rem, 2vw + 1rem, 2.5rem);
+			--hue: 10;
+			--ox: 0;
+			--oy: 0;
+			--dx: 0;
+			--dy: 0;
+			--or: 0;
+			--dr: 0;
+			display: inline-flex;
+			text-wrap: nowrap;
+			align-items: center;
+			gap: 0.5rem;
+			font-size: var(--font-size);
+			border: 1px solid hsl(var(--hue) 100% 80%);
+			padding: 0.5rem 1rem;
+			border-radius: 0.375rem;
+			position: absolute;
+			bottom: 0%;
+			left: 50%;
+			translate: -50% 0%;
+			background: linear-gradient(
+					hsl(var(--hue) 100% 90% / 0.75),
+					#0000 50%
+				),
+				hsl(var(--hue) 100% 80%);
+			color: hsl(var(--hue) 100% 40% / 0.8);
+			box-shadow: 1px -1px 0.5rem 0rem hsl(var(--hue) 100% 30%) inset;
+			transform: translate(var(--ox), var(--oy)) rotate(var(--or))
+				translate(var(--dx), var(--dy)) rotate(var(--dr));
+		}
+
+		.attribute:nth-of-type(1) {
+			--hue: 10;
+			/*	Origin	*/
+			--ox: -25%;
+			--oy: 50%;
+			--or: 7deg;
+			/*	Destination	*/
+			--dx: -100vw;
+			--dr: -190deg;
+			--dy: -50vh;
+		}
+		.attribute:nth-of-type(2) {
+			--hue: 60;
+			--ox: 56%;
+			--oy: -48%;
+			--or: 12deg;
+			/*	Destination	*/
+			--dx: 80vw;
+			--dr: 200deg;
+			--dy: 20vh;
+		}
+		.attribute:nth-of-type(3) {
+			--hue: 180;
+			--ox: -35%;
+			--oy: -35%;
+			--or: -10deg;
+			/*	Destination	*/
+			--dx: -40vw;
+			--dr: 60deg;
+			--dy: -150vh;
+		}
+		.attribute:nth-of-type(4) {
+			--hue: 120;
+			--ox: 18%;
+			--oy: 35%;
+			--or: 15deg;
+			/*	Destination	*/
+			--dx: 10vw;
+			--dr: -290deg;
+			--dy: -120vh;
+		}
+		.attribute:nth-of-type(5) {
+			--hue: 210;
+			--ox: 56%;
+			--oy: -16%;
+			--or: 10deg;
+			/*	Destination	*/
+			--dx: 80vw;
+			--dr: 230deg;
+			--dy: -80vh;
+		}
+		.attribute:nth-of-type(6) {
+			--hue: 280;
+			--ox: 5%;
+			--oy: 15%;
+			--or: -8deg;
+			/*	Destination	*/
+			--dx: -120vw;
+			--dr: -540deg;
+			--dy: 40vh;
+		}
+
+		.attribute svg {
+			width: var(--font-size);
+			stroke-width: 2;
+		}
+	}
+
+	@layer scrolls {
+		@supports (animation-timeline: scroll()) {
 			header {
-				position: relative; /* Necesario para posicionar el pseudo-elemento */
-				min-height: 100dvh;
-				height: 100%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				width: 100%;
-				overflow: hidden;
-				border-radius: 0.375rem;
-			}
-
-			header::before {
-				content: "";
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				z-index: -2;
-			}
-
-			header::after {
-				content: "";
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background-image: url("../../img/wallstreet2.jpg");
-				background-size: cover;
-				background-position: center;
-				background-repeat: no-repeat;
-				opacity: 0.5; /* Ajusta la opacidad según sea necesario */
-				z-index: -1; /* Coloca el pseudo-elemento detrás del contenido del header */
-			}
-			.content {
-				padding-top: 10rem;
-				align-self: center;
-				width: 800px;
-				margin: 0 auto 8rem;
-				position: relative;
-			}
-
-			p {
-				display: grid;
-				gap: 2rem;
-				margin: 0;
-				line-height: 1;
-				font-size: clamp(1rem, 2vw + 1rem, 2.5rem);
-				font-weight: 700;
-				box-shadow: rgb(75 85 99 / 0.1);
-				padding: 4rem;
-				border-radius: 0.375rem;
-				background-color: rgba(0, 0, 0, 0.25);
-			}
-
-			p > span:first-of-type {
-				font-size: clamp(1rem, 0.25vw + 1rem, 3rem);
-				line-height: 1.5rem;
-				font-weight: 400;
-				position: relative;
-				opacity: 0.75;
-			}
-		}
-
-		@layer attributes {
-			.attributes {
-				position: absolute;
-				bottom: 25%;
-				left: 50%;
+				view-timeline-name: --header;
 			}
 			.attribute {
-				--font-size: clamp(1rem, 2vw + 1rem, 2.5rem);
-				--hue: 10;
-				--ox: 0;
-				--oy: 0;
-				--dx: 0;
-				--dy: 0;
-				--or: 0;
-				--dr: 0;
-				display: inline-flex;
-				text-wrap: nowrap;
-				align-items: center;
-				gap: 0.5rem;
-				font-size: var(--font-size);
-				border: 1px solid hsl(var(--hue) 100% 80%);
-				padding: 0.5rem 1rem;
-				border-radius: 0.375rem;
-				position: absolute;
-				bottom: 0%;
-				left: 50%;
-				translate: -50% 0%;
-				background: linear-gradient(
-						hsl(var(--hue) 100% 90% / 0.75),
-						#0000 50%
-					),
-					hsl(var(--hue) 100% 80%);
-				color: hsl(var(--hue) 100% 40% / 0.8);
-				box-shadow: 1px -1px 0.5rem 0rem hsl(var(--hue) 100% 30%) inset;
+				animation: expand both linear;
+				animation-timeline: --header;
+				animation-range: exit;
 				transform: translate(var(--ox), var(--oy)) rotate(var(--or))
-					translate(var(--dx), var(--dy)) rotate(var(--dr));
+					translate(0, 0) rotate(0);
 			}
-
-			.attribute:nth-of-type(1) {
-				--hue: 10;
-				/*	Origin	*/
-				--ox: -25%;
-				--oy: 50%;
-				--or: 7deg;
-				/*	Destination	*/
-				--dx: -100vw;
-				--dr: -190deg;
-				--dy: -50vh;
-			}
-			.attribute:nth-of-type(2) {
-				--hue: 60;
-				--ox: 56%;
-				--oy: -48%;
-				--or: 12deg;
-				/*	Destination	*/
-				--dx: 80vw;
-				--dr: 200deg;
-				--dy: 20vh;
-			}
-			.attribute:nth-of-type(3) {
-				--hue: 180;
-				--ox: -35%;
-				--oy: -35%;
-				--or: -10deg;
-				/*	Destination	*/
-				--dx: -40vw;
-				--dr: 60deg;
-				--dy: -150vh;
-			}
-			.attribute:nth-of-type(4) {
-				--hue: 120;
-				--ox: 18%;
-				--oy: 35%;
-				--or: 15deg;
-				/*	Destination	*/
-				--dx: 10vw;
-				--dr: -290deg;
-				--dy: -120vh;
-			}
-			.attribute:nth-of-type(5) {
-				--hue: 210;
-				--ox: 56%;
-				--oy: -16%;
-				--or: 10deg;
-				/*	Destination	*/
-				--dx: 80vw;
-				--dr: 230deg;
-				--dy: -80vh;
-			}
-			.attribute:nth-of-type(6) {
-				--hue: 280;
-				--ox: 5%;
-				--oy: 15%;
-				--or: -8deg;
-				/*	Destination	*/
-				--dx: -120vw;
-				--dr: -540deg;
-				--dy: 40vh;
-			}
-
-			.attribute svg {
-				width: var(--font-size);
-				stroke-width: 2;
-			}
-		}
-
-		@layer scrolls {
-			@supports (animation-timeline: scroll()) {
-				header {
-					view-timeline-name: --header;
-				}
-				.attribute {
-					animation: expand both linear;
-					animation-timeline: --header;
-					animation-range: exit;
+			@keyframes expand {
+				to {
 					transform: translate(var(--ox), var(--oy)) rotate(var(--or))
-						translate(0, 0) rotate(0);
-				}
-				@keyframes expand {
-					to {
-						transform: translate(var(--ox), var(--oy))
-							rotate(var(--or)) translate(var(--dx), var(--dy))
-							rotate(var(--dr));
-					}
+						translate(var(--dx), var(--dy)) rotate(var(--dr));
 				}
 			}
 		}
-	</style>
-</section>
+	}
+</style>

@@ -45,7 +45,7 @@ export function Breadcrumbs() {
 		<article className="fixed top-0 mx-auto right-0 left-0 w-fit ">
 			<nav
 				id="breadcrumbs"
-				className=" flex top-0 w-full m-auto inset-0  text-xs font-bold py-2 px-4 backdrop-blur rounded-md rounded-t-none "
+				className=" flex top-0 w-full m-auto inset-0  text-xs md:text-sm font-bold py-2 px-4 backdrop-blur rounded-md rounded-t-none "
 				aria-label="breadcrumb">
 				<ol className="flex items-center">
 					{breadcrumbs.map((breadcrumb, index) => {
@@ -66,7 +66,7 @@ export function Breadcrumbs() {
 											}>
 											{breadcrumb.title}
 										</a>
-										<span className="mx-1 text-[--darkblue] mx-1">
+										<span className="mx-1 text-[--darkblue] ">
 											↪
 										</span>
 									</>

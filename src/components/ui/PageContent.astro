@@ -6,6 +6,7 @@ import Nav2 from "./Nav2.astro";
 import Flap from "./Flap.astro";
 import { Breadcrumbs } from "./Breadcrumbs/Breadcrumbs";
 import AsideRight from "./AsideRight.astro";
+import AnchorBack from "./AnchorBack.astro";
 
 interface PageContentProps {
 	headerImage: string;
@@ -33,13 +34,14 @@ const { headerImage, title } = Astro.props;
 				<span class="flex gap-1 items-center">
 					{title}
 				</span>
-				<button
+				<!-- <button
 					onclick="window.history.back()"
 					id="back"
 					class="w-fit text-[--darkblue] bg-gray-100 hover:shadow-md p-2 rounded-md my-2 active:scale-90 text-sm flex flex-col items-center justify-center">
 					<span>Atrás </span>
 					<span>↩</span>
-				</button>
+				</button> -->
+				<AnchorBack />
 			</h1>
 			<slot />
 		</section>
@@ -61,6 +63,6 @@ const { headerImage, title } = Astro.props;
 		background-position: center;
 		background-repeat: no-repeat;
 		opacity: 0.02; /* Ajusta este valor para cambiar la transparencia de la imagen */
-		z-index:-1;
+		z-index: -1;
 	}
 </style>

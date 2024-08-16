@@ -1,11 +1,14 @@
 ---
+import { info } from "node_modules/astro/dist/core/logger/core";
 import finance from "../../icons/finance.svg";
 import logoTaller from "../../img/logoTaller.png";
+import Tooltip from "./Tooltip.astro";
 
 export const NAVBAR = [
 	{
 		name: "Introducción",
 		href: "/#introduction",
+		info: "Educación Continua, Inversión y Finanzas Personales, Bolsa de Valores, Mitos de la Bolsa, Evitemos Estafas, Perfiles del Inversor, Renta Fija ó Variable, Instrumentos Financieros, Fondo Común de Inversión, Dolar MEP, Sectores de la Economía de EE.UU.",
 	},
 	{
 		name: "Bolsa de Valores",
@@ -53,10 +56,10 @@ export const NAVBAR = [
 
 <nav
 	transition:persist
-	class="mt-48 pointer-events-none sticky inset-0 z-90 flex-shrink-0 flex-col overflow-clip transition-opacity duration-300 ease-in-out xl:pointer-events-auto xl:bottom-auto xl:left-0 xl:right-auto xl:top-0 xl:z-[9999] xl:h-screen 2xl:left-6 2xl:top-12 2xl:h-[calc(100vh-6rem)] rounded-md  xl:block shadow-md -z-10 max-w-[310px]"
+	class="mt-48 pointer-events-none sticky inset-0 z-90 flex-shrink-0 flex-col transition-opacity duration-300 ease-in-out xl:pointer-events-auto xl:bottom-auto xl:left-0 xl:right-auto xl:top-0 xl:z-[9999] xl:h-screen 2xl:left-6 2xl:top-12 2xl:h-[calc(100vh-6rem)] rounded-md xl:block shadow-md -z-10 max-w-[310px] hidden"
 	id="nav">
 	<div
-		class="relative z-10 flex h-full max-h-full w-full flex-shrink-0 flex-col items-center justify-start !overflow-y-auto text-[--darkblue] p-6"
+		class="relative z-10 flex h-full max-h-full w-full flex-shrink-0 flex-col items-center justify-start rounded-md text-[--darkblue] p-6"
 		id="navbar">
 		<div class="flex w-full flex-col items-center justify-center">
 			<a
@@ -95,6 +98,13 @@ export const NAVBAR = [
 				}
 			</div>
 		</div>
+		<!-- <div class="flex items-start flex-col">
+			{
+				NAVBAR.map(({ name, href, info }) => (
+					<Tooltip name={name} href={href} info={info} />
+				))
+			}
+		</div> -->
 		<ul
 			class="relative z-100 mx-auto flex w-full max-w-[16rem] flex-shrink-0 flex-col items-center justify-center gap-3 text-center">
 			<li class="contents">

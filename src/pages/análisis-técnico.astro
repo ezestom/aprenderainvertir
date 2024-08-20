@@ -1,0 +1,194 @@
+---
+import PageContent from "../components/ui/PageContent.astro";
+import header from "../img/analisis-tecnico.png";
+import { Image } from "astro:assets";
+import tendencias from "../img/análisis-técnico/tendencias.webp";
+import tendenciaPrincipal from "../img/análisis-técnico/tendenciaPrincipal.png";
+---
+
+<PageContent title="Análisis Técnico" headerImage={header}>
+	<h2>¿Qué es el Análisis Técnico?</h2>
+	<p>
+		El <strong>Análisis Técnico (AT)</strong> es el estudio del comportamiento
+		del mercado a través de gráficos. Su objetivo principal es predecir las tendencias
+		futuras de los precios, observando datos históricos. Utilizando gráficos
+		y herramientas estadísticas, los analistas técnicos intentan anticipar los
+		movimientos futuros de los precios en base a patrones y tendencias pasadas.
+		Este enfoque es valioso para los inversores que buscan identificar oportunidades
+		y tomar decisiones basadas en el análisis de datos de mercado en lugar de
+		factores económicos o fundamentales.
+	</p>
+
+	<h3>Fuentes de Datos en el Análisis Técnico</h3>
+	<p>El Análisis Técnico se basa en las siguientes fuentes de información:</p>
+	<ul>
+		<li>
+			<strong>Precios</strong>: Monitorea los precios históricos de un
+			activo para identificar tendencias y patrones. Los precios reflejan
+			la oferta y demanda en el mercado y ayudan a prever futuros
+			movimientos.
+		</li>
+		<li>
+			<strong>Volumen</strong>: Refleja la cantidad de transacciones o
+			dinero movido en un activo, indicando el interés y la actividad en
+			ese mercado. Un aumento en el volumen puede confirmar la validez de
+			una tendencia.
+		</li>
+		<li>
+			<strong>Interés Abierto</strong>: Principalmente utilizado en
+			mercados de futuros, mide la cantidad de contratos abiertos y
+			activos. Un aumento en el interés abierto puede indicar una mayor
+			participación en el mercado.
+		</li>
+	</ul>
+
+	<h3>Fundamentos del Análisis Técnico</h3>
+	<ol>
+		<li>
+			<strong>Los movimientos del mercado lo descuentan todo</strong>:
+			<ul>
+				<li>
+					Todo lo que afecta al precio, ya sea psicológico, económico,
+					político o social, se refleja en el precio de mercado. Por
+					ejemplo, una noticia económica importante puede afectar el
+					precio de una acción, reflejando inmediatamente en el
+					gráfico.
+				</li>
+				<li>
+					El técnico se centra únicamente en estudiar los movimientos
+					de precios, sin buscar las causas detrás de estos. Este
+					enfoque permite que el análisis se base exclusivamente en
+					datos visuales y estadísticos.
+				</li>
+			</ul>
+		</li>
+		<li>
+			<strong>Los precios se mueven por tendencias</strong>:
+			<ul>
+				<li>
+					Identificar una tendencia en sus inicios permite
+					aprovecharla. Las tendencias pueden ser alcistas, bajistas o
+					laterales. Por ejemplo, un analista técnico puede
+					identificar una tendencia alcista en una acción y comprar
+					antes de que el precio suba aún más.
+				</li>
+			</ul>
+		</li>
+		<li>
+			<strong>La historia se repite</strong>:
+			<ul>
+				<li>
+					El Análisis Técnico se basa en la psicología humana. Los
+					patrones observados en el pasado tienden a repetirse, ya que
+					la naturaleza humana no cambia. Los patrones como los
+					"soportes" y "resistencias" que se repiten en el tiempo
+					ayudan a prever movimientos futuros.
+				</li>
+			</ul>
+		</li>
+	</ol>
+
+	<h3>Análisis Técnico vs Análisis Fundamental</h3>
+	<p>
+		Mientras que el <strong>Análisis Fundamental</strong> se enfoca en las causas
+		detrás de los movimientos de precios, como noticias económicas y balances
+		financieros, el <strong>Análisis Técnico</strong> se centra en los efectos
+		visibles de esos movimientos en los gráficos. Ambos enfoques pueden ser complementarios:
+		el análisis fundamental puede ayudar a identificar activos con potencial
+		a largo plazo, mientras que el análisis técnico puede optimizar el momento
+		de compra o venta.
+	</p>
+	<ul>
+		<li>
+			<strong>Análisis Fundamental</strong>:
+			<ul>
+				<li>
+					Se enfoca en estudiar las fuerzas de oferta y demanda que
+					mueven los precios.
+				</li>
+				<li>
+					Busca entender el valor intrínseco de un activo para
+					determinar si está sobrevalorado o infravalorado.
+				</li>
+			</ul>
+		</li>
+		<li>
+			<strong>Análisis Técnico</strong>:
+			<ul>
+				<li>
+					Estudia los movimientos de precios y volúmenes, enfocándose
+					en los efectos, no en las causas.
+				</li>
+				<li>
+					Se apoya en gráficos, patrones y herramientas como
+					indicadores para predecir tendencias futuras.
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+	<h3>Teoría de Dow</h3>
+	<p>
+		<strong>Introducción a la Teoría de Dow</strong><br />
+		En 1887, Charles Dow, junto con Edward Jones, creó el índice Dow Jones, un
+		indicador esencial para evaluar la salud económica de Estados Unidos. Además
+		de su papel en el desarrollo de este índice, Charles Dow fundó el <em
+			>Wall Street Journal</em
+		>, donde publicó numerosos artículos que más tarde se recopilaron y
+		publicaron en 1903 bajo el nombre de <strong>Teoría de Dow</strong>.
+		Esta teoría se ha convertido en la base del análisis gráfico y técnico,
+		influenciando profundamente lo que hoy conocemos como Análisis Técnico
+		(AT).
+	</p>
+	<p>
+		La <strong>Teoría de Dow</strong> es crucial para entender el análisis técnico,
+		ya que establece los principios fundamentales que guían el estudio de gráficos
+		y tendencias de mercado. A continuación, se presentan estos principios:
+	</p>
+	<ol>
+		<li>
+			<strong>Los índices lo descuentan todo.</strong> Todo lo que sucede en
+			el mercado se refleja en los índices, ya que estos incorporan toda la
+			información disponible.
+		</li>
+		<li>
+			<strong>El mercado tiene tres tendencias</strong>: primaria (largo
+			plazo), secundaria (mediano plazo) y menor (corto plazo). Cada una
+			de estas tendencias se comporta como olas dentro de una marea más
+			grande.
+		</li>
+		<Image
+			src={tendencias}
+			class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
+			alt="Teoría de Dow"
+		/>
+		<li>
+			<strong>La tendencia principal tiene tres fases</strong>:
+			acumulación (compras informadas), participación pública (crecimiento
+			del precio y entrada de inversores) y distribución (venta por parte
+			de quienes compraron en la acumulación).
+		</li>
+		<Image
+			src={tendenciaPrincipal}
+			class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
+			alt="Teoría de Dow"
+		/>
+
+		<li>
+			<strong>Los índices deben confirmarse entre sí.</strong> Los movimientos
+			en diferentes índices deben ser consistentes para confirmar una tendencia.
+		</li>
+		<li>
+			<strong>El volumen debe confirmar la tendencia.</strong> Un aumento en
+			el volumen confirma la tendencia. Por ejemplo, si los precios suben y
+			el volumen aumenta, la tendencia alcista se fortalece.
+		</li>
+		<li>
+			<strong
+				>Una tendencia permanece activa hasta que se demuestre lo
+				contrario.</strong
+			> No se debe cambiar de tendencia hasta que haya señales claras de que
+			la tendencia actual ha cambiado.
+		</li>
+	</ol>
+</PageContent>

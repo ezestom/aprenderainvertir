@@ -1,62 +1,64 @@
 ---
 import finance from "../../icons/finance.svg";
 import logoTaller from "../../img/logoTaller.png";
+import Tooltip from "./Tooltip.astro";
 
 export const NAVBAR = [
 	{
 		name: "Introducción",
 		href: "/#introduction",
+		info: "✓ ¿Qué es la inversión?\n✓ ¿Por qué deberías considerar invertir?\n✓ La inflación\n✓ Cómo empezar",
 	},
 	{
 		name: "Bolsa de Valores",
 		href: "/bolsa-de-valores",
-	},
-	{
-		name: "Mitos de la Bolsa",
-		href: "/mitos-de-la-bolsa",
-	},
-	{
-		name: "Evitemos Estafas",
-		href: "/evitemos-estafas",
+		info: "✓ Funciones de la Bolsa de Valores\n✓ Los mitos\n✓ Tipos de Instrumentos\n✓ Mecanismo de Negociación\n✓ Video Explicativo\n✓ Principales Bolsas del Mundo\n✓ Actores Clave\n✓ Evitar posibles estafas",
 	},
 	{
 		name: "Perfiles del Inversor",
 		href: "/perfiles-del-inversor",
+		info: "empty",
 	},
 	{
 		name: "Renta Fija ó Variable",
 		href: "/renta-fija-o-renta-variable",
+		info: "empty",
 	},
 	{
 		name: "Instrumentos Financieros",
 		href: "/instrumentos-financieros",
+		info: "empty",
 	},
 	{
 		name: "Fondo Común de Inversión",
 		href: "/fondo-común-de-inversion",
+		info: "empty",
 	},
 	{
 		name: "Dolar MEP",
 		href: "/dolar-mep",
+		info: "empty",
 	},
 	{
 		name: "Sectores de la Economía de EE.UU.",
 		href: "/sectores-de-la-economía-de-EEUU",
+		info: "empty",
 	},
 
 	{
 		name: "Comenzar a Invertir",
 		href: "/comenzar-a-invertir",
+		info: "empty",
 	},
 ];
 ---
 
 <nav
 	transition:persist
-	class="pointer-events-none opacity-0 fixed inset-0 z-90 flex-shrink-0 flex-col overflow-clip transition-opacity duration-300 ease-in-out xl:pointer-events-auto xl:bottom-auto xl:left-0 xl:right-auto xl:top-0 xl:z-[9999] xl:h-screen 2xl:left-6 2xl:top-12 2xl:h-[calc(100vh-6rem)] rounded-md hidden xl:block shadow-md max-w-[310px]"
+	class="pointer-events-none opacity-0 fixed inset-0 z-90 flex-shrink-0 flex-col transition-opacity duration-300 ease-in-out xl:pointer-events-auto xl:bottom-auto xl:left-0 xl:right-auto xl:top-0 xl:z-[9999] xl:h-screen 2xl:left-6 2xl:top-12 2xl:h-[calc(100vh-6rem)] rounded-md hidden xl:block shadow-md max-w-[310px]"
 	id="nav">
 	<div
-		class="relative z-10 flex h-full max-h-full w-full flex-shrink-0 flex-col items-center justify-start !overflow-y-auto text-[--darkblue] p-6"
+		class="relative z-10 flex h-full max-h-full w-full flex-shrink-0 flex-col items-center justify-start text-[--darkblue] p-6"
 		id="navbar">
 		<div class="flex w-full flex-col items-center justify-center">
 			<a
@@ -78,19 +80,8 @@ export const NAVBAR = [
 			<div
 				class="relative flex max-h-full w-full flex-grow flex-col gap-0.5 py-2 md:left-auto font-normal">
 				{
-					NAVBAR.map(({ name, href }) => (
-						<a href={href} class="mx-auto block w-full">
-							<div class="whitespace-nowrap text-start w-full text-base text-[--darkblue] relative group opacity-75 hover:opacity-100 transition">
-								<>
-									<span class="opacity-0 group-hover:opacity-100 absolute left-0">
-										#
-									</span>
-									<span class="pl-4 text-black/75 tracking-tight">
-										{name}
-									</span>
-								</>
-							</div>
-						</a>
+					NAVBAR.map(({ name, href, info }) => (
+						<Tooltip name={name} href={href} info={info} />
 					))
 				}
 			</div>

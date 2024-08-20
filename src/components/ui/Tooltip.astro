@@ -15,12 +15,14 @@ const { href, name, info } = Astro.props;
 		<span class="opacity-0 group-hover:opacity-100 absolute left-0">
 			#
 		</span>
+
 		<span
 			class="anchor-name pl-4 text-black tracking-tight whitespace-nowrap"
 			>{name}</span
 		>
+
 		<div class="content">
-			<p class="m-0">{info}</p>
+			<p class="m-0 text-pretty">{info.split("•").join("\n")}</p>
 		</div>
 	</div>
 </a>
@@ -51,10 +53,11 @@ const { href, name, info } = Astro.props;
 		margin-left: 60%;
 	}
 	.anchor-container .content {
+		white-space: pre-wrap;
 		width: 300px;
 		position: absolute;
 		z-index: 5;
-		padding: 1rem;
+		padding: 0 1rem;
 		opacity: 0;
 		transition:
 			opacity 0.3s ease,

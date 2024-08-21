@@ -4,6 +4,11 @@ import header from "../img/analisis-tecnico.png";
 import { Image } from "astro:assets";
 import tendencias from "../img/análisis-técnico/tendencias.webp";
 import tendenciaPrincipal from "../img/análisis-técnico/tendenciaPrincipal.png";
+import tendencias1 from "../img/análisis-técnico/tendencias1.png";
+import tendenciaAlcista from "../img/análisis-técnico/tendenciaAlcista.png";
+import tendenciaBajista from "../img/análisis-técnico/tendenciaBajista.png";
+import tendenciaLateral from "../img/análisis-técnico/tendenciaLateral.png";
+import tendenciaOtroTipo from "../img/análisis-técnico/tendenciaOtroTipo.png";
 ---
 
 <PageContent title="Análisis Técnico" headerImage={header}>
@@ -67,128 +72,301 @@ import tendenciaPrincipal from "../img/análisis-técnico/tendenciaPrincipal.png
 			<ul>
 				<li>
 					Identificar una tendencia en sus inicios permite
-					aprovecharla. Las tendencias pueden ser alcistas, bajistas o
-					laterales. Por ejemplo, un analista técnico puede
-					identificar una tendencia alcista en una acción y comprar
-					antes de que el precio suba aún más.
+					aprovecharla. Las tendencias pueden ser <strong>
+						alcistas, bajistas o laterales</strong
+					>. Por ejemplo, un analista técnico puede identificar una
+					tendencia alcista en una acción y comprar antes de que el
+					precio suba aún más.
 				</li>
+				<h3>¿Qué son las Tendencias de mercado?</h3>
+				<p>
+					Las tendencias de mercado en trading se pueden definir como
+					la dirección en la que se mueve un mercado de manera
+					sostenida durante un intervalo de tiempo determinado. El
+					movimiento nunca será en línea recta sino que los precios
+					suelen variar en sentido ascendente y descendente formando
+					una especie de ondas que, en conjunto, determinarán la
+					tendencia. En la siguiente imagen mostramos de una manera
+					simple este concepto:
+				</p>
+				<Image
+					src={tendencias1}
+					class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
+					alt="Teoría de Dow"
+				/>
+				<p>
+					El análisis de tendencias de mercado es imprescindible en
+					trading ya que nos proporciona una información muy valiosa
+					para poder tomar posiciones. Para ello, contamos con la
+					ayuda del análisis técnico y de todas sus herramientas
+					gráficas para identificar patrones, pero esto lo veremos más
+					adelante. Para identificar tendencias en bolsa, también es
+					importante que definas tu estilo de trading y el marco
+					temporal en el que vas a operar.
+				</p>
+				<h3>Tipos de tendencias - Alcista, bajista y lateral</h3>
+				<p>
+					Por lo general, las tendencias se pueden agrupar en tres
+					grandes grupos según su dirección: tendencia alcista,
+					tendencia bajista y tendencia lateral o sin tendencia.
+				</p>
+				<h3>Tendencia Alcista o 'Bull market'</h3>
+				<p>
+					Una tendencia alcista se refiere a un movimiento ascendente
+					de precios de manera sostenida en un periodo de tiempo
+					determinado. A esta tendencia también se le denomina con el
+					anglicismo 'bull market' y se caracteriza por un sentimiento
+					de optimismo, de confianza y porque la presión de la demanda
+					supera a la de la oferta, de ahí que refleje una subida de
+					precios.
+				</p>
+				<p>
+					Una tendencia alcista comienza generalmente tras un periodo
+					de indecisión y dudas en el mercado para después encadenar
+					mínimos y máximos al alza.
+				</p>
+				<p>
+					En una tendencia alcista podemos detectar tres fases, según
+					la <strong> Teoría de Dow </strong>:
+				</p>
+				<ol>
+					<li>
+						<strong>Acumulación:</strong> Los inversores tienen una actitud
+						moderada, de cierta precaución, con poco volumen en el mercado,
+						y algo de incertidumbre, por lo que se producen ventas.
+					</li>
+					<li>
+						<strong>Participación: </strong> La confianza comienza a
+						regresar al mercado poco a poco, los inversores vuelven para
+						buscar rentabilidad, el volumen aumenta y los precios comienzan
+						a subir. En el gráfico se aprecia cómo los máximos y los
+						mínimos son crecientes.
+					</li>
+					<li>
+						<strong>Distribución:</strong> El periodo alcista se detiene
+						poco a poco mientras los grandes inversores y los traders
+						más experimentados creen que es momento de salir del mercado
+						y vender mientras los menos expertos compran pensando que
+						lograrán rentabilidades fáciles y rápidas.
+					</li>
+				</ol>
+				<p>Veamos un ejemplo de tendencia alcista en Forex:</p>
+				<Image
+					src={tendenciaAlcista}
+					class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
+					alt="Teoría de Dow"
+				/>
+				<h3>Tendencia Bajista o 'Bear market'</h3>
+				<p>
+					La tendencia bajista o bear market se refiere al momento en
+					el que el precio comienza a descender de manera sostenida.
+					El pesimismo comienza a extenderse por el mercado y el miedo
+					a perder dinero. Los inversores comienzan a salir del
+					mercado y la presión vendedora supera a la presión
+					compradora. Los máximos y los mínimos son decrecientes.
+				</p>
+				<p>
+					De la misma manera que la tendencia alcista, la tendencia
+					bajista de los mercados cuenta con tres fases:
+				</p>
+				<ol>
+					<li>
+						<strong>Distribución: </strong> El precio alcanza su máximo
+						absoluto y a partir de ese pico comienza a caer cuando aparecen
+						las primeras órdenes de venta.
+					</li>
+					<li>
+						<strong>Participación: </strong> Los precios caen de manera
+						más pronunciada mientras los bajistas (también llamados osos)
+						se hacen con el mercado. El pesimismo se extiende y los inversores
+						buscan salir rápidamente del mercado.
+					</li>
+					<li>
+						<strong>Pánico:</strong> El miedo lleva a los traders a deshacerse
+						de sus activos al precio que sea.
+					</li>
+				</ol>
+				<p>Veamos un ejemplo de tendencia bajista en Forex:</p>
+				<Image
+					src={tendenciaBajista}
+					class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
+					alt="Teoría de Dow"
+				/>
 			</ul>
-		</li>
-		<li>
-			<strong>La historia se repite</strong>:
-			<ul>
+			<h3>Tendencia Lateral o Mercado sin tendencia</h3>
+			<p>
+				Hablamos de tendencia lateral cuando el mercado no se decide
+				entre una tendencia alcista y una tendencia bajista. El precio
+				del activo oscila en un rango estrecho, entre soportes y
+				resistencias, sin que haya grandes variaciones durante un
+				periodo determinado de tiempo.
+			</p>
+			<Image
+				src={tendenciaLateral}
+				class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
+				alt="Teoría de Dow"
+			/>
+			<p>
+				Durante un mercado lateral no se suelen lograr grandes
+				rentabilidades, como es lógico, ya que el precio apenas se mueve
+				en un rango muy pequeño, por eso a los inversores no les suele
+				gustar esta tendencia.
+			</p>
+			<p>
+				No obstante, hay que tener en cuenta que si es una tendencia de
+				largo plazo, siempre se podrán encontrar pequeñas tendencias
+				alcistas y bajistas como en la imagen de arriba, que pueden
+				servirnos modestas oportunidades. Por otro lado, si se trata de
+				tendencias en bolsa, siempre podremos beneficiarnos de los
+				dividendos de las acciones.
+			</p>
+			<h3>Otros tipos de tendencia del mercado</h3>
+			<p>
+				Las tendencias del mercado también pueden clasificarse en
+				función de su duración a lo largo del tiempo. De nuevo, hablamos
+				de <strong>tres tipos de tendencias</strong> :
+			</p>
+			<ol>
 				<li>
-					El Análisis Técnico se basa en la psicología humana. Los
-					patrones observados en el pasado tienden a repetirse, ya que
-					la naturaleza humana no cambia. Los patrones como los
-					"soportes" y "resistencias" que se repiten en el tiempo
-					ayudan a prever movimientos futuros.
+					<strong>Tendencia principal o de largo plazo </strong>: La
+					Teoría de Dow considera que éstas duran más de un año
 				</li>
-			</ul>
+				<li>
+					<strong>Tendencia intermedia o de medio plazo </strong>:
+					Duraría en torno a tres meses
+				</li>
+				<li>
+					<strong>Tendencia inmediata o de corto plazo </strong>:
+					Menos de tres semanas
+				</li>
+				<Image
+					src={tendenciaOtroTipo}
+					class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
+					alt="Teoría de Dow"
+				/>
+			</ol>
+			<p>
+				Siempre debemos tener en cuenta que cada tendencia forma parte
+				siempre de otra más grande y que a su vez esta tendencia estará
+				formada por otras pequeñas tendencias de corto plazo.
+			</p>
 		</li>
-	</ol>
 
-	<h3>Análisis Técnico vs Análisis Fundamental</h3>
-	<p>
-		Mientras que el <strong>Análisis Fundamental</strong> se enfoca en las causas
-		detrás de los movimientos de precios, como noticias económicas y balances
-		financieros, el <strong>Análisis Técnico</strong> se centra en los efectos
-		visibles de esos movimientos en los gráficos. Ambos enfoques pueden ser complementarios:
-		el análisis fundamental puede ayudar a identificar activos con potencial
-		a largo plazo, mientras que el análisis técnico puede optimizar el momento
-		de compra o venta.
-	</p>
-	<ul>
-		<li>
-			<strong>Análisis Fundamental</strong>:
-			<ul>
-				<li>
-					Se enfoca en estudiar las fuerzas de oferta y demanda que
-					mueven los precios.
-				</li>
-				<li>
-					Busca entender el valor intrínseco de un activo para
-					determinar si está sobrevalorado o infravalorado.
-				</li>
-			</ul>
-		</li>
-		<li>
-			<strong>Análisis Técnico</strong>:
-			<ul>
-				<li>
-					Estudia los movimientos de precios y volúmenes, enfocándose
-					en los efectos, no en las causas.
-				</li>
-				<li>
-					Se apoya en gráficos, patrones y herramientas como
-					indicadores para predecir tendencias futuras.
-				</li>
-			</ul>
-		</li>
-	</ul>
+		<h3>Análisis Técnico vs Análisis Fundamental</h3>
+		<p>
+			Mientras que el <strong>Análisis Fundamental</strong> se enfoca en las
+			causas detrás de los movimientos de precios, como noticias económicas
+			y balances financieros, el <strong>Análisis Técnico</strong> se centra
+			en los efectos visibles de esos movimientos en los gráficos. Ambos enfoques
+			pueden ser complementarios: el análisis fundamental puede ayudar a identificar
+			activos con potencial a largo plazo, mientras que el análisis técnico
+			puede optimizar el momento de compra o venta.
+		</p>
+		<ul>
+			<li>
+				<strong>Análisis Fundamental</strong>:
+				<ul>
+					<li>
+						Se enfoca en estudiar las fuerzas de oferta y demanda
+						que mueven los precios.
+					</li>
+					<li>
+						Busca entender el valor intrínseco de un activo para
+						determinar si está sobrevalorado o infravalorado.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<strong>Análisis Técnico</strong>:
+				<ul>
+					<li>
+						Estudia los movimientos de precios y volúmenes,
+						enfocándose en los efectos, no en las causas.
+					</li>
+					<li>
+						Se apoya en gráficos, patrones y herramientas como
+						indicadores para predecir tendencias futuras.
+					</li>
+				</ul>
+			</li>
+		</ul>
 
-	<h3>Teoría de Dow</h3>
-	<p>
-		<strong>Introducción a la Teoría de Dow</strong><br />
-		En 1887, Charles Dow, junto con Edward Jones, creó el índice Dow Jones, un
-		indicador esencial para evaluar la salud económica de Estados Unidos. Además
-		de su papel en el desarrollo de este índice, Charles Dow fundó el <em
-			>Wall Street Journal</em
-		>, donde publicó numerosos artículos que más tarde se recopilaron y
-		publicaron en 1903 bajo el nombre de <strong>Teoría de Dow</strong>.
-		Esta teoría se ha convertido en la base del análisis gráfico y técnico,
-		influenciando profundamente lo que hoy conocemos como Análisis Técnico
-		(AT).
-	</p>
-	<p>
-		La <strong>Teoría de Dow</strong> es crucial para entender el análisis técnico,
-		ya que establece los principios fundamentales que guían el estudio de gráficos
-		y tendencias de mercado. A continuación, se presentan estos principios:
-	</p>
-	<ol>
-		<li>
-			<strong>Los índices lo descuentan todo.</strong> Todo lo que sucede en
-			el mercado se refleja en los índices, ya que estos incorporan toda la
-			información disponible.
-		</li>
-		<li>
-			<strong>El mercado tiene tres tendencias</strong>: primaria (largo
-			plazo), secundaria (mediano plazo) y menor (corto plazo). Cada una
-			de estas tendencias se comporta como olas dentro de una marea más
-			grande.
-		</li>
-		<Image
-			src={tendencias}
-			class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
-			alt="Teoría de Dow"
-		/>
-		<li>
-			<strong>La tendencia principal tiene tres fases</strong>:
-			acumulación (compras informadas), participación pública (crecimiento
-			del precio y entrada de inversores) y distribución (venta por parte
-			de quienes compraron en la acumulación).
-		</li>
-		<Image
-			src={tendenciaPrincipal}
-			class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
-			alt="Teoría de Dow"
-		/>
+		<h3>Teoría de Dow</h3>
+		<p>
+			<strong>Introducción a la Teoría de Dow</strong><br />
+			En 1887, Charles Dow, junto con Edward Jones, creó el índice Dow Jones,
+			un indicador esencial para evaluar la salud económica de Estados Unidos.
+			Además de su papel en el desarrollo de este índice, Charles Dow fundó
+			el <em>Wall Street Journal</em>, donde publicó numerosos artículos
+			que más tarde se recopilaron y publicaron en 1903 bajo el nombre de <strong
+				>Teoría de Dow</strong
+			>. Esta teoría se ha convertido en la base del análisis gráfico y
+			técnico, influenciando profundamente lo que hoy conocemos como
+			Análisis Técnico (AT).
+		</p>
+		<p>
+			La <strong>Teoría de Dow</strong> es crucial para entender el análisis
+			técnico, ya que establece los principios fundamentales que guían el estudio
+			de gráficos y tendencias de mercado. A continuación, se presentan estos
+			principios:
+		</p>
+		<ol>
+			<li>
+				<strong>Los índices lo descuentan todo.</strong> Todo lo que sucede
+				en el mercado se refleja en los índices, ya que estos incorporan
+				toda la información disponible.
+			</li>
+			<li>
+				<strong>El mercado tiene tres tendencias</strong>: primaria
+				(largo plazo), secundaria (mediano plazo) y menor (corto plazo).
+				Cada una de estas tendencias se comporta como olas dentro de una
+				marea más grande.
+			</li>
+			<Image
+				src={tendencias}
+				class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
+				alt="Teoría de Dow"
+			/>
+			<li>
+				<strong>La tendencia principal tiene tres fases</strong>:
+				acumulación (compras informadas), participación pública
+				(crecimiento del precio y entrada de inversores) y distribución
+				(venta por parte de quienes compraron en la acumulación).
+			</li>
+			<Image
+				src={tendenciaPrincipal}
+				class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
+				alt="Teoría de Dow"
+			/>
 
-		<li>
-			<strong>Los índices deben confirmarse entre sí.</strong> Los movimientos
-			en diferentes índices deben ser consistentes para confirmar una tendencia.
-		</li>
-		<li>
-			<strong>El volumen debe confirmar la tendencia.</strong> Un aumento en
-			el volumen confirma la tendencia. Por ejemplo, si los precios suben y
-			el volumen aumenta, la tendencia alcista se fortalece.
-		</li>
-		<li>
-			<strong
-				>Una tendencia permanece activa hasta que se demuestre lo
-				contrario.</strong
-			> No se debe cambiar de tendencia hasta que haya señales claras de que
-			la tendencia actual ha cambiado.
-		</li>
+			<li>
+				<strong>Los índices deben confirmarse entre sí.</strong> Los movimientos
+				en diferentes índices deben ser consistentes para confirmar una tendencia.
+			</li>
+			<li>
+				<strong>El volumen debe confirmar la tendencia.</strong> Un aumento
+				en el volumen confirma la tendencia. Por ejemplo, si los precios
+				suben y el volumen aumenta, la tendencia alcista se fortalece.
+			</li>
+			<li>
+				<strong
+					>Una tendencia permanece activa hasta que se demuestre lo
+					contrario.</strong
+				> No se debe cambiar de tendencia hasta que haya señales claras de
+				que la tendencia actual ha cambiado.
+			</li>
+			<li>
+				<strong>La historia se repite</strong>:
+				<ul>
+					<li>
+						El Análisis Técnico se basa en la psicología humana. Los
+						patrones observados en el pasado tienden a repetirse, ya
+						que la naturaleza humana no cambia. Los patrones como
+						los "soportes" y "resistencias" que se repiten en el
+						tiempo ayudan a prever movimientos futuros.
+					</li>
+				</ul>
+			</li>
+		</ol>
 	</ol>
 </PageContent>

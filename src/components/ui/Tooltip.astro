@@ -17,12 +17,14 @@ const { href, name, info } = Astro.props;
 		</span>
 
 		<span
-			class="anchor-name pl-4 text-black tracking-tight whitespace-nowrap"
+			class="anchor-name text-slate-600 pl-4 tracking-tight whitespace-nowrap"
 			>{name}</span
 		>
 
 		<div class="content">
-			<p class="m-0 text-pretty">{info.split("•").join("\n")}</p>
+			<p class="m-0 text-pretty text-[--darklight]">
+				{info.split("•").join("\n")}
+			</p>
 		</div>
 	</div>
 </a>
@@ -41,7 +43,6 @@ const { href, name, info } = Astro.props;
 	}
 	.anchor-container .anchor-name {
 		opacity: 0.75;
-		color: #000000bf;
 	}
 	.anchor-container .anchor-name:hover {
 		opacity: 1;

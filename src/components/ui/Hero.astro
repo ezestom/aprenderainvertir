@@ -19,6 +19,7 @@ import instrumentos from "../../img/hero-instrumentos-children.png";
 		</p>
 		<div class="attributes">
 			<!-- Content, Design, Speaking, Creative, Engineering  -->
+			<div class="attribute">Blog gratis</div>
 			<div class="attribute">Bolsa de valores</div>
 			<div class="attribute">CEDEARs</div>
 			<div class="attribute">Acciones</div>
@@ -32,16 +33,6 @@ import instrumentos from "../../img/hero-instrumentos-children.png";
 <style>
 	section {
 		position: relative;
-		/* animation: fadeOut linear both;
-			animation-timeline: view();
-			animation-range: 50% 75%;
-			z-index: 20; */
-	}
-
-	@keyframes fadeOut {
-		to {
-			/* opacity: 110; */
-		}
 	}
 	@layer foundation {
 		*,
@@ -107,7 +98,8 @@ import instrumentos from "../../img/hero-instrumentos-children.png";
 		.presentation {
 			background: linear-gradient(hsl(0, 10%, 10% / 0.75), #000 50%),
 				hsl(0, 10%, 20%);
-			color: hsl(0, 10%, 70% / 0.8);
+			color: black !important;
+			opacity: 0.85;
 			box-shadow: 1px -1px 0.5rem 0rem hsl(0, 10%, 30%) inset;
 		}
 
@@ -196,11 +188,11 @@ import instrumentos from "../../img/hero-instrumentos-children.png";
 			--or: 15deg;
 			/*	Destination	*/
 			--dx: 10vw;
-			--dr: -290deg;
+			--dr: -390deg;
 			--dy: -120vh;
 		}
 		.attribute:nth-of-type(5) {
-			--hue: 210;
+			--hue: 330;
 			--ox: 56%;
 			--oy: -16%;
 			--or: 10deg;
@@ -218,6 +210,16 @@ import instrumentos from "../../img/hero-instrumentos-children.png";
 			--dx: -120vw;
 			--dr: -540deg;
 			--dy: 40vh;
+		}
+		.attribute:nth-of-type(7) {
+			--hue: 210;
+			--ox: 5%;
+			--oy: 15%;
+			--or: -8deg;
+			/*	Destination	*/
+			--dx: -10vw;
+			--dr: 140deg;
+			--dy: 80vh;
 		}
 
 		.attribute svg {

@@ -5,8 +5,8 @@ import Content from "./Content.astro";
 import Nav2 from "./Nav2.astro";
 import Flap from "./Flap.astro";
 import { Breadcrumbs } from "./Breadcrumbs/Breadcrumbs";
-import AsideRight from "./AsideRight.astro";
 import AnchorBack from "./AnchorBack.astro";
+import Menu from "./Menu.astro";
 
 interface PageContentProps {
 	headerImage: string;
@@ -16,17 +16,17 @@ const { headerImage, title } = Astro.props;
 ---
 
 <Layout title={title}>
+	<Menu />
 	<Nav2 />
 	<Content>
 		<!-- <AsideRight /> -->
 		<section
-			class="py-12 text-pretty text-sm md:text-base leading-normal text-black/60 relative z-10">
+			class="py-12 text-pretty text-sm md:text-base leading-normal relative z-10">
 			<Breadcrumbs client:load />
 			<Image
-				style={{ background: "rgba(0,0,0,0.05)" }}
 				src={headerImage}
 				alt="Header"
-				class="h-[300px] md:h-[350px] w-full rounded-md object-contain shadow-md"
+				class="h-[300px] md:h-[350px] w-full rounded-md object-contain shadow-md bg-black/5"
 				id="headerImage"
 			/>
 			<h1
@@ -34,19 +34,11 @@ const { headerImage, title } = Astro.props;
 				<span class="flex gap-1 items-center">
 					{title}
 				</span>
-				<!-- <button
-					onclick="window.history.back()"
-					id="back"
-					class="w-fit text-[--darkblue] bg-gray-100 hover:shadow-md p-2 rounded-md my-2 active:scale-90 text-sm flex flex-col items-center justify-center">
-					<span>Atrás </span>
-					<span>↩</span>
-				</button> -->
 				<AnchorBack />
 			</h1>
 			<slot />
 		</section>
 	</Content>
-	<!-- <AsideRight /> -->
 	<Flap />
 </Layout>
 

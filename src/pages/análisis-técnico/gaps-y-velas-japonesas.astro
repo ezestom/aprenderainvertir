@@ -1,0 +1,138 @@
+---
+import PageContent from "../../components/ui/PageContent.astro";
+import header from "../../img/analisis-tecnico.png";
+import { Image } from "astro:assets";
+import velas from "../../img/análisis-técnico/velas.png";
+import gap from "../../img/análisis-técnico/gap.png";
+---
+
+<PageContent title="Gaps y Velas Japonesas" headerImage={header}>
+	<h3>¿Cómo interpretar los GAPS?</h3>
+	<p>
+		Los gaps alcistas, que aparecen en la parte superior del gráfico,
+		indican fuerza en el mercado, es decir, una tendencia alcista. Los gaps
+		bajistas, en la parte inferior, indican debilidad en el mercado, o una
+		tendencia bajista.
+	</p>
+	<p>
+		Los gaps pueden aparecer en cualquier timeframe, pero son más
+		significativos en gráficos de largo plazo como los semanales o
+		mensuales. Sin embargo, son más comunes en gráficos de temporalidad
+		diaria.
+	</p>
+   <h3 class="pt-6">Gap - gráfico</h3>
+
+   <Image
+      src={gap}
+      class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
+      alt="Teoría de Dow"
+   />
+
+	<h3>Tipos de GAPS</h3>
+	<p>Existen tres tipos de gaps bien diferenciados:</p>
+	<ul>
+		<strong>
+			<li>Gap de Separación (Breakaway)</li>
+			<li>Gap de Escape o de Medida (Runaway)</li>
+			<li>Gap de Agotamiento (Exhaustion)</li>
+		</strong>
+	</ul>
+
+	<h3>Velas Japonesas</h3>
+
+	<strong>¿Qué es el gráfico de velas?</strong>
+	<p>
+		El gráfico de velas nos brinda información sobre la situación del
+		mercado a través de precios de apertura, máximo, mínimo y cierre. Es uno
+		de los más utilizados debido a su claridad gráfica y la facilidad con la
+		que se pueden interpretar los patrones una vez comprendidos.
+	</p>
+
+	<h3>Estructura de las Velas Japonesas</h3>
+	<ul>
+		<li>
+			Las velas tienen una forma similar a una vela real, con un cuerpo y
+			una mecha (pabilo).
+		</li>
+		<li>
+			El cuerpo de la vela representa la diferencia entre el precio de
+			apertura y cierre. Si el precio de cierre es mayor que el de
+			apertura, el cuerpo suele ser verde (aunque en algunos gráficos
+			puede aparecer como blanco o vacío). Si el precio de cierre es menor
+			que el de apertura, el cuerpo es rojo o negro.
+		</li>
+		<li>
+			Las sombras, o mechas, representan los precios máximo y mínimo
+			alcanzados durante el período analizado.
+		</li>
+	</ul>
+	<h3 class="pt-6">Velas - Estructura</h3>
+	<Image
+		src={velas}
+		class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
+		alt="Teoría de Dow"
+	/>
+
+	<h3>Patrones de Velas Básicos</h3>
+	<p>
+		Los patrones de velas son combinaciones de cuerpos y sombras que tienen
+		significados específicos. Algunos patrones básicos incluyen:
+	</p>
+	<ul>
+		<li>
+			<strong>Días largos</strong>: cuando hay una gran diferencia entre
+			el precio de apertura y cierre.
+
+			<li>
+				<strong>Perinolas</strong>: velas con cuerpos cortos y sombras
+				largas, indicando indecisión en el mercado.
+
+				<li>
+					<strong>Doji</strong>: cuando el precio de apertura y cierre
+					son iguales o muy cercanos, lo que también indica
+					indecisión.
+				</li>
+
+				<h3>Diferentes Tipos de Doji</h3>
+				<ul>
+					<li>
+						<strong>Doji Perinola</strong>: tiene sombras superiores
+						e inferiores largas, indicando indecisión.
+					</li>
+					<li>
+						<strong>Doji Lápida</strong>: con una larga sombra
+						superior y sin sombra inferior, lo que suele
+						interpretarse como bajista.
+					</li>
+					<li>
+						<strong>Doji Libélula</strong>: con una larga sombra
+						inferior y sin sombra superior, generalmente considerada
+						alcista.
+					</li>
+				</ul>
+
+				<h3>Análisis de Patrones de Velas</h3>
+				<p>
+					El análisis de patrones de velas es una herramienta esencial
+					en la toma de decisiones de inversión, ya que nos muestra la
+					psicología de los participantes del mercado. Es importante
+					utilizar este análisis en conjunto con otros indicadores
+					técnicos para obtener mejores resultados.
+				</p>
+
+				<h3>Automatización de Patrones de Velas</h3>
+				<p>
+					Es posible automatizar la identificación de patrones de
+					velas en herramientas como <strong>
+						<a
+							href="https://es.investing.com/technical/candlestick-patterns"
+							target="_blank"
+							rel="noopener noreferrer">Investing.com</a
+						></strong
+					>, lo que facilita el seguimiento de los activos en nuestra
+					cartera personal.
+				</p>
+			</li>
+		</li>
+	</ul>
+</PageContent>

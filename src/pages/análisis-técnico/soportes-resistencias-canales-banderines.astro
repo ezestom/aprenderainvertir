@@ -1,0 +1,153 @@
+---
+import PageContent from "../../components/ui/PageContent.astro";
+import header from "../../img/analisis-tecnico.png";
+import { Image } from "astro:assets";
+import soportesResistenciasFijos from "../../img/análisis-técnico/soportesResistenciasFijos.webp";
+import soportesResistenciasDinámicos from "../../img/análisis-técnico/soportesResistenciasDinámicos.webp";
+import canales from "../../img/análisis-técnico/canales.webp";
+import hch from "../../img/análisis-técnico/hch.png";
+import hchInvertido from "../../img/análisis-técnico/hchInvertido.png";
+import banderin from "../../img/análisis-técnico/banderin.png";
+---
+
+<PageContent
+	title="Soportes, Resistencias, Canales y Banderines"
+	headerImage={header}>
+	<h2>Soportes y Resistencias</h2>
+	<p>
+		En el análisis técnico, los soportes y resistencias son niveles
+		cruciales donde el precio de un activo suele detenerse o revertir su
+		dirección. Entender estos conceptos es esencial para anticipar posibles
+		movimientos del mercado.
+	</p>
+
+	<h3>Soportes:</h3>
+	<ul>
+		<li>
+			<strong>Soporte Estático:</strong> Es un nivel de precios específico
+			en el gráfico donde la demanda es lo suficientemente fuerte como para
+			detener o revertir una tendencia bajista. Este tipo de soporte se encuentra
+			en mínimos anteriores, actuando como una "zona de piso" donde el precio
+			tiende a rebotar.
+		</li>
+		<li>
+			<strong>Soporte Dinámico:</strong> A diferencia del soporte estático,
+			el soporte dinámico se mueve con el tiempo, generalmente definido por
+			líneas de tendencia o medias móviles. Este soporte se ajusta a la evolución
+			del mercado, proporcionando un nivel en movimiento donde los compradores
+			pueden volver a entrar en el mercado.
+		</li>
+	</ul>
+
+	<h3>Resistencias:</h3>
+	<ul>
+		<li>
+			<strong>Resistencia Estática:</strong> Similar a los soportes estáticos,
+			las resistencias estáticas son niveles fijos en el gráfico, pero en este
+			caso, se encuentran en máximos anteriores. Aquí, la oferta es suficientemente
+			fuerte para detener o revertir una tendencia alcista, creando una "zona
+			de techo" donde el precio tiende a retroceder.
+		</li>
+		<li>
+			<strong>Resistencia Dinámica:</strong> Las resistencias dinámicas cambian
+			con el tiempo y se identifican utilizando herramientas como líneas de
+			tendencia descendentes o medias móviles. Estas resistencias ofrecen un
+			nivel móvil donde los vendedores pueden entrar en el mercado, frenando
+			el avance del precio.
+		</li>
+	</ul>
+	<h3 class="pt-6">Soportes y Resistencias Fijos - gráfico</h3>
+	<Image
+		src={soportesResistenciasFijos}
+		class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
+		alt="Teoría de Dow"
+	/>
+	<h3 class="pt-6">Soportes y Resistencias Dinámicos - gráfico</h3>
+	<Image
+		src={soportesResistenciasDinámicos}
+		class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
+		alt="Teoría de Dow"
+	/>
+
+	<h2>Canales</h2>
+	<p>
+		Los canales son formaciones gráficas que delimitan la oscilación del
+		precio entre dos líneas paralelas, una superior y otra inferior. Los
+		canales pueden ser:
+	</p>
+	<ul>
+		<li>
+			<strong>Canal Ascendente:</strong> Formado por líneas paralelas que conectan
+			máximos y mínimos crecientes, sugiriendo una tendencia alcista. El precio
+			oscila dentro de estas líneas, siguiendo la tendencia general hacia arriba.
+		</li>
+		<li>
+			<strong>Canal Descendente:</strong> Aquí, las líneas paralelas conectan
+			máximos y mínimos decrecientes, indicando una tendencia bajista. El precio
+			se mueve dentro de este canal hacia abajo.
+		</li>
+		<li>
+			<strong>Canal Lateral:</strong> Cuando el precio oscila entre líneas
+			paralelas horizontales, sin una tendencia clara, formando un canal lateral
+			que refleja indecisión en el mercado.
+		</li>
+	</ul>
+	<h3 class="pt-6">Canales - gráfico</h3>
+	<Image
+		src={canales}
+		class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
+		alt="Teoría de Dow"
+	/>
+
+	<h2>Patrones de Cambio de Tendencia</h2>
+	<p>
+		Los patrones de cambio de tendencia señalan una posible reversión en la
+		dirección del precio. Los más conocidos son:
+	</p>
+	<ul>
+		<li>
+			<strong>Hombro-Cabeza-Hombro (HCH):</strong> Este patrón sugiere un cambio
+			de tendencia de alcista a bajista. Se forma después de una tendencia
+			alcista y consta de tres picos: el hombro izquierdo, la cabeza (el pico
+			más alto) y el hombro derecho.
+		</li>
+		<h3 class="pt-6">HCH - gráfico</h3>
+		<Image
+			src={hch}
+			class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
+			alt="Teoría de Dow"
+		/>
+		<li>
+			<strong>Hombro-Cabeza-Hombro Invertido (HCH Invertido):</strong> Indica
+			un cambio de tendencia de bajista a alcista. Al igual que el HCH, consta
+			de tres picos, pero en este caso, invertidos.
+		</li>
+	</ul>
+	<h3 class="pt-6">HCH Invertido - gráfico</h3>
+	<Image
+		src={hchInvertido}
+		class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
+		alt="Teoría de Dow"
+	/>
+
+	<h2>Patrones de Continuidad</h2>
+	<p>
+		Los patrones de continuidad sugieren que la tendencia actual continuará
+		después de una breve pausa o consolidación:
+	</p>
+	<ul>
+		<li>
+			<strong>Banderín:</strong> Es un patrón de consolidación que se forma
+			tras un movimiento fuerte (impulso) y precede a la continuación de la
+			tendencia. Tiene la forma de un pequeño triángulo simétrico, donde el
+			precio se comprime antes de romper en la dirección de la tendencia original.
+		</li>
+		<h3 class="pt-6">Banderín - gráfico</h3>
+		<Image
+			src={banderin}
+			class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
+			alt="Teoría de Dow"
+		/>
+	</ul>
+</PageContent>
+

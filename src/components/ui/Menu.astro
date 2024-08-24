@@ -1,10 +1,11 @@
 ---
 import open from "../../icons/openNav.svg";
 import close from "../../icons/closeNav.svg";
+import ThemeIcon from "./ThemeIcon.astro";
 ---
 
 <div
-	class="[view-transition-name:menu] mx-auto right-12 absolute z-50 text-[--darkblue] hidden md:block">
+	class="[view-transition-name:menu] mx-auto right-6 top-6 fixed z-50 text-[--darkblue] hidden md:block">
 	<div
 		class="size-9 relative bg-[--lightblue] transition-all rounded-md group text-[--darkblue] shadow-md">
 		<label for="nav-toggle" class="cursor-pointer group">
@@ -29,27 +30,13 @@ import close from "../../icons/closeNav.svg";
 	</div>
 	<nav
 		id="menu"
-		class="bg-[--lightblue] rounded-md p-4 rounded-tr-none transition-transform duration-300 menu-closed absolute top-8 right-0 w-[200px] z-40 shadow-md">
-		<ul>
-			<li>
-				<button
-					class="group transition-colors px-3.5 w-full flex items-center gap-2">
-					<img
-						src={open.src}
-						alt=""
-						class="absolute w-5 opacity-0 group-hover:opacity-100 group-hover:scale-[1.15] transition-all"
-					/>
-					<img
-						src={close.src}
-						alt=""
-						class="w-5 group-hover:scale-110 opacity-100 group-hover:opacity-0 transition-all"
-					/>
-					<span
-						class="w-10 whitespace-nowrap text-[--darkblue] font-semibold group-hover:text-[--lightblue] transition-colors text-sm"
-						>Light mode</span
-					>
-				</button>
-			</li>
+		class="bg-[--lightblue] rounded-md p-4 rounded-tr-none transition-transform duration-300 menu-closed absolute top-8 right-0 w-[300px] z-40 shadow-md">
+		<ul
+			class="absulute inset-0 flex flex-col justify-start items-start w-full h-full">
+			<button
+				class="group transition-colors px-3.5 w-full flex items-center gap-2">
+				<ThemeIcon />
+			</button>
 			<li>
 				<a
 					href="https://github.com/cosmoart/Freesets"
@@ -96,55 +83,57 @@ import close from "../../icons/closeNav.svg";
 			</li>
 		</ul>
 	</nav>
-</div>
 
-<script>
-	const toggleMenu = () => {
-		const navToggle: HTMLInputElement | null =
-			document.querySelector("#nav-toggle");
-		const menu: HTMLElement | null = document.querySelector("#menu");
-		const open: HTMLImageElement | null = document.querySelector("#open");
-		const close: HTMLImageElement | null = document.querySelector("#close");
+	<script>
+		const toggleMenu = () => {
+			const navToggle: HTMLInputElement | null =
+				document.querySelector("#nav-toggle");
+			const menu: HTMLElement | null = document.querySelector("#menu");
+			const open: HTMLImageElement | null =
+				document.querySelector("#open");
+			const close: HTMLImageElement | null =
+				document.querySelector("#close");
 
-		if (navToggle && menu && open && close) {
-			if (navToggle.checked) {
-				menu.classList.remove("menu-closed");
-				menu.classList.add("menu-open");
-				open.style.opacity = "0"; // Oculta imagen de apertura
-				close.style.opacity = "1"; // Muestra imagen de cierre
-			} else {
-				menu.classList.remove("menu-open");
-				menu.classList.add("menu-closed");
-				open.style.opacity = "1"; // Muestra imagen de apertura
-				close.style.opacity = "0"; // Oculta imagen de cierre
+			if (navToggle && menu && open && close) {
+				if (navToggle.checked) {
+					menu.classList.remove("menu-closed");
+					menu.classList.add("menu-open");
+					open.style.opacity = "0"; // Oculta imagen de apertura
+					close.style.opacity = "1"; // Muestra imagen de cierre
+				} else {
+					menu.classList.remove("menu-open");
+					menu.classList.add("menu-closed");
+					open.style.opacity = "1"; // Muestra imagen de apertura
+					close.style.opacity = "0"; // Oculta imagen de cierre
+				}
 			}
+		};
+
+		document.addEventListener("DOMContentLoaded", () => {
+			const navToggle: HTMLInputElement | null =
+				document.querySelector("#nav-toggle");
+			if (navToggle) {
+				navToggle.addEventListener("change", toggleMenu);
+			}
+		});
+	</script>
+
+	<style>
+		/* Agrega estas clases en tu archivo CSS o en el bloque de estilos */
+		.menu-open {
+			transform: translateY(0);
+			opacity: 1;
+			transition: all 0.2s ease-in-out;
+			pointer-events: all;
 		}
-	};
 
-	document.addEventListener("DOMContentLoaded", () => {
-		const navToggle: HTMLInputElement | null =
-			document.querySelector("#nav-toggle");
-		if (navToggle) {
-			navToggle.addEventListener("change", toggleMenu);
+		.menu-closed {
+			transform: translateY(
+				-10px
+			); /* Ajusta el valor según tus necesidades */
+			transition: all 0.2s ease-in-out;
+			opacity: 0;
+			pointer-events: none;
 		}
-	});
-</script>
-
-<style>
-	/* Agrega estas clases en tu archivo CSS o en el bloque de estilos */
-	.menu-open {
-		transform: translateY(0);
-		opacity: 1;
-		transition: all 0.2s ease-in-out;
-		pointer-events: all;
-	}
-
-	.menu-closed {
-		transform: translateY(
-			-10px
-		); /* Ajusta el valor según tus necesidades */
-		transition: all 0.2s ease-in-out;
-		opacity: 0;
-		pointer-events: none;
-	}
-</style>
+	</style>
+</div>

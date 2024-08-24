@@ -81,9 +81,9 @@ const { title } = Astro.props;
 	:root {
 		/* --lightblue: #99ccff;
 				 */
-		--lightblue: #cce6ff;
+		--lightblue: #99ccff;
 		--darkblue: #0066cccc;
-		--lightred: #ffaa99;
+		--lightred: #fa8484;
 		--darkred: #cc2200cc;
 		--lightyellow: #ffff99;
 		--darkyellow: #cccc00cc;
@@ -91,31 +91,60 @@ const { title } = Astro.props;
 		--darkgreen: #00cc00cc;
 		--lightviolet: #dd99ff;
 		--darkviolet: #8800cccc;
+		--text-primary: #595960;
 	}
 
 	body {
 		font-family: "Onest Variable", sans-serif, system-ui;
-		background-color: #fafafa;
-	
 	}
+	html {
+		color: var(--text-primary);
+		background-color: #fafafa;
+		h2,
+		h3 {
+			color: var(--darkblue);
+		}
+		strong {
+			color: var(--darkred);
+		}
+		a p {
+			color: #2d333bf2;
+		}
+	}
+	html.dark {
+		background-color: #2d333bf2;
+		color: white;
+		h2,
+		h3 {
+			color: var(--lightblue);
+		}
+
+		strong {
+			color: var(--lightred);
+		}
+		a p {
+			color: white;
+		}
+	}
+
 	h1 {
 		@apply mb-2 mt-2 scroll-mt-16 text-balance text-xl md:text-[1.75rem] font-black leading-none text-white first:mt-0;
 	}
 	h2 {
-		@apply mb-2  text-balance text-2xl font-bold leading-none text-[--darkblue] first:mt-0 sm:text-[1.75rem];
+		@apply mb-2  text-balance text-2xl font-bold leading-none  first:mt-0 sm:text-[1.75rem];
 	}
 
 	h3 {
-		@apply text-sm leading-normal text-[--darkblue] sm:text-lg lg:text-xl font-bold;
+		@apply text-sm leading-normal  sm:text-lg lg:text-xl font-bold;
 		/* @apply font-semibold text-[--darkred]; */
 	}
 	strong {
-		@apply font-semibold text-[--darkred];
+		@apply font-semibold;
 	}
 
 	li,
 	p {
-		@apply mb-4 text-pretty text-slate-500;
+		@apply mb-4 text-pretty;
 	}
 	strong > a,
 	strong > button {

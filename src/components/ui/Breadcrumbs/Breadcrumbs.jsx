@@ -60,7 +60,7 @@ export function Breadcrumbs() {
 									<>
 										<a
 											href={breadcrumb.url}
-											className="text-[--darkblue] hover:text-[--darkred] capitalize-first-letter "
+											className="text-[--darkblue] hover:text-white capitalize-first-letter "
 											aria-current={
 												isLast ? "page" : undefined
 											}>

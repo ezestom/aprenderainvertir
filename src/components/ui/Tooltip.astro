@@ -1,4 +1,5 @@
 ---
+import Layout from "@layouts/Layout.astro";
 interface TooltiProps {
 	name: string;
 	href: string;
@@ -11,18 +12,18 @@ const { href, name, info } = Astro.props;
 	<div
 		class="hint"
 		data-position="4"
-		class="whitespace-nowrap text-start w-fit text-base text-[--darkblue] group opacity-75 hover:opacity-100 transition">
+		class="whitespace-nowrap text-start w-fit text-base group opacity-75 hover:opacity-100 transition">
+		
+		<p
+		class="anchor-name pl-4 tracking-tight font-normal whitespace-nowrap m-0">
 		<span class="opacity-0 group-hover:opacity-100 absolute left-0">
 			#
 		</span>
-
-		<span
-			class="anchor-name text-slate-600 pl-4 tracking-tight whitespace-nowrap"
-			>{name}</span
-		>
+			{name}
+		</p>
 
 		<div class="content">
-			<p class="m-0 text-pretty text-[--darklight]">
+			<p class="m-0 text-pretty !text-[--darkblue]">
 				{info.split("•").join("\n")}
 			</p>
 		</div>
@@ -63,7 +64,7 @@ const { href, name, info } = Astro.props;
 		transition:
 			opacity 0.3s ease,
 			visibility 0.3s ease;
-		color: var(--darkblue);
+		/* color: var(--darkblue); */
 		font-weight: 600;
 		visibility: hidden;
 		pointer-events: none;
@@ -82,7 +83,7 @@ const { href, name, info } = Astro.props;
 		transition:
 			opacity 0.3s ease,
 			visibility 0.3s ease;
-		color: var(--darkblue);
+		/* color: var(--darkblue); */
 		font-weight: 600;
 		visibility: visible;
 		pointer-events: none;

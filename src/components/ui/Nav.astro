@@ -1,4 +1,5 @@
 ---
+import Layout from "@layouts/Layout.astro";
 import finance from "../../icons/finance.svg";
 import logoTaller from "../../img/logoTaller.png";
 import Tooltip from "./Tooltip.astro";
@@ -59,7 +60,7 @@ export const NAVBAR = [
 
 <nav
 	transition:persist
-	class="mt-48 pointer-events-none sticky inset-0 z-90 flex-shrink-0 flex-col transition-opacity duration-300 ease-in-out xl:pointer-events-auto xl:bottom-auto xl:left-0 xl:right-auto xl:top-0 xl:z-[9999] xl:h-screen 2xl:left-6 2xl:top-12 2xl:h-[calc(100vh-6rem)] rounded-md xl:block shadow-md -z-10 max-w-[310px] hidden"
+	class="mt-48 pointer-events-none sticky inset-0 z-90 flex-shrink-0 flex-col transition-opacity duration-300 ease-in-out xl:pointer-events-auto xl:bottom-auto xl:left-0 xl:right-auto xl:top-0 xl:z-[9999] xl:h-screen 2xl:left-6 2xl:top-12 2xl:h-[calc(100vh-6rem)] rounded-md xl:block shadow-md -z-10 max-w-[310px] bg-black/5 hidden"
 	id="nav">
 	<div
 		class="relative z-10 flex h-full max-h-full w-full flex-shrink-0 flex-col items-center justify-start rounded-md text-[--darkblue] p-6"
@@ -157,11 +158,11 @@ export const NAVBAR = [
 			</ul>
 		</div>
 	</div>
-
-	<style>
-		#navbar {
-			scrollbar-width: none;
-			background-color: rgba(0, 0, 0, 0.05);
-		}
-	</style>
 </nav>
+
+<style>
+	#navbar {
+		scrollbar-width: none;
+	}
+</style>
+

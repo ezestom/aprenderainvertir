@@ -6,7 +6,6 @@ import Nav2 from "./Nav2.astro";
 import Flap from "./Flap.astro";
 import { Breadcrumbs } from "./Breadcrumbs/Breadcrumbs";
 import AnchorBack from "./AnchorBack.astro";
-import Menu from "./Menu.astro";
 
 interface PageContentProps {
 	headerImage: string;
@@ -16,7 +15,6 @@ const { headerImage, title } = Astro.props;
 ---
 
 <Layout title={title}>
-	<Menu />
 	<Nav2 />
 	<Content>
 		<!-- <AsideRight /> -->

@@ -13,12 +13,11 @@ const { href, name, info } = Astro.props;
 		class="hint"
 		data-position="4"
 		class="whitespace-nowrap text-start w-fit text-base group opacity-75 hover:opacity-100 transition">
-		
 		<p
-		class="anchor-name pl-4 tracking-tight font-normal whitespace-nowrap m-0">
-		<span class="opacity-0 group-hover:opacity-100 absolute left-0">
-			#
-		</span>
+			class="anchor-name pl-4 tracking-tight font-normal whitespace-nowrap m-0">
+			<span class="opacity-0 group-hover:opacity-100 absolute left-0">
+				#
+			</span>
 			{name}
 		</p>
 
@@ -29,6 +28,15 @@ const { href, name, info } = Astro.props;
 		</div>
 	</div>
 </a>
+
+<script>
+	const anchor = document.querySelector(".anchor-container");
+
+	anchor?.addEventListener("click", () => {
+		window.location.reload();
+		console.log("Reloaded");
+	});
+</script>
 
 <style>
 	.anchor-container {

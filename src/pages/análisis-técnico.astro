@@ -2,6 +2,7 @@
 import PageContent from "../components/ui/PageContent.astro";
 import header from "../img/analisis-tecnico.png";
 import { Image } from "astro:assets";
+import { SimpleGallery } from "../components/ui/SimpleGallery/SimpleGallery.jsx";
 import tendencias from "../img/análisis-técnico/tendencias.webp";
 import tendencias1 from "../img/análisis-técnico/tendencias1.png";
 import tendenciaAlcista from "../img/análisis-técnico/tendenciaAlcista.png";
@@ -11,6 +12,84 @@ import tendenciaOtroTipo from "../img/análisis-técnico/tendenciaOtroTipo.png";
 import tendenciaLineas from "../img/análisis-técnico/tendenciaLineas.png";
 import tendenciaCompVenta from "../img/análisis-técnico/tendenciaCompVenta.png";
 import tendenciaMercado from "../img/análisis-técnico/tendenciaMercado.png";
+
+const images = [
+	{
+		id: "1",
+		largeURL: tendencias.src,
+		thumbnailURL: tendencias.src,
+		title: "Tipos de tendencias de mercado",
+		width: 960,
+		height: 540,
+	},
+	{
+		id: "2",
+		largeURL: tendencias1.src,
+		thumbnailURL: tendencias1.src,
+		title: "Movimiento de precios en tendencias",
+		width: 960,
+		height: 540,
+	},
+	{
+		id: "3",
+		largeURL: tendenciaAlcista.src,
+		thumbnailURL: tendenciaAlcista.src,
+		title: "Tendencia alcista",
+		width: 960,
+		height: 540,
+	},
+	{
+		id: "4",
+		largeURL: tendenciaBajista.src,
+		thumbnailURL: tendenciaBajista.src,
+		title: "Tendencia bajista",
+		width: 960,
+		height: 540,
+	},
+	{
+		id: "5",
+		largeURL: tendenciaLateral.src,
+		thumbnailURL: tendenciaLateral.src,
+		title: "Tendencia lateral",
+		width: 960,
+		height: 540,
+	},
+	{
+		id: "6",
+		largeURL: tendenciaOtroTipo.src,
+		thumbnailURL: tendenciaOtroTipo.src,
+		title: "Otros tipos de tendencias",
+		width: 960,
+		height: 540,
+	},
+	{
+		id: "7",
+		largeURL: tendenciaLineas.src,
+		thumbnailURL: tendenciaLineas.src,
+		title: "Máximos y mínimos en tendencias",
+		width: 960,
+		height: 540,
+	},
+	{
+		id: "8",
+		largeURL: tendenciaCompVenta.src,
+		thumbnailURL: tendenciaCompVenta.src,
+		title: "Tendencia de mercado",
+		width: 960,
+		height: 540,
+	},
+	{
+		id: "9",
+		largeURL: tendenciaMercado.src,
+		thumbnailURL: tendenciaMercado.src,
+		title: "Tendencia de mercado",
+		width: 960,
+		height: 540,
+	},
+];
+const selectingImage = (id: any) => {
+	return images.filter((image) => image.id === id);
+};
 ---
 
 <PageContent title="Análisis Técnico" headerImage={header}>
@@ -112,15 +191,38 @@ import tendenciaMercado from "../img/análisis-técnico/tendenciaMercado.png";
 			información disponible.
 		</li>
 		<li>
-			<strong>El mercado tiene tres tendencias</strong>: primaria (largo
-			plazo), secundaria (mediano plazo) y menor (corto plazo). Cada una
-			de estas tendencias se comporta como olas dentro de una marea más
-			grande.
+			<h3>El mercado tiene tres tipos de tendencias:</h3>
+			<ul>
+				<li>
+					<strong>Tendencia Primaria:</strong> Esta es la tendencia de
+					largo plazo que puede durar varios años. Representa la dirección
+					general del mercado y es la más significativa en términos de
+					impacto en el comportamiento del mercado.
+				</li>
+				<li>
+					<strong>Tendencia Secundaria:</strong> También conocida como
+					tendencia intermedia, tiene una duración de semanas a meses.
+					Esta tendencia se desarrolla dentro de la tendencia primaria
+					y puede representar correcciones o movimientos de consolidación.
+				</li>
+				<li>
+					<strong>Tendencia Menor:</strong> Esta es la tendencia de corto
+					plazo que puede durar desde unos días hasta algunas semanas.
+					Las tendencias menores son más volátiles y pueden fluctuar dentro
+					de las tendencias secundaria y primaria.
+				</li>
+			</ul>
+			Cada una de estas tendencias opera como olas dentro de una marea más
+			grande, con la tendencia primaria proporcionando el contexto general,
+			mientras que las tendencias secundaria y menor representan movimientos
+			dentro de ese marco más amplio.
 		</li>
-		<Image
-			src={tendencias}
-			class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
-			alt="Teoría de Dow"
+
+		<SimpleGallery
+			client:load
+			galleryID="myGallery"
+			title
+			images={selectingImage("1")}
 		/>
 		<li>
 			<strong>La tendencia principal tiene tres fases</strong>:
@@ -201,10 +303,12 @@ import tendenciaMercado from "../img/análisis-técnico/tendenciaMercado.png";
 					tendencia. En la siguiente imagen mostramos de una manera
 					simple este concepto:
 				</p>
-				<Image
-					src={tendencias1}
-					class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
-					alt="Teoría de Dow"
+
+				<SimpleGallery
+					client:load
+					galleryID="myGallery"
+					title
+					images={selectingImage("2")}
 				/>
 				<p>
 					El análisis de tendencias de mercado es imprescindible en
@@ -265,11 +369,13 @@ import tendenciaMercado from "../img/análisis-técnico/tendenciaMercado.png";
 					</li>
 				</ol>
 				<p>Veamos un ejemplo de tendencia alcista en Forex:</p>
-				<Image
-					src={tendenciaAlcista}
-					class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
-					alt="Teoría de Dow"
+				<SimpleGallery
+					client:load
+					galleryID="myGallery"
+					title
+					images={selectingImage("3")}
 				/>
+
 				<h3>Tendencia Bajista o 'Bear market'</h3>
 				<p>
 					La <strong> tendencia bajista o bear market</strong> se refiere
@@ -301,10 +407,12 @@ import tendenciaMercado from "../img/análisis-técnico/tendenciaMercado.png";
 					</li>
 				</ol>
 				<p>Veamos un ejemplo de tendencia bajista en Forex:</p>
-				<Image
-					src={tendenciaBajista}
-					class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
-					alt="Teoría de Dow"
+
+				<SimpleGallery
+					client:load
+					galleryID="myGallery"
+					title
+					images={selectingImage("4")}
 				/>
 			</ul>
 			<h3>Tendencia Lateral o Mercado sin tendencia</h3>
@@ -316,10 +424,12 @@ import tendenciaMercado from "../img/análisis-técnico/tendenciaMercado.png";
 				> , sin que haya grandes variaciones durante un periodo determinado
 				de tiempo.
 			</p>
-			<Image
-				src={tendenciaLateral}
-				class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
-				alt="Teoría de Dow"
+
+			<SimpleGallery
+				client:load
+				galleryID="myGallery"
+				title
+				images={selectingImage("5")}
 			/>
 			<p>
 				Durante un mercado lateral no se suelen lograr grandes
@@ -354,10 +464,12 @@ import tendenciaMercado from "../img/análisis-técnico/tendenciaMercado.png";
 					<strong>Tendencia inmediata o de corto plazo </strong>:
 					Menos de tres semanas.
 				</li>
-				<Image
-					src={tendenciaOtroTipo}
-					class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
-					alt="Teoría de Dow"
+
+				<SimpleGallery
+					client:load
+					galleryID="myGallery"
+					title
+					images={selectingImage("6")}
 				/>
 			</ol>
 			<p>
@@ -398,10 +510,12 @@ import tendenciaMercado from "../img/análisis-técnico/tendenciaMercado.png";
 				los mínimos:
 			</p>
 		</ol>
-		<Image
-			src={tendenciaLineas}
-			class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
-			alt="Teoría de Dow"
+
+		<SimpleGallery
+			client:load
+			galleryID="myGallery"
+			title
+			images={selectingImage("7")}
 		/>
 		<p>
 			¿Cómo podemos detectar un cambio de tendencia? Una vez que hemos
@@ -451,10 +565,11 @@ import tendenciaMercado from "../img/análisis-técnico/tendenciaMercado.png";
 			Vamos a verlo con un ejemplo práctico muy sencillo en una tendencia
 			alcista:
 		</p>
-		<Image
-			src={tendenciaCompVenta}
-			class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
-			alt="Teoría de Dow"
+		<SimpleGallery
+			client:load
+			galleryID="myGallery"
+			title
+			images={selectingImage("8")}
 		/>
 		<h3>Tendencias del mercado - Trading Contratendencia</h3>
 		<p>
@@ -475,10 +590,11 @@ import tendenciaMercado from "../img/análisis-técnico/tendenciaMercado.png";
 			>. En el siguiente ejemplo podemos hacernos una idea de cómo
 			funciona la operativa y de lo arriesgada que puede llegar a ser.
 		</p>
-		<Image
-			src={tendenciaMercado}
-			class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
-			alt="Teoría de Dow"
+		<SimpleGallery
+			client:load
+			galleryID="myGallery"
+			title
+			images={selectingImage("9")}
 		/>
 		<p>
 			En la imagen superior vemos los posibles puntos de venta cuando el
@@ -496,11 +612,10 @@ import tendenciaMercado from "../img/análisis-técnico/tendenciaMercado.png";
 			>
 		</strong>. O descubre que son los
 		<strong>
-			<a href="análisis-técnico/gaps-y-velas-japonesas"
-				>Gaps y Velas Japonesas</a
-			>.
-		</strong>
-		para seguir profundizando en el análisis técnico.
+			<a href="análisis-técnico/gráficos-gaps-velas-japonesas-volumen"
+				>Gráficos, Gaps, Velas Japonesas y Volumen</a
+			>
+		</strong>. para seguir profundizando en el análisis técnico.
 	</p>
 
 	<h3>Conclusión</h3>

@@ -1,0 +1,332 @@
+---
+import PageContent from "../../components/ui/PageContent.astro";
+import header from "../../img/analisis-tecnico.png";
+import { SimpleGallery } from "@components/ui/SimpleGallery/SimpleGallery";
+import lineas from "../../img/análisis-técnico/lineas.png";
+import barras from "../../img/análisis-técnico/barras.png";
+import velas2 from "../../img/análisis-técnico/velas2.png";
+import gap from "../../img/análisis-técnico/gap.png";
+import mensual from "../../img/análisis-técnico/mensual.png";
+import semanal from "../../img/análisis-técnico/semanal.png";
+import diario from "../../img/análisis-técnico/diario.png";
+import velas from "../../img/análisis-técnico/velas.png";
+import volumen from "../../img/análisis-técnico/volumen.png";
+
+const images = [
+	{
+		id: "1",
+		largeURL: lineas.src,
+		thumbnailURL: lineas.src,
+		title: "Gráfico de Líneas",
+		width: 960,
+		height: 540,
+	},
+	{
+		id: "2",
+		largeURL: barras.src,
+		thumbnailURL: barras.src,
+		title: "Gráfico de Barras",
+		width: 960,
+		height: 540,
+	},
+	{
+		id: "3",
+		largeURL: velas2.src,
+		thumbnailURL: velas2.src,
+		title: "Gráfico de Velas Japonesas",
+		width: 960,
+		height: 540,
+	},
+	{
+		id: "4",
+		largeURL: gap.src,
+		thumbnailURL: gap.src,
+		title: "Gaps en el Análisis Técnico",
+		width: 960,
+		height: 540,
+	},
+	{
+		id: "5",
+		largeURL: mensual.src,
+		thumbnailURL: mensual.src,
+		title: "Compresión Mensual",
+		width: 960,
+		height: 540,
+	},
+	{
+		id: "6",
+		largeURL: semanal.src,
+		thumbnailURL: semanal.src,
+		title: "Compresión Semanal",
+		width: 960,
+		height: 540,
+	},
+	{
+		id: "7",
+		largeURL: diario.src,
+		thumbnailURL: diario.src,
+		title: "Compresión Diaria",
+		width: 960,
+		height: 540,
+	},
+	{
+		id: "8",
+		largeURL: velas.src,
+		thumbnailURL: velas.src,
+		title: "Velas Japonesas",
+		width: 960,
+		height: 540,
+	},
+	{
+		id: "9",
+		largeURL: volumen.src,
+		thumbnailURL: volumen.src,
+		title: "Volumen",
+		width: 960,
+		height: 540,
+	},
+];
+const selectingImage = (id: any) => {
+	return images.filter((image) => image.id === id);
+};
+---
+
+<PageContent
+	title="Gráficos, Gaps, Velas Japonesas y Volumen"
+	headerImage={header}>
+	<h2>Tipos de Gráficos</h2>
+
+	<h3>Gráfico de Líneas</h3>
+	<p>
+		Utiliza solo los precios de cierre, ya que se considera el más
+		relevante. La desventaja es que no muestra la información del precio
+		durante el día.
+	</p>
+	<SimpleGallery
+		client:load
+		galleryID="myGallery"
+		title
+		images={selectingImage("1")}
+	/>
+
+	<h3>Gráfico de Barras</h3>
+	<p>
+		Muestra el precio de apertura, el máximo, el mínimo y el precio de
+		cierre. Esto proporciona una visión completa de la acción durante el
+		día.
+	</p>
+	<SimpleGallery
+		client:load
+		galleryID="myGallery"
+		title
+		images={selectingImage("2")}
+	/>
+
+	<h3>Gráfico de Velas Japonesas</h3>
+	<p>
+		Es una extensión del gráfico de barras que ofrece más claridad en la
+		exposición. Las velas proporcionan múltiples señales para operar.
+	</p>
+	<SimpleGallery
+		client:load
+		galleryID="myGallery"
+		title
+		images={selectingImage("3")}
+	/>
+
+	<h2>Gaps en el Análisis Técnico</h2>
+	<h3>¿Cómo interpretar los GAPS?</h3>
+	<p>
+		Los gaps alcistas, que aparecen en la parte superior del gráfico,
+		indican fuerza en el mercado, es decir, una tendencia alcista. Los gaps
+		bajistas, en la parte inferior, indican debilidad en el mercado, o una
+		tendencia bajista.
+	</p>
+	<p>
+		Los gaps pueden aparecer en cualquier timeframe, pero son más
+		significativos en gráficos de largo plazo como los semanales o
+		mensuales. Sin embargo, son más comunes en gráficos de temporalidad
+		diaria.
+	</p>
+	<SimpleGallery
+		client:load
+		galleryID="myGallery"
+		title
+		images={selectingImage("4")}
+	/>
+
+	<h3>Tipos de GAPS</h3>
+	<p>Existen tres tipos de gaps bien diferenciados:</p>
+	<ul>
+		<li>
+			<strong>Gap de Separación (Breakaway)</strong>: Aparece al inicio de
+			una nueva tendencia, indicando la ruptura de un rango previo y el
+			comienzo de una tendencia fuerte.
+		</li>
+		<li>
+			<strong>Gap de Escape o de Medida (Runaway)</strong>: Se produce
+			durante una tendencia en curso, confirmando la continuación de la
+			tendencia.
+		</li>
+		<li>
+			<strong>Gap de Agotamiento (Exhaustion)</strong>: Aparece al final
+			de una tendencia, señalando que la tendencia actual está cerca de su
+			fin.
+		</li>
+	</ul>
+
+	<h2>Compresión Temporal</h2>
+
+	<h3>Compresión Mensual</h3>
+	<p>
+		Vemos el comportamiento (suavizado) de muy largo plazo; es útil para
+		detectar la tendencia de fondo.
+	</p>
+	<SimpleGallery
+		client:load
+		galleryID="myGallery"
+		title
+		images={selectingImage("5")}
+	/>
+
+	<h3>Compresión Semanal</h3>
+	<p>
+		Permite detectar la tendencia de mediano y largo plazo. Es ideal para
+		obtener una visión general de la tendencia.
+	</p>
+	<SimpleGallery
+		client:load
+		galleryID="myGallery"
+		title
+		images={selectingImage("6")}
+	/>
+
+	<h3>Compresión Diaria</h3>
+	<p>
+		Utilizada para detectar tendencias de corto plazo. Permite analizar el
+		comportamiento más detallado de los precios.
+	</p>
+	<SimpleGallery
+		client:load
+		galleryID="myGallery"
+		title
+		images={selectingImage("7")}
+	/>
+
+	<h3>Velas Japonesas</h3>
+
+	<strong>¿Qué es el gráfico de velas?</strong>
+	<p>
+		El gráfico de velas nos brinda información sobre la situación del
+		mercado a través de precios de apertura, máximo, mínimo y cierre. Es uno
+		de los más utilizados debido a su claridad gráfica y la facilidad con la
+		que se pueden interpretar los patrones una vez comprendidos.
+	</p>
+
+	<h3>Estructura de las Velas Japonesas</h3>
+	<ul>
+		<li>
+			Las velas tienen una forma similar a una vela real, con un cuerpo y
+			una mecha (pabilo).
+		</li>
+		<li>
+			El cuerpo de la vela representa la diferencia entre el precio de
+			apertura y cierre. Si el precio de cierre es mayor que el de
+			apertura, el cuerpo suele ser verde (aunque en algunos gráficos
+			puede aparecer como blanco o vacío). Si el precio de cierre es menor
+			que el de apertura, el cuerpo es rojo o negro.
+		</li>
+		<li>
+			Las sombras, o mechas, representan los precios máximo y mínimo
+			alcanzados durante el período analizado.
+		</li>
+	</ul>
+	<SimpleGallery
+		client:load
+		galleryID="myGallery"
+		title
+		images={selectingImage("8")}
+	/>
+
+	<h3>Patrones de Velas Básicos</h3>
+	<p>
+		Los patrones de velas son combinaciones de cuerpos y sombras que tienen
+		significados específicos. Algunos patrones básicos incluyen:
+	</p>
+	<ul>
+		<li>
+			<strong>Días largos</strong>: cuando hay una gran diferencia entre
+			el precio de apertura y cierre.
+
+			<li>
+				<strong>Perinolas</strong>: velas con cuerpos cortos y sombras
+				largas, indicando indecisión en el mercado.
+
+				<li>
+					<strong>Doji</strong>: cuando el precio de apertura y cierre
+					son iguales o muy cercanos, lo que también indica
+					indecisión.
+				</li>
+
+				<h3>Diferentes Tipos de Doji</h3>
+				<ul>
+					<li>
+						<strong>Doji Perinola</strong>: tiene sombras superiores
+						e inferiores largas, indicando indecisión.
+					</li>
+					<li>
+						<strong>Doji Lápida</strong>: con una larga sombra
+						superior y sin sombra inferior, lo que suele
+						interpretarse como bajista.
+					</li>
+					<li>
+						<strong>Doji Libélula</strong>: con una larga sombra
+						inferior y sin sombra superior, generalmente considerada
+						alcista.
+					</li>
+				</ul>
+
+				<h3>Análisis de Patrones de Velas</h3>
+				<p>
+					El análisis de patrones de velas es una herramienta esencial
+					en la toma de decisiones de inversión, ya que nos muestra la
+					psicología de los participantes del mercado. Es importante
+					utilizar este análisis en conjunto con otros indicadores
+					técnicos para obtener mejores resultados.
+				</p>
+
+				<h3>Automatización de Patrones de Velas</h3>
+				<p>
+					Es posible automatizar la identificación de patrones de
+					velas en herramientas como <strong>
+						<a
+							href="https://es.investing.com/technical/candlestick-patterns"
+							target="_blank"
+							rel="noopener noreferrer">Investing.com</a
+						></strong
+					>, lo que facilita el seguimiento de los activos en nuestra
+					cartera personal.
+				</p>
+			</li>
+		</li>
+	</ul>
+	<h2>Volumen</h2>
+	<p>
+		El volumen debe acompañar la tendencia para que esta continúe. En una
+		tendencia alcista, el volumen debe aumentar con cada nuevo máximo, y en
+		una tendencia bajista, el volumen debe aumentar con cada nuevo mínimo.
+	</p>
+	<SimpleGallery
+		client:load
+		galleryID="myGallery"
+		title
+		images={selectingImage("9")}
+	/>
+
+	<h3>Convergencia y Divergencia de Volumen</h3>
+	<p>
+		La convergencia de volumen indica que la tendencia tiene fuerza y puede
+		continuar. La divergencia de volumen sugiere que una tendencia podría
+		estar agotándose y que podría haber un cambio de tendencia.
+	</p>
+</PageContent>

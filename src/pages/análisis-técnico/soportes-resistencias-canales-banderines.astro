@@ -8,6 +8,63 @@ import canales from "../../img/análisis-técnico/canales.webp";
 import hch from "../../img/análisis-técnico/hch.png";
 import hchInvertido from "../../img/análisis-técnico/hchInvertido.png";
 import banderin from "../../img/análisis-técnico/banderin.png";
+import { SimpleGallery } from "../../components/ui/SimpleGallery/SimpleGallery.jsx";
+
+const images = [
+	{
+		id: "1",
+		largeURL: soportesResistenciasFijos.src,
+		thumbnailURL: soportesResistenciasFijos.src,
+		title: "Soportes y Resistencias Fijos - gráfico",
+		width: 960,
+		height: 540,
+	},
+	{
+		id: "2",
+		largeURL: soportesResistenciasDinámicos.src,
+		thumbnailURL: soportesResistenciasDinámicos.src,
+		title: "Soportes y Resistencias Dinámicos - gráfico",
+		width: 960,
+		height: 540,
+	},
+	{
+		id: "3",
+		largeURL: canales.src,
+		thumbnailURL: canales.src,
+		title: "Canales - gráfico",
+		width: 960,
+		height: 540,
+	},
+	{
+		id: "4",
+		largeURL: hch.src,
+		thumbnailURL: hch.src,
+		title: "Hombro-Cabeza-Hombro (HCH) - gráfico",
+		width: 960,
+		height: 540,
+	},
+	{
+		id: "5",
+		largeURL: hchInvertido.src,
+		thumbnailURL: hchInvertido.src,
+		title: "Hombro-Cabeza-Hombro Invertido (HCH Invertido) - gráfico",
+		width: 960,
+		height: 540,
+	},
+
+	{
+		id: "6",
+		largeURL: banderin.src,
+		thumbnailURL: banderin.src,
+		title: "Banderín - gráfico",
+		width: 960,
+		height: 540,
+	},
+];
+
+const selectingImage = (id: any) => {
+	return images.filter((image) => image.id === id);
+};
 ---
 
 <PageContent
@@ -56,17 +113,18 @@ import banderin from "../../img/análisis-técnico/banderin.png";
 			el avance del precio.
 		</li>
 	</ul>
-	<h3 class="pt-6">Soportes y Resistencias Fijos - gráfico</h3>
-	<Image
-		src={soportesResistenciasFijos}
-		class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
-		alt="Teoría de Dow"
+	<SimpleGallery
+		client:load
+		galleryID="myGallery"
+		title
+		images={selectingImage("1")}
 	/>
-	<h3 class="pt-6">Soportes y Resistencias Dinámicos - gráfico</h3>
-	<Image
-		src={soportesResistenciasDinámicos}
-		class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
-		alt="Teoría de Dow"
+
+	<SimpleGallery
+		client:load
+		galleryID="myGallery"
+		title
+		images={selectingImage("2")}
 	/>
 
 	<h2>Canales</h2>
@@ -92,11 +150,11 @@ import banderin from "../../img/análisis-técnico/banderin.png";
 			que refleja indecisión en el mercado.
 		</li>
 	</ul>
-	<h3 class="pt-6">Canales - gráfico</h3>
-	<Image
-		src={canales}
-		class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
-		alt="Teoría de Dow"
+	<SimpleGallery
+		client:load
+		galleryID="myGallery"
+		title
+		images={selectingImage("3")}
 	/>
 
 	<h2>Patrones de Cambio de Tendencia</h2>
@@ -111,11 +169,11 @@ import banderin from "../../img/análisis-técnico/banderin.png";
 			alcista y consta de tres picos: el hombro izquierdo, la cabeza (el pico
 			más alto) y el hombro derecho.
 		</li>
-		<h3 class="pt-6">HCH - gráfico</h3>
-		<Image
-			src={hch}
-			class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
-			alt="Teoría de Dow"
+		<SimpleGallery
+			client:load
+			galleryID="myGallery"
+			title
+			images={selectingImage("4")}
 		/>
 		<li>
 			<strong>Hombro-Cabeza-Hombro Invertido (HCH Invertido):</strong> Indica
@@ -123,11 +181,11 @@ import banderin from "../../img/análisis-técnico/banderin.png";
 			de tres picos, pero en este caso, invertidos.
 		</li>
 	</ul>
-	<h3 class="pt-6">HCH Invertido - gráfico</h3>
-	<Image
-		src={hchInvertido}
-		class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
-		alt="Teoría de Dow"
+	<SimpleGallery
+		client:load
+		galleryID="myGallery"
+		title
+		images={selectingImage("5")}
 	/>
 
 	<h2>Patrones de Continuidad</h2>
@@ -142,12 +200,12 @@ import banderin from "../../img/análisis-técnico/banderin.png";
 			tendencia. Tiene la forma de un pequeño triángulo simétrico, donde el
 			precio se comprime antes de romper en la dirección de la tendencia original.
 		</li>
-		<h3 class="pt-6">Banderín - gráfico</h3>
-		<Image
-			src={banderin}
-			class="w-full rounded-md overflow-hidden shadow-xl border-0 mb-6"
-			alt="Teoría de Dow"
+
+		<SimpleGallery
+			client:load
+			galleryID="myGallery"
+			title
+			images={selectingImage("6")}
 		/>
 	</ul>
 </PageContent>
-

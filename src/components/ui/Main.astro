@@ -1,11 +1,12 @@
 ---
+import Layout from "@layouts/Layout.astro";
 import Flap from "./Flap.astro";
 import Introduction from "./Introduction.astro";
-import Menu from "./Menu.astro";
 ---
 
-<section class="h-[100vh] relative">
-	<Introduction />
-	<Flap />
-	<Menu />
-</section>
+<Layout title="Invertir360 - Guía Completa de Inversiones en Argentina">
+	<section class="h-[100vh] relative">
+		<Introduction />
+		<Flap />
+	</section>
+</Layout>

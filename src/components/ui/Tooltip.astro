@@ -29,15 +29,6 @@ const { href, name, info } = Astro.props;
 	</div>
 </a>
 
-<script>
-	const anchor = document.querySelector(".anchor-container");
-
-	anchor?.addEventListener("click", () => {
-		window.location.reload();
-		console.log("Reloaded");
-	});
-</script>
-
 <style>
 	.anchor-container {
 		width: 100%;
@@ -70,8 +61,8 @@ const { href, name, info } = Astro.props;
 		padding: 0 1rem;
 		opacity: 0;
 		transition:
-			opacity 0.3s ease,
-			visibility 0.3s ease;
+			opacity 0.5s ease,
+			visibility 0.5s ease;
 		/* color: var(--darkblue); */
 		font-weight: 600;
 		visibility: hidden;
@@ -86,12 +77,11 @@ const { href, name, info } = Astro.props;
 
 		opacity: 1;
 		-webkit-transition:
-			opacity 0.3s ease,
-			visibility 0.3s ease;
+			opacity 0.5s ease,
+			visibility 0.5s ease;
 		transition:
-			opacity 0.3s ease,
-			visibility 0.3s ease;
-		/* color: var(--darkblue); */
+			opacity 0.5s ease,
+			visibility 0.5s ease;
 		font-weight: 600;
 		visibility: visible;
 		pointer-events: none;
@@ -101,15 +91,15 @@ const { href, name, info } = Astro.props;
 		bottom: -7.5px;
 		left: 5%;
 		content: "";
-		background: rgba(0, 102, 204, 0.25);
+		background: rgba(0, 102, 204, 0.5);
 
 		height: 1px;
 		position: absolute;
-		transition: width 0.4s;
+		transition: width 0.5s ease;
 	}
 	.anchor-container .hint:hover .content::before {
 		width: 275px;
-		transition: width 0.4s;
+		transition: width 0.5s;
 	}
 	.anchor-container .content::after {
 		-webkit-transform-origin: 0 50%;
@@ -118,9 +108,9 @@ const { href, name, info } = Astro.props;
 		transform: rotate(-225deg);
 		bottom: -7.5px;
 		left: 5%;
-		width: 80px;
+		width: 75px;
 		content: "";
-		background: rgba(0, 102, 204, 0.25);
+		background: rgba(0, 102, 204, 0.5);
 
 		height: 1px;
 		position: absolute;
@@ -130,6 +120,7 @@ const { href, name, info } = Astro.props;
 		-webkit-transition-delay: 0s;
 		transition-delay: 0s;
 	}
+
 	.anchor-container .hint:hover .content::after {
 		opacity: 1;
 		visibility: visible;

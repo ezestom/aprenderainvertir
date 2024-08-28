@@ -34,7 +34,7 @@ export function SimpleGallery(props) {
 						<img
 							src={image.thumbnailURL}
 							alt={image.title || `Image ${index + 1}`}
-							className="rounded-sm"
+							className="rounded-sm aspect-video object-cover"
 						/>
 					</div>
 				</a>

@@ -1,9 +1,8 @@
 ---
 import PageContent from "../components/ui/PageContent.astro";
 import header from "../img/analisis-tecnico.png";
-import { Image } from "astro:assets";
 import { SimpleGallery } from "../components/ui/SimpleGallery/SimpleGallery.jsx";
-import tendencias from "../img/análisis-técnico/tendencias.webp";
+import tendencias from "../img/análisis-técnico/tendencias-shots.png";
 import tendencias1 from "../img/análisis-técnico/tendencias1.png";
 import tendenciaAlcista from "../img/análisis-técnico/tendenciaAlcista.png";
 import tendenciaBajista from "../img/análisis-técnico/tendenciaBajista.png";
@@ -12,6 +11,7 @@ import tendenciaOtroTipo from "../img/análisis-técnico/tendenciaOtroTipo.png";
 import tendenciaLineas from "../img/análisis-técnico/tendenciaLineas.png";
 import tendenciaCompVenta from "../img/análisis-técnico/tendenciaCompVenta.png";
 import tendenciaMercado from "../img/análisis-técnico/tendenciaMercado.png";
+import NormalVideo from "../components/ui/NormalVideo.astro";
 
 const images = [
 	{
@@ -20,7 +20,7 @@ const images = [
 		thumbnailURL: tendencias.src,
 		title: "Tipos de tendencias de mercado",
 		width: 960,
-		height: 540,
+		height: 720,
 	},
 	{
 		id: "2",
@@ -137,6 +137,12 @@ const selectingImage = (id: any) => {
 		a largo plazo, mientras que el análisis técnico puede optimizar el momento
 		de compra o venta.
 	</p>
+	<NormalVideo
+		videoid="myg3QTgI3Sc"
+		title={"🦈 Memorias de Tiburón"}
+		description={"✅ Análisis TÉCNICO Vs Análisis FUNDAMENTAL Vs Análisis MACRO | ¿Cuál es mejor?"}
+	/>
+
 	<ul>
 		<li>
 			<strong>Análisis Fundamental</strong>:
@@ -605,28 +611,31 @@ const selectingImage = (id: any) => {
 	</ol>
 	<p>
 		Sigue <strong>ampliando tu conocimiento</strong> sobre las tendencias del
-		mercado explorando temas como.
+		mercado explorando temas como:
 		<strong>
-			<a href="análisis-técnico/soportes-resistencias-canales-banderines"
-				>Soportes, resistencias, canales y banderines</a
+			<a href="análisis-técnico/soportes-resistencias-canales"
+				>Soportes, resistencias y canales</a
 			>
 		</strong>. O descubre que son los
 		<strong>
 			<a href="análisis-técnico/gráficos-gaps-velas-japonesas-volumen"
 				>Gráficos, Gaps, Velas Japonesas y Volumen</a
 			>
-		</strong>. para seguir profundizando en el análisis técnico.
+		</strong>, para seguir profundizando en el análisis técnico.
 	</p>
 
 	<h3>Conclusión</h3>
 	<p>
 		El Análisis Técnico es una herramienta valiosa para los inversores que
-		buscan comprender y predecir los movimientos del mercado. Al estudiar
-		los gráficos y patrones de precios, los analistas técnicos pueden
-		identificar oportunidades de inversión y tomar decisiones informadas
-		basadas en datos históricos. Combinado con el Análisis Fundamental, el
-		Análisis Técnico puede proporcionar una visión completa del mercado y
-		ayudar a los inversores a maximizar sus ganancias y minimizar sus
-		riesgos.
+		buscan comprender y predecir los movimientos del mercado. Al <strong>
+			estudiar los gráficos y <a
+				href="análisis-técnico/patrones-técnicos">
+				patrones técnicos
+			</a>
+		</strong>, los analistas técnicos pueden identificar oportunidades de
+		inversión y tomar decisiones informadas basadas en datos históricos.
+		Combinado con el Análisis Fundamental, el Análisis Técnico puede
+		proporcionar una visión completa del mercado y ayudar a los inversores a
+		maximizar sus ganancias y minimizar sus riesgos.
 	</p>
 </PageContent>

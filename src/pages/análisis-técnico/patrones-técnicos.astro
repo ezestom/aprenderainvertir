@@ -1,0 +1,163 @@
+---
+import PageContent from "../../components/ui/PageContent.astro";
+import header from "../../img/analisis-tecnico.png";
+import { SimpleGallery } from "@components/ui/SimpleGallery/SimpleGallery";
+import patrones from "../../img/análisis-técnico/patrones.jpg";
+
+const images = [
+	{
+		id: "1",
+		largeURL: patrones.src,
+		thumbnailURL: patrones.src,
+		title: "Ejemplos de Patrones Técnicos",
+		width: 960,
+		height: 960,
+	},
+	// {
+	// 	id: "2",
+	// 	largeURL: hch.src,
+	// 	thumbnailURL: hch.src,
+	// 	title: "Hombro-Cabeza-Hombro (HCH) - gráfico",
+	// 	width: 960,
+	// 	height: 540,
+	// },
+	// {
+	// 	id: "3",
+	// 	largeURL: hchInvertido.src,
+	// 	thumbnailURL: hchInvertido.src,
+	// 	title: "Hombro-Cabeza-Hombro Invertido (HCH Invertido) - gráfico",
+	// 	width: 960,
+	// 	height: 540,
+	// },
+	// {
+	// 	id: "4",
+	// 	largeURL: banderin.src,
+	// 	thumbnailURL: banderin.src,
+	// 	title: "Banderín - gráfico",
+	// 	width: 960,
+	// 	height: 540,
+	// },
+];
+const selectingImage = (id: any) => {
+	return images.filter((image) => image.id === id);
+};
+---
+
+<PageContent title="Patrones Técnicos" headerImage={header}>
+	<h2>Introducción a los Patrones Técnicos</h2>
+	<p>
+		<strong>El mercado y las tendencias:</strong> En el análisis técnico, entender
+		las tendencias del mercado es fundamental. Las tendencias pueden ser alcistas,
+		bajistas o laterales. Un mercado alcista está en constante subida, mientras
+		que un mercado bajista está en descenso. Los mercados laterales muestran
+		una ausencia de dirección clara. Los períodos de transición entre estas fases
+		son cruciales para identificar posibles cambios en la dirección del precio.
+	</p>
+	<p>
+		<strong>Transición y Patrones Técnicos:</strong> Los períodos de transición
+		son momentos clave donde los patrones técnicos pueden formarse. Estos patrones
+		pueden ser de continuación, indicando que la tendencia actual seguirá, o
+		de reversión, sugiriendo un cambio en la dirección de la tendencia.
+	</p>
+	<SimpleGallery
+		client:load
+		galleryID="myGallery"
+		title
+		images={selectingImage("1")}
+	/>
+
+	<h3>Patrones de Reversión</h3>
+	<p>
+		<strong>Definición y Objetivo:</strong> Los patrones de reversión indican
+		que una tendencia existente está a punto de cambiar de dirección. Son útiles
+		para anticipar cambios importantes en el mercado.
+	</p>
+	<p>
+		<strong>Hombro Cabeza Hombro (HCH):</strong> El patrón HCH es una señal de
+		cambio de una tendencia alcista a una bajista. Se forma tras una tendencia
+		alcista y consta de tres picos: el hombro izquierdo, la cabeza (el pico más
+		alto) y el hombro derecho. La línea de cuello, que conecta los mínimos entre
+		los picos, es clave para identificar la ruptura. El objetivo mínimo del patrón
+		se calcula midiendo la distancia desde la línea de cuello hasta el pico más
+		alto y proyectando esta distancia hacia abajo desde la línea de cuello.
+	</p>
+	<p>
+		<strong>Hombro Cabeza Hombro Invertido (HCH Invertido):</strong> Este patrón
+		es el opuesto del HCH y sugiere una reversión de una tendencia bajista a
+		una alcista. Se forma con tres valles en lugar de picos. La línea de cuello
+		se dibuja conectando los picos entre los valles, y el objetivo se calcula
+		de manera similar al HCH.
+	</p>
+	<p>
+		<strong>Triple Techo y Triple Piso:</strong> Estos patrones se forman después
+		de una tendencia alcista o bajista y sugieren una reversión. El Triple Techo
+		está compuesto por tres picos en el mismo nivel, mientras que el Triple Piso
+		tiene tres valles en el mismo nivel. La importancia del volumen y la confirmación
+		de la ruptura de la línea de soporte o resistencia son esenciales para validar
+		estos patrones.
+	</p>
+	<p>
+		<strong>Doble Techo y Doble Piso:</strong> El Doble Techo se forma con dos
+		picos consecutivos en el mismo nivel, mientras que el Doble Piso tiene dos
+		valles en el mismo nivel. Ambos patrones indican una posible reversión. La
+		ruptura de la línea de soporte o resistencia, y el volumen asociado, son
+		factores clave para confirmar el patrón.
+	</p>
+
+	<h3>Patrones de Continuación</h3>
+	<p>
+		<strong>Definición y Objetivo:</strong> Los patrones de continuación sugieren
+		que una tendencia existente continuará tras una breve consolidación o pausa.
+		Son útiles para confirmar la dirección de la tendencia actual.
+	</p>
+	<p>
+		<strong>Banderas y Banderines:</strong> Ambos son patrones de consolidación
+		que se forman después de un movimiento fuerte. El banderín es un pequeño
+		triángulo simétrico que se forma con líneas de tendencia convergentes, mientras
+		que la bandera tiene forma de rectángulo y está inclinada en la dirección
+		opuesta a la tendencia previa. Ambos patrones indican que la tendencia continuará
+		en la misma dirección después de una breve consolidación.
+	</p>
+	<p>
+		<strong>Triángulos:</strong> Los triángulos pueden ser simétricos, ascendentes
+		o descendentes. Un triángulo simétrico se forma con líneas de tendencia convergentes,
+		mientras que un triángulo ascendente tiene una línea de resistencia horizontal
+		y una línea de soporte ascendente. Un triángulo descendente tiene una línea
+		de soporte horizontal y una línea de resistencia descendente. Cada tipo de
+		triángulo tiene implicaciones diferentes sobre la dirección de la ruptura
+		y la continuidad de la tendencia.
+	</p>
+	<p>
+		<strong>Cuñas:</strong> Las cuñas son patrones de consolidación que se forman
+		cuando el precio se mueve dentro de dos líneas convergentes. Una cuña ascendente
+		se forma en una tendencia alcista y sugiere una posible reversión bajista,
+		mientras que una cuña descendente se forma en una tendencia bajista y sugiere
+		una posible reversión alcista. La confirmación se basa en la ruptura de la
+		línea de soporte o resistencia de la cuña.
+	</p>
+
+	<h3>Características Generales de los Patrones</h3>
+	<p>
+		<strong>Comparación entre Banderas, Cuñas y Banderines:</strong> Los patrones
+		de banderas y banderines son similares en que ambos indican una continuación
+		de la tendencia, pero se diferencian en su forma y estructura. Las cuñas,
+		por otro lado, pueden indicar una posible reversión y tienen una estructura
+		de líneas convergentes. La comprensión de estas diferencias es crucial para
+		interpretar correctamente los patrones y tomar decisiones informadas.
+	</p>
+
+	<h3>Consideraciones Importantes</h3>
+	<p>
+		<strong>Tendencia Previa:</strong> La validez de los patrones técnicos suele
+		depender de la existencia de una tendencia previa. Los patrones de reversión
+		requieren una tendencia establecida antes de formarse, mientras que los patrones
+		de continuación se producen en medio de una tendencia existente.
+	</p>
+	<p>
+		<strong>Duración de los Patrones:</strong> Los patrones pueden variar en
+		duración. Los patrones de corto plazo suelen formarse en un marco temporal
+		menor y se resuelven rápidamente, mientras que los patrones de largo plazo
+		se forman en marcos temporales mayores y pueden tardar más en desarrollarse
+		y confirmar su validez.
+	</p>
+</PageContent>

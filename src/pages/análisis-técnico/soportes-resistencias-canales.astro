@@ -35,31 +35,6 @@ const images = [
 		width: 960,
 		height: 540,
 	},
-	{
-		id: "4",
-		largeURL: hch.src,
-		thumbnailURL: hch.src,
-		title: "Hombro-Cabeza-Hombro (HCH) - gráfico",
-		width: 960,
-		height: 540,
-	},
-	{
-		id: "5",
-		largeURL: hchInvertido.src,
-		thumbnailURL: hchInvertido.src,
-		title: "Hombro-Cabeza-Hombro Invertido (HCH Invertido) - gráfico",
-		width: 960,
-		height: 540,
-	},
-
-	{
-		id: "6",
-		largeURL: banderin.src,
-		thumbnailURL: banderin.src,
-		title: "Banderín - gráfico",
-		width: 960,
-		height: 540,
-	},
 ];
 
 const selectingImage = (id: any) => {
@@ -67,9 +42,7 @@ const selectingImage = (id: any) => {
 };
 ---
 
-<PageContent
-	title="Soportes, Resistencias, Canales y Banderines"
-	headerImage={header}>
+<PageContent title="Soportes, Resistencias y Canales" headerImage={header}>
 	<h2>Soportes y Resistencias</h2>
 	<p>
 		En el análisis técnico, los soportes y resistencias son niveles
@@ -156,56 +129,12 @@ const selectingImage = (id: any) => {
 		title
 		images={selectingImage("3")}
 	/>
-
-	<h2>Patrones de Cambio de Tendencia</h2>
+	<h3>Conclusión</h3>
 	<p>
-		Los patrones de cambio de tendencia señalan una posible reversión en la
-		dirección del precio. Los más conocidos son:
+		El análisis de soportes, resistencias y canales es fundamental para
+		identificar niveles clave en el gráfico y anticipar posibles movimientos
+		del precio. Estos conceptos permiten a los traders tomar decisiones
+		informadas y gestionar el riesgo de manera efectiva en los mercados
+		financieros.
 	</p>
-	<ul>
-		<li>
-			<strong>Hombro-Cabeza-Hombro (HCH):</strong> Este patrón sugiere un cambio
-			de tendencia de alcista a bajista. Se forma después de una tendencia
-			alcista y consta de tres picos: el hombro izquierdo, la cabeza (el pico
-			más alto) y el hombro derecho.
-		</li>
-		<SimpleGallery
-			client:load
-			galleryID="myGallery"
-			title
-			images={selectingImage("4")}
-		/>
-		<li>
-			<strong>Hombro-Cabeza-Hombro Invertido (HCH Invertido):</strong> Indica
-			un cambio de tendencia de bajista a alcista. Al igual que el HCH, consta
-			de tres picos, pero en este caso, invertidos.
-		</li>
-	</ul>
-	<SimpleGallery
-		client:load
-		galleryID="myGallery"
-		title
-		images={selectingImage("5")}
-	/>
-
-	<h2>Patrones de Continuidad</h2>
-	<p>
-		Los patrones de continuidad sugieren que la tendencia actual continuará
-		después de una breve pausa o consolidación:
-	</p>
-	<ul>
-		<li>
-			<strong>Banderín:</strong> Es un patrón de consolidación que se forma
-			tras un movimiento fuerte (impulso) y precede a la continuación de la
-			tendencia. Tiene la forma de un pequeño triángulo simétrico, donde el
-			precio se comprime antes de romper en la dirección de la tendencia original.
-		</li>
-
-		<SimpleGallery
-			client:load
-			galleryID="myGallery"
-			title
-			images={selectingImage("6")}
-		/>
-	</ul>
 </PageContent>

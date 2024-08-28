@@ -42,10 +42,10 @@ export function Breadcrumbs() {
 	}, []);
 
 	return (
-		<article className="fixed top-0 mx-auto right-0 left-0 w-fit ">
+		<article className="fixed top-0 mx-auto right-0 left-0 w-fit z-50   ">
 			<nav
 				id="breadcrumbs"
-				className=" flex top-0 w-full m-auto inset-0  text-xs md:text-sm font-bold py-2 px-4 backdrop-blur rounded-md rounded-t-none "
+				className=" flex top-0 w-full m-auto inset-0  text-xs md:text-sm font-bold py-2 px-4 backdrop-blur rounded-md rounded-t-none shadow-md"
 				aria-label="breadcrumb">
 				<ol className="flex items-center">
 					{breadcrumbs.map((breadcrumb, index) => {

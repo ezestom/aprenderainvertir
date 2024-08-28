@@ -1,11 +1,11 @@
 ---
-import back from "../../icons/back.svg";
+import back from "../../icons/back2.svg";
 ---
 
 <button
 	onclick="window.history.back()"
 	id="back"
-	class="flex items-center gap-1 font-bold rounded-md p-2 my-2 transition bg-[#fafafa] text-[--darkblue] shadow-md hover:bg-[--lightblue] active:scale-95 text-xs">
-	<span>Atrás </span>
-	<img src={back.src} class="w-4" alt="Image back svg button" />
+	class="flex relative items-center gap-1 font-bold rounded-md p-[.1rem] my-2 transition bg-[#fafafa] text-[--darkblue] shadow-md hover:bg-[--lightblue] active:scale-95 text-[.65rem]">
+	<span class="absolute m-auto w-fit right-0 left-0 uppercase z-50">Atrás </span>
+	<img src={back.src} class="w-14 opacity-50" alt="Image back svg button" />
 </button>

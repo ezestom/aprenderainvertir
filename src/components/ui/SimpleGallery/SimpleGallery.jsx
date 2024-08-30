@@ -27,10 +27,9 @@ export function SimpleGallery(props) {
 					data-cropped="true"
 					key={props.galleryID + "-" + index}
 					target="_blank"
-					rel="noreferrer"
-					className="">
+					rel="noreferrer">
 					<h3 className="my-1">{image.title}</h3>
-					<div className="shadow-xl rounded-md">
+					<div className="shadow-xl rounded-md" id="gallery-image">
 						<img
 							src={image.thumbnailURL}
 							alt={image.title || `Image ${index + 1}`}

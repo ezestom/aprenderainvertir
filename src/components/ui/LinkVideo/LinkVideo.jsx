@@ -15,9 +15,11 @@ export function LinkVideo({ buttonName, youtubeUrl, title, description }) {
 	};
 
 	return (
-		<article className="">
+		<article>
 			<strong className="px-1 ">
-				<button className="inline-flex" onClick={openDialog}>{buttonName}</button>
+				<button className="inline-flex" onClick={openDialog}>
+					{buttonName}
+				</button>
 			</strong>
 			{isOpen && (
 				<dialog

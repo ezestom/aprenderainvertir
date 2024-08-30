@@ -2,38 +2,152 @@
 import Link from "@components/ui/Link.astro";
 import PageContent from "../components/ui/PageContent.astro";
 import header from "../img/analisis-fundamental.png";
+import NormalVideo from "@components/ui/NormalVideo.astro";
 ---
 
 <PageContent title="Análisis Fundamental" headerImage={header}>
-	<h2>Análisis Fundamental</h2>
-
-	<h3>¿Qué es el Análisis Fundamental?</h3>
+	<h2>¿Qué es el Análisis Fundamental?</h2>
 	<p>
-		El análisis fundamental busca determinar el verdadero valor de una
-		acción o título. Esto se refiere al <strong>valor fundamental</strong>,
-		que representa el valor intrínseco de un activo según factores
-		económicos, financieros y de mercado.
+		El análisis fundamental es una metodología utilizada para evaluar el
+		valor intrínseco de un activo mediante el estudio de factores
+		económicos, financieros y de mercado. Su objetivo es determinar si el
+		activo está sobrevalorado o subvalorado en relación con su precio actual
+		en el mercado.
 	</p>
+
+	<h2>Factores Clave en el Análisis Fundamental</h2>
+	<ul>
+		<li>
+			<strong>Factores Económicos:</strong> Incluyen la inflación, tasas de
+			interés, crecimiento económico, y políticas fiscales. Estos factores
+			influyen en la salud económica general y afectan el rendimiento de las
+			inversiones.
+		</li>
+		<li>
+			<strong>Factores Financieros:</strong> Comprenden los estados financieros
+			de la empresa, su nivel de deuda, flujo de caja, márgenes de beneficio,
+			y rentabilidad. Estos factores ayudan a evaluar la solidez financiera
+			y la capacidad de generación de beneficios de la empresa.
+		</li>
+		<li>
+			<strong>Factores de Mercado:</strong> Consideran la competencia, la posición
+			en la industria, y las tendencias del mercado. Estos factores ayudan
+			a comprender el entorno en el que opera la empresa y cómo puede afectar
+			su desempeño futuro.
+		</li>
+	</ul>
+
+	<h2>Tipos de Ratios en el Análisis Fundamental</h2>
+	<p>
+		Los ratios financieros son herramientas clave en el análisis
+		fundamental. Cada tipo de ratio proporciona información específica sobre
+		diferentes aspectos de la salud financiera de una empresa.
+	</p>
+
+	<h3>Ratios de Liquidez:</h3>
+	<ul>
+		<li>
+			<strong>Current Ratio (C.R.):</strong> Mide la capacidad de la empresa
+			para cubrir sus deudas a corto plazo con sus activos corrientes. Se calcula
+			dividiendo los activos corrientes entre los pasivos corrientes. Un valor
+			mayor a 1 es generalmente considerado saludable, indicando que la empresa
+			tiene suficientes activos para cubrir sus obligaciones a corto plazo.
+		</li>
+		<li>
+			<strong>Quick Ratio (Q.R.):</strong> Excluye inventarios para medir la
+			capacidad de la empresa de cubrir deudas a corto plazo con activos líquidos.
+			Se calcula dividiendo los activos líquidos (efectivo, equivalentes de
+			efectivo y cuentas por cobrar) entre los pasivos corrientes. Es un indicador
+			más conservador que el Current Ratio, ya que excluye activos menos líquidos.
+		</li>
+	</ul>
+
+	<h3>Ratios de Solvencia:</h3>
+	<ul>
+		<li>
+			<strong>Debt to Equity Ratio (D.E.):</strong> Relaciona la deuda total
+			con los fondos propios de la empresa. Se calcula dividiendo la deuda
+			total entre el capital propio. Un valor bajo indica menos riesgo financiero,
+			ya que la empresa tiene una menor proporción de deuda en relación con
+			su capital.
+		</li>
+		<li>
+			<strong>Debt Ratio (D.R.):</strong> Mide la proporción de los activos
+			financiados por deuda. Se calcula dividiendo la deuda total entre los
+			activos totales. Un valor más bajo es preferible, ya que indica una menor
+			dependencia de la deuda.
+		</li>
+	</ul>
+
+	<h3>Ratios de Rentabilidad:</h3>
+	<ul>
+		<li>
+			<strong>Return on Equity (ROE):</strong> Mide la rentabilidad generada
+			por el capital de los accionistas. Se calcula dividiendo el beneficio
+			neto entre el capital propio. Un ROE de 10-15% es considerado saludable
+			y muestra que la empresa está generando beneficios adecuados para sus
+			accionistas.
+		</li>
+		<li>
+			<strong>Return on Assets (ROA):</strong> Mide la eficiencia con la que
+			una empresa utiliza sus activos para generar beneficios. Se calcula dividiendo
+			el beneficio neto entre los activos totales. Un ROA de 5-10% indica una
+			buena eficiencia en la generación de beneficios a partir de los activos.
+		</li>
+	</ul>
+
+	<h3>Ratios de Valuación o Mercado:</h3>
+	<ul>
+		<li>
+			<strong>Earnings Per Share (EPS/BPA):</strong> Representa el beneficio
+			neto por acción en circulación. Un EPS creciente es un signo positivo
+			y muestra que la empresa está generando mayores beneficios para sus accionistas.
+		</li>
+		<li>
+			<strong>Price to Earnings (P/E o PER):</strong> Relaciona el precio de
+			la acción con el EPS. Se calcula dividiendo el precio de la acción entre
+			el EPS. Un PER bajo puede indicar que la acción está infravalorada, mientras
+			que un PER alto puede indicar sobrevaloración.
+		</li>
+		<li>
+			<strong>Book Value (VL):</strong> Es el valor contable por acción, calculado
+			dividiendo el valor contable total entre el número de acciones en circulación.
+			Se utiliza para comparar el valor contable con el precio de mercado de
+			la acción.
+		</li>
+		<li>
+			<strong>Price to Book (PB):</strong> Relaciona el precio de mercado de
+			la acción con el valor contable. Se calcula dividiendo el precio de mercado
+			entre el valor contable por acción. Un PB bajo puede indicar que la acción
+			está infravalorada.
+		</li>
+	</ul>
+
+	<NormalVideo
+		videoid="_WoP-s_Qf3A"
+		title={"🦈 Memorias de Tiburón"}
+		description={"✅ El pequeño VÍDEO con el que BATIRÁS al MERCADO | Descubre la fórmula más rentable para invertir."}
+	/>
 
 	<h3>Ejemplo Práctico: Comprar un Auto</h3>
 	<ol>
 		<li>
-			<strong>Precio en la Revista</strong>: Supongamos que ves un auto en
+			<strong>Precio en la Revista:</strong> Supongamos que ves un auto en
 			una revista con un precio de U$S 100.000.
 		</li>
 		<li>
-			<strong>Valor Estimado</strong>: Basado en el estado del auto
-			(kilometraje alto, detalles de pintura, necesidades de reparación),
-			determines que el valor justo es U$S 80.000.
+			<strong>Valor Estimado:</strong> Basado en el estado del auto (kilometraje
+			alto, detalles de pintura, necesidades de reparación), determines que
+			el valor justo es U$S 80.000.
 		</li>
 		<li>
-			<strong>Negociación</strong>: Intentas comprar el auto por debajo
-			del valor estimado, digamos U$S 78.000, para tener un mejor trato.
+			<strong>Negociación:</strong> Intentas comprar el auto por debajo del
+			valor estimado, digamos U$S 78.000, para obtener un mejor trato.
 		</li>
 	</ol>
 
 	<p>
-		En el mercado de valores, el proceso es similar. Evalúas el valor real
+		En el mercado de valores, el proceso es similar. Analizas el valor real
 		de una acción comparado con su precio de mercado para decidir si
 		comprar, vender o mantener la acción.
 	</p>
@@ -41,39 +155,415 @@ import header from "../img/analisis-fundamental.png";
 	<h3>Diferencia entre Precio y Valor</h3>
 	<ul>
 		<li>
-			<strong>Precio</strong>: Es el monto que pagas por un título o
-			acción en el mercado.
+			<strong>Precio:</strong> Es el monto que pagas por un título o acción
+			en el mercado.
 		</li>
 		<li>
-			<strong>Valor</strong>: Es la estimación del verdadero valor del
-			activo basado en su desempeño y perspectivas futuras.
+			<strong>Valor:</strong> Es la estimación del verdadero valor del activo
+			basado en su desempeño y perspectivas futuras.
 		</li>
 	</ul>
 
 	<p>
-		Como lo expresa Warren Buffett: "El precio es lo que pagás. El valor es
-		lo que recibís."
+		<strong>Como lo expresa Warren Buffett</strong>: "El precio es lo que
+		pagás. El valor es lo que recibís."
 	</p>
 
 	<h3>Comparación con el Análisis Técnico</h3>
 	<ul>
 		<li>
-			<strong>Análisis Técnico (AT)</strong>: Se enfoca en <strong
+			<strong>Análisis Técnico (AT):</strong> Se enfoca en <strong
 				>¿Cuándo?</strong
 			> comprar o vender basado en patrones de precios y volúmenes de negociación.
 		</li>
 		<li>
-			<strong>Análisis Fundamental (AF)</strong>: Se enfoca en <strong
+			<strong>Análisis Fundamental (AF):</strong> Se enfoca en <strong
 				>¿Qué?</strong
 			> estás comprando, evaluando el valor intrínseco del activo.
 		</li>
 	</ul>
 
+	<h2>Tipos de Análisis</h2>
+	<p>
+		La estructura de análisis fundamental se puede organizar en dos modelos
+		principales que se ajustan a diferentes estilos de inversión:
+	</p>
+
+	<strong>Top Down</strong>
+	<p>
+		En el enfoque "Top Down", se prioriza la evaluación del entorno
+		económico general antes de examinar los aspectos específicos de una
+		empresa. Se sigue una secuencia desde el análisis macroeconómico hasta
+		el análisis de la acción en el mercado. Este enfoque considera:
+	</p>
+	<ul>
+		<li>Análisis Macroeconómico</li>
+		<li>Análisis Local</li>
+		<li>Análisis de Sector</li>
+		<li>Análisis de aspectos institucionales</li>
+		<li>Indicadores de la empresa</li>
+		<li>Análisis de la acción en el mercado</li>
+		<li>Ratios</li>
+		<li>Múltiplos</li>
+	</ul>
+
+	<strong>Bottom Up</strong>
+	<p>
+		El enfoque "Bottom Up" se centra en el análisis detallado de las
+		características internas de la empresa, independientemente del entorno
+		económico. Se examinan las métricas financieras y operativas de la
+		empresa en detalle, asumiendo que una empresa sólida puede prosperar
+		incluso en un entorno económico desfavorable.
+	</p>
+	<ul>
+		<li>Análisis de la acción en el mercado</li>
+		<li>Ratios</li>
+		<li>Múltiplos</li>
+		<li>Análisis de aspectos institucionales</li>
+		<li>Análisis del Sector</li>
+		<li>Análisis Local</li>
+		<li>Análisis Macroeconómico</li>
+	</ul>
+
+	<h2>Tipos de Riesgos</h2>
+	<p>
+		El riesgo es un componente inevitable en las inversiones y no siempre es
+		negativo. La relación entre riesgo y rentabilidad varía según el perfil
+		del inversor.
+	</p>
+
+	<strong>Sistemático</strong>
+	<p>
+		También conocido como Riesgo de Mercado o riesgo no diversificable. Este
+		riesgo afecta a un conjunto de empresas en una economía y no se puede
+		reducir mediante diversificación. Ejemplos incluyen ciclos económicos y
+		eventos globales como la inflación.
+	</p>
+
+	<strong>No Sistemático</strong>
+	<p>
+		Conocido como riesgo específico o diversificable, afecta únicamente a la
+		rentabilidad de una acción o bono específico. Ejemplos incluyen
+		resultados empresariales decepcionantes o cambios en la industria
+		particular.
+	</p>
+
+	<h2>Parámetros de Selección en Análisis Fundamental</h2>
+	<p>
+		Para elegir empresas de forma efectiva, es importante utilizar ciertos
+		parámetros que ayudan a filtrar las opciones y hacer una selección más
+		informada.
+	</p>
+
+	<h3>Capitalización</h3>
+	<p>Clasificación por tamaño de la empresa:</p>
+	<ul>
+		<li>
+			<strong>Mega</strong>:<span>
+				Capitalización mayor a U$S 200.000 millones.
+			</span>
+		</li>
+
+		<li>
+			<strong>Grandes</strong>:
+			<span>Capitalización entre U$S 10.000 y U$S 200.000 millones.</span>
+		</li>
+		<li>
+			<strong>Medianas</strong>:
+			<span>Capitalización entre U$S 2.000 y U$S 10.000 millones.</span>
+		</li>
+		<li>
+			<strong>Pequeñas</strong>:
+			<span>Capitalización entre U$S 300 y U$S 2.000 millones.</span>
+		</li>
+		<li>
+			<strong>Micro</strong>:
+			<span>Capitalización menor a U$S 300 millones.</span>
+		</li>
+	</ul>
+
+	<p>
+		La capitalización de mercado (market cap) es el valor total de mercado
+		de todas las acciones en circulación de una empresa cotizada.
+	</p>
+
+	<strong>BETA</strong>
+	<p>
+		Es la medida de la volatilidad o riesgo sistemático de una acción o
+		cartera en relación al mercado o a un índice de referencia. Ejemplo: Si
+		una acción tiene un Beta de 1.5, se moverá un 50% más que el mercado. Si
+		el mercado subió un 1%, la acción sube un 1.5%.
+	</p>
+
+	<strong>Dividendo</strong>
+	<p>
+		Los dividendos son la parte de los beneficios que una empresa reparte
+		entre sus accionistas. Hay empresas que pagan dividendos y otras que no.
+		En base a esto se pueden clasificar las empresas en de valor y de
+		crecimiento. Las empresas que pagan dividendos consistentemente pueden
+		formar parte del grupo de Dividend Aristocrats.
+	</p>
+
+	<h2>Fuentes de Información</h2>
+	<p>
+		Las siguientes fuentes proporcionan información clave para el análisis
+		fundamental:
+	</p>
+
+	<ul>
+		<li>
+			<strong>Estados Financieros:</strong> Incluyen el balance general, el
+			estado de resultados y el estado de flujos de efectivo. Estos documentos
+			proporcionan una visión integral de la situación financiera de la empresa.
+		</li>
+		<li>
+			<strong>Técnicas de Valuación:</strong> Métodos como el descuento de
+			flujos de caja (DCF), el valor contable y el valor de mercado para determinar
+			el valor intrínseco de un activo.
+		</li>
+		<li>
+			<strong>Previsiones Económicas:</strong> Proyecciones sobre el crecimiento
+			económico, tasas de interés e inflación que pueden impactar en la valoración
+			de los activos.
+		</li>
+		<li>
+			<strong>Información Económica:</strong> Datos sobre indicadores macroeconómicos,
+			políticas monetarias y fiscales que afectan el entorno de inversión.
+		</li>
+		<li>
+			<strong>Eventos Políticos:</strong> Cambios en políticas gubernamentales,
+			elecciones y eventos internacionales que pueden influir en el mercado
+			y en la economía en general.
+		</li>
+		<li>
+			<strong>Cambios Empresariales:</strong> Noticias sobre fusiones, adquisiciones,
+			cambios en la gestión y otras noticias relevantes sobre la empresa en
+			cuestión.
+		</li>
+		<li>
+			<strong>Información Adicional:</strong> Análisis de informes de analistas,
+			estudios de mercado, y datos sobre la competencia.
+		</li>
+	</ul>
+
+	<h2>Métodos de Valuación</h2>
+
+	<h3>Contable</h3>
+	<p>
+		El método contable es una forma básica de calcular el valor de una
+		empresa. Este método se enfoca en lo que la empresa posee y lo que debe.
+		Para obtener el valor neto de la empresa, se suman todos los activos
+		(como el dinero en caja, los muebles y las propiedades) y se restan
+		todos los pasivos (deudas). El resultado es el patrimonio neto, que
+		muestra el valor total de la empresa después de pagar todas sus deudas.
+	</p>
+
+	<h3>Múltiplos y Ratios</h3>
+	<p>
+		Este método compara una empresa con otra que tiene un funcionamiento
+		similar. La idea es utilizar un multiplicador basado en las ventas y
+		otros factores para determinar el valor relativo de la empresa. Por
+		ejemplo, si dos empresas operan en el mismo sector, se puede usar este
+		método para ver cuál está funcionando mejor. Es útil para los inversores
+		que quieren entender cómo se compara una empresa con sus competidores.
+	</p>
+
+	<h3>Descuento de Flujo de Fondos</h3>
+	<p>
+		El método de descuento de flujo de fondos se enfoca en proyectar cuánto
+		dinero generará una empresa en el futuro. Se basa en el flujo de caja
+		actual (el dinero que entra y sale de la empresa) para estimar cuánto
+		valdrá la empresa en los próximos años. Este método es clave para tomar
+		decisiones sobre inversiones, como si es una buena idea fusionarse con
+		otra empresa, expandir el negocio, o comprar nueva maquinaria. Ayuda a
+		los inversores a decidir si es rentable invertir en una empresa a largo
+		plazo.
+	</p>
+
+	<h2>Estados Contables y Ratios</h2>
+
+	<h3>Situación Financiera</h3>
+
+	<p class="mb-4">
+		En esta sección, se muestra un ejemplo ficticio para ilustrar cómo se
+		puede analizar la situación financiera de una empresa. Los datos
+		proporcionados ayudan a entender la estructura financiera de una empresa
+		y cómo interpretar sus resultados.
+	</p>
+
+	<h3>1. Activos</h3>
+	<p>
+		Son todos los bienes y recursos que posee una empresa. Representan el
+		valor de lo que la empresa tiene disponible para generar ingresos.
+	</p>
+	<h3>2. Pasivos</h3>
+	<p>
+		Son todas las deudas y obligaciones que tiene la empresa. Representan el
+		valor de lo que la empresa debe a terceros.
+	</p>
+	<h3>3. Patrimonio</h3>
+	<p>
+		Es la diferencia entre los activos y los pasivos. Representa el valor
+		neto de la empresa, o cuánto queda para los propietarios después de
+		pagar todas las deudas.
+	</p>
+	<h3>4. Resultados Operativos</h3>
+	<p>
+		Muestran la eficiencia de la empresa en generar ingresos y controlar sus
+		costos. Es crucial para entender la rentabilidad operativa de la
+		empresa.
+	</p>
+	<h2>Interpretación de los Datos</h2>
+	<p>
+		Este ejercicio muestra cómo se puede analizar la situación financiera de
+		una empresa mediante la revisión de sus activos, pasivos y patrimonio.
+		Los resultados operativos permiten evaluar la rentabilidad y eficiencia
+		de las operaciones. Los datos proporcionados son ficticios, pero
+		representan una forma típica de presentar la situación financiera de una
+		empresa.
+	</p>
+
+	<h3>Análisis Vertical y Horizontal</h3>
+	<p>
+		El análisis vertical y horizontal son dos formas de evaluar el
+		rendimiento financiero de una empresa a lo largo del tiempo.
+	</p>
+	<ul>
+		<li>
+			<strong>Análisis Vertical:</strong> Examina la relación de cada elemento
+			de los estados financieros con un total en un mismo periodo (por ejemplo,
+			cómo se distribuyen los gastos en relación con los ingresos totales).
+		</li>
+		<li>
+			<strong>Análisis Horizontal:</strong> Compara los estados financieros
+			de la empresa en diferentes periodos (por ejemplo, cómo han cambiado
+			los ingresos y gastos de un año a otro).
+		</li>
+	</ul>
+	<p>
+		Estos análisis son posibles porque la información financiera de las
+		empresas que cotizan en bolsa es pública y accesible para todos.
+	</p>
+
+	<h2>Ratios Financieros</h2>
+
+	<p>
+		<strong>Los ratios financieros</strong> son herramientas que ayudan a medir
+		la salud financiera de una empresa. Se dividen en varias categorías:
+	</p>
+
+	<p>
+		Estos ratios miden la capacidad de la empresa para cumplir con sus
+		obligaciones y la manera en que se financia. Algunos ejemplos son:
+	</p>
+	<ul>
+		<li>
+			<strong>Índice de Liquidez:</strong> Activo Corriente / Pasivo Corriente.
+			Mide si la empresa tiene suficientes activos líquidos (como dinero en
+			efectivo) para cubrir sus deudas a corto plazo.
+		</li>
+		<li>
+			<strong>Liquidez Ácida:</strong> (Activo Corriente - Bienes de Cambio)
+			/ Pasivo Corriente. Similar al índice de liquidez, pero excluye inventarios,
+			lo que ofrece una visión más conservadora de la capacidad de pago a corto
+			plazo.
+		</li>
+		<li>
+			<strong>Ratio de Endeudamiento:</strong> Deuda Total / Patrimonio Neto.
+			Mide qué tan endeudada está la empresa en relación con su patrimonio
+			neto.
+		</li>
+		<li>
+			<strong>Ratio de Solvencia:</strong> Activo Total / Pasivo Total. Mide
+			la capacidad de la empresa para cubrir sus deudas con todos sus activos.
+		</li>
+	</ul>
+
+	<h3>Ratios de Rentabilidad</h3>
+	<p>
+		Estos ratios miden cuán eficaz es la empresa para generar ingresos a
+		partir de sus activos o del patrimonio:
+	</p>
+	<ul>
+		<li>
+			<strong>Rentabilidad sobre los Activos (ROA):</strong> Utilidad Neta
+			/ Activo Total. Mide la eficiencia con la que la empresa utiliza sus
+			activos para generar ganancias. Un ROA estándar está entre el 5% y el
+			10%.
+		</li>
+		<li>
+			<strong>Rentabilidad sobre el Patrimonio (ROE):</strong> Utilidad Neta
+			/ Patrimonio Neto. Mide la eficiencia con la que la empresa utiliza el
+			dinero de los accionistas para generar beneficios. Un ROE estándar está
+			entre el 10% y el 15%.
+		</li>
+	</ul>
+
+	<h3>Ratios de Mercado</h3>
+	<p>
+		Estos ratios evalúan cómo se percibe el valor de la empresa en el
+		mercado, en función del precio de sus acciones:
+	</p>
+	<ul>
+		<li>
+			<strong>Beneficio por Acción (EPS):</strong> Utilidad Neta / Cantidad
+			de Acciones. Mide cuántos beneficios genera la empresa por cada acción
+			en circulación.
+		</li>
+		<li>
+			<strong>Price Earning Ratio (PER):</strong> Precio / BPA. Mide cuántos
+			años de beneficios se necesitarían para recuperar la inversión en la
+			acción al precio actual.
+		</li>
+		<li>
+			<strong>Valor Libro (Book Value):</strong> Patrimonio Neto / Cantidad
+			de Acciones. Indica el valor contable de la empresa por acción.
+		</li>
+		<li>
+			<strong>Price to Book (PB):</strong> Precio / Valor Libro. Compara el
+			precio de mercado de la acción con su valor contable.
+		</li>
+		<li>
+			<strong>Rentabilidad por Dividendo:</strong> Dividendo en Efectivo por
+			Acción / Precio. Mide cuánto del precio de la acción se devuelve a los
+			inversores en forma de dividendos.
+		</li>
+	</ul>
+
+	<h3>Interpretación del PER</h3>
+	<p>
+		El <strong>PER</strong> es un ratio importante para evaluar si una acción
+		está sobrevalorada o infravalorada:
+	</p>
+	<ul>
+		<li>
+			<strong>N/A:</strong> Si la empresa tiene pérdidas, su PER no se puede
+			calcular.
+		</li>
+		<li>
+			<strong>0-10:</strong> Puede indicar que la acción está infravalorada
+			o que los inversores esperan que los beneficios disminuyan.
+		</li>
+		<li>
+			<strong>10-17:</strong> Este rango es considerado adecuado para la mayoría
+			de las empresas.
+		</li>
+		<li>
+			<strong>17-25:</strong> Puede indicar que la acción está sobrevalorada
+			o que se espera un crecimiento significativo de los beneficios.
+		</li>
+		<li>
+			<strong>25+:</strong> Puede reflejar altas expectativas de crecimiento
+			futuro o una burbuja especulativa en el precio de la acción.
+		</li>
+	</ul>
+
+	<!--  -->
 	<h3>Conclusión</h3>
 	<p>
-		<strong>Ambos Análisis</strong>: El análisis técnico y el análisis
-		fundamental no son mutuamente excluyentes. Utilizar ambos en conjunto
-		proporciona una visión más completa para tomar decisiones de inversión
-		informadas.
+		El análisis fundamental es una herramienta esencial para evaluar la
+		viabilidad de las inversiones a largo plazo. Al comprender y aplicar
+		diferentes modelos y tipos de análisis, los inversores pueden tomar
+		decisiones más informadas y alineadas con sus objetivos financieros.
 	</p>
 </PageContent>

@@ -1,0 +1,54 @@
+---
+import Layout from "../layouts/Layout.astro";
+import success from "../icons/success.svg";
+---
+
+<Layout title="Mensaje enviado">
+	<section class="h-screen flex items-center justify-center px-4 relative">
+		<article class="rounded-3xl shadow-2xl text-white">
+			<div class="p-8 text-center">
+				<p
+					class="text-base font-normal flex gap-2 items-center justify-center">
+					Tu mensaje ha sido enviado con éxito
+					<img src={success.src} alt="success icon" class="w-5" />
+				</p>
+
+				<p
+					class="text-base font-normal flex gap-2 items-center justify-center pt-4">
+					El equipo de Aprender a Invertir se pondrá en contacto
+					contigo a la brevedad.
+				</p>
+
+				<a
+					class="flex w-full items-center gap-3 rounded-md bg-[--lightblue] px-3 py-2 text-[--darkblue] transition-colors duration-300 ease-in-out hover:bg-[--darkblue] hover:text-[--lightblue]"
+					href="/">
+					Volver al inicio
+				</a>
+			</div>
+		</article>
+	</section>
+</Layout>
+<style>
+	section {
+		position: relative; /* Necesario para que el pseudo-elemento se posicione relativamente al section */
+		overflow: hidden; /* Para asegurarse de que el pseudo-elemento no sobresalga del section */
+	}
+
+	section::before {
+		content: ""; /* Necesario para mostrar el pseudo-elemento */
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: url("../img/agriculture.jpg");
+		background-size: cover;
+		background-position: bottom;
+		background-repeat: no-repeat;
+		opacity: 0.85; /* Ajusta la opacidad aquí */
+		z-index: -1; /* Coloca el pseudo-elemento detrás del contenido del section */
+	}
+	article {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+</style>

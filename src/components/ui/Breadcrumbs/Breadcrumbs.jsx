@@ -2,7 +2,7 @@ import "./Breadcrumbs.css";
 import { useState, useEffect } from "react";
 import { NAVBAR } from "../Nav.astro"; // Asegúrate de que la ruta sea correcta
 
-// Definir rutas adicionales que no están en NAVBAR
+// Definir rutas adicionales que no están en NAV
 const ADDITIONAL_ROUTES = [
 	{ name: "Anchor 1", href: "#anchor1" },
 	{ name: "Internal Section", href: "/internal-section" },
@@ -15,7 +15,7 @@ export function Breadcrumbs() {
 	useEffect(() => {
 		const currentPath = window.location.pathname + window.location.hash;
 
-		// Combinar NAVBAR con ADDITIONAL_ROUTES
+		// Combinar NAV con ADDITIONAL_ROUTES
 		const combinedRoutes = [...NAVBAR, ...ADDITIONAL_ROUTES];
 
 		// Dividir el currentPath en partes

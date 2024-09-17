@@ -23,13 +23,11 @@ export function Form() {
 	const openDialog = () => {
 		setDialog(true);
 		document.body.style.overflow = "hidden";
-		document.getElementById("navbar").style.display = "none";
 	};
 
 	const closeDialog = () => {
 		setDialog(false);
 		document.body.style.overflow = "auto";
-		document.getElementById("navbar").style.display = "flex";
 	};
 
 	const isMessageSuccess = () => {
@@ -84,15 +82,15 @@ export function Form() {
 	};
 
 	return (
-		<div className="form-container z-10 ">
-			{/* <Toaster /> */}
-			<div className="flex w-full items-center justify-center">
+		<div className="form-container z-10 w-full flex">
+			<Toaster />
+			<div className="flex w-full items-start justify-start">
 				<button
 					onClick={openDialog}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="transition-colors group w-full flex gap-2 hover:bg-[--darkblue] py-2 px-3 rounded-md">
-					<span className="group-hover:scale-105 transition duration-300 gap-2 group-hover:drop-shadow-md">
+					className="transition-colors group flex w-full gap-2 hover:bg-[--darkblue] py-2 px-3 rounded-md">
+					<span className="group-hover:scale-105 transition duration-300 gap-2 group-hover:drop-shadow-md w-fit">
 						<img
 							src={pencilFull.src}
 							alt=""
@@ -104,16 +102,14 @@ export function Form() {
 							className="w-5 group-hover:scale-105 opacity-100 group-hover:opacity-0 transition-all"
 						/>
 					</span>
-					<span className="whitespace-nowrap font-semibold transition-colors text-sm group-hover:text-[--lightblue]">
+					<span className="whitespace-nowrap w-fit font-semibold transition-colors text-sm group-hover:text-[--lightblue]">
 						Enviar mensaje
 					</span>
 				</button>
 			</div>
 
 			{dialog && (
-				<dialog
-					open
-					className="backdrop-blur flex items-center justify-center bg-black/20">
+				<dialog open className="z-50 w-screen h-screen m-auto">
 					<section className="md:bg-black/40 backdrop-blur-md flex items-center justify-center ">
 						<div className="lg:grid h-full min-h-full lg:min-h-screen lg:grid-cols-12 w-full px-4 md:px-0  ">
 							<aside className="relative hidden md:block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
@@ -132,7 +128,7 @@ export function Form() {
 							</aside>
 
 							<main className="flex items-center justify-center py-8 md:px-12 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6  ">
-								<div className="form-container-dialog max-w-xl lg:max-w-3xl p-8 bg-[#f0f0f0] rounded-3xl relative">
+								<div className="form-container-dialog  p-8 bg-[#f0f0f0] rounded-3xl relative">
 									<button
 										className="absolute z-100 top-2 right-2 "
 										onClick={closeDialog}>

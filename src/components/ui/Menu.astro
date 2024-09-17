@@ -7,13 +7,13 @@ import coffeeFull from "../../icons/coffeeFull.svg";
 import githubBlue from "../../icons/githubBlue.svg";
 import githubBlack from "../../icons/githubBlack.svg";
 import { Form } from "../Form/Form.jsx";
-import pencilEmpty from "../../icons/pencilEmpty.svg";
-import pencilFull from "../../icons/pencilFull.svg";
 ---
 
-<div class="mx-auto right-6 top-6 fixed z-50 text-[--darkblue] hidden md:block" id="menu-btn">
+<div
+	class="mx-auto right-6 top-6 fixed z-50 text-[--darkblue] hidden md:block"
+	id="menu-btn">
 	<div
-		class="size-9 relative bg-[--lightblue] transition-all rounded-md group text-[--darkblue]">
+		class="size-9 bg-[--lightblue] transition-all rounded-md group text-[--darkblue]">
 		<label for="nav-toggle" class="cursor-pointer group">
 			<input
 				type="checkbox"
@@ -24,21 +24,20 @@ import pencilFull from "../../icons/pencilFull.svg";
 				src={open.src}
 				alt="Open menu"
 				id="open"
-				class="transition-all absolute group-hover:scale-105 group-active:scale-90 opacity-100"
+				class="transition-all absolute group-hover:scale-105 group-active:scale-90"
 			/>
 			<img
 				src={close.src}
 				alt="Close menu"
 				id="close"
-				class="transition-all absolute group-hover:scale-105 group-active:scale-90 opacity-0 scale-100"
+				class="transition-all absolute group-hover:scale-105 group-active:scale-90 scale-100 opacity-0"
 			/>
 		</label>
 	</div>
 	<nav
 		id="menu"
-		class="bg-[--lightblue] rounded-md p-4 rounded-tr-none transition-transform duration-300 menu-closed absolute top-8 right-0 w-[245px] z-40 shadow-md">
-		<ul
-			class="inset-0 flex flex-col justify-center items-start w-full h-full">
+		class="bg-[--lightblue] rounded-md p-4 rounded-tr-none transition-transform duration-300 menu-closed absolute top-8 right-0 min-w-[245px] w-full z-40 shadow-md">
+		<ul class="flex flex-col justify-center items-start w-full h-full">
 			<li class="transition-colors group w-full flex items-center m-0">
 				<ThemeIcon transition:persist />
 			</li>
@@ -62,8 +61,8 @@ import pencilFull from "../../icons/pencilFull.svg";
 					</span>
 					<span
 						class="whitespace-nowrap font-semibold transition-colors text-sm group-hover:text-[--lightblue] w-full"
-						>Invitar un Cafecito
-					</span>
+						>Invitar un Cafecito</span
+					>
 				</a>
 			</li>
 			<li class="m-0 flex items-start w-full">
@@ -92,97 +91,48 @@ import pencilFull from "../../icons/pencilFull.svg";
 				</a>
 			</li>
 			<li class="m-0 flex items-start w-full">
-				<!-- <a
-					href="https://github.com/cosmoart/Freesets"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="transition-colors group w-full flex gap-2 hover:bg-[--darkblue] py-2 px-3 rounded-md">
-					<span
-						class="group-hover:scale-105 transition duration-300 gap-2 group-hover:drop-shadow-md">
-						<img
-							src={pencilFull.src}
-							alt=""
-							class="absolute w-5 opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all"
-						/>
-						<img
-							src={pencilEmpty.src}
-							alt=""
-							class="w-5 group-hover:scale-105 opacity-100 group-hover:opacity-0 transition-all"
-						/>
-					</span>
-					<span
-						class="whitespace-nowrap font-semibold transition-colors text-sm group-hover:text-[--lightblue]"
-						>Enviar mensaje
-					</span>
-				</a> -->
 				<Form client:load />
 			</li>
 		</ul>
 	</nav>
 </div>
 
-<script>
+<script is:inline>
 	const toggleMenu = () => {
-		const navToggle: HTMLInputElement | null =
-			document.querySelector("#nav-toggle");
-		const menu: HTMLElement | null = document.querySelector("#menu");
-		const open: HTMLImageElement | null = document.querySelector("#open");
-		const close: HTMLImageElement | null = document.querySelector("#close");
+		const navToggle = document.querySelector("#nav-toggle");
+		const menu = document.querySelector("#menu");
+		const open = document.querySelector("#open");
+		const close = document.querySelector("#close");
 
 		if (navToggle && menu && open && close) {
 			if (navToggle.checked) {
 				menu.classList.remove("menu-closed");
 				menu.classList.add("menu-open");
-				open.style.opacity = "0"; // Oculta imagen de apertura
-				close.style.opacity = "1"; // Muestra imagen de cierre
-				navToggle.classList.remove("menu-closed"); // Remueve la clase menu-closed de navToggle
+				open.style.opacity = "0";
+				close.style.opacity = "1";
 			} else {
 				menu.classList.remove("menu-open");
 				menu.classList.add("menu-closed");
-				open.style.opacity = "1"; // Muestra imagen de apertura
-				close.style.opacity = "0"; // Oculta imagen de cierre
-				navToggle.classList.add("menu-closed"); // Añade la clase menu-closed a navToggle
+				open.style.opacity = "1";
+				close.style.opacity = "0";
 			}
 		}
 	};
 
-	const handleClickOutsideMenu = (event: MouseEvent) => {
-		const menu: HTMLElement | null = document.querySelector("#menu");
-		const navToggle: HTMLInputElement | null =
-			document.querySelector("#nav-toggle");
-
-		if (
-			menu &&
-			navToggle &&
-			!menu.contains(event.target as Node) &&
-			!navToggle.contains(event.target as Node)
-		) {
-			navToggle.checked = false;
-			toggleMenu();
-		}
-	};
-
 	document.addEventListener("DOMContentLoaded", () => {
-		const navToggle: HTMLInputElement | null =
-			document.querySelector("#nav-toggle");
+		const navToggle = document.querySelector("#nav-toggle");
 
 		if (navToggle) {
 			navToggle.addEventListener("change", toggleMenu);
 		}
-
-		document.addEventListener("click", handleClickOutsideMenu);
 	});
 </script>
 
 <style>
-	#menu-btn{
-		/* position: relative; */
-	}
-	/* Agrega estas clases en tu archivo CSS o en el bloque de estilos */
 	.menu-open {
 		transform: translateY(0);
 		opacity: 1;
-		transition: all 0.1s ease-in-out;
+		transition: all 0.3s ease-in-out;
 		pointer-events: all;
 	}
 
@@ -190,8 +140,8 @@ import pencilFull from "../../icons/pencilFull.svg";
 		transform: translateY(
 			-20px
 		); /* Ajusta el valor según tus necesidades */
-		transition: all 0.1s ease-in-out;
 		opacity: 0;
+		transition: all 0.3s ease-in-out;
 		pointer-events: none;
 	}
 </style>

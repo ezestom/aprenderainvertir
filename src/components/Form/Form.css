@@ -6,9 +6,8 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	width: 100%;
-	position: relative;
 }
+
 .btn-form {
 	-webkit-box-reflect: below 0px
 		linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.08));

@@ -5,6 +5,7 @@ import logoTaller from "../../img/logoTaller.png";
 import Tooltip from "./Tooltip.astro";
 import linkedin from "../../icons/linkedin.svg";
 import discord from "../../icons/discord.svg";
+import beta from "../../icons/beta.svg";
 
 export const NAVBAR = [
 	{
@@ -90,6 +91,12 @@ export const NAVBAR = [
 					class="mx-auto block w-full rounded-xl hover:bg-[--lightblue] duration-300 ease-in-out group transition-all"
 					><div class="relative flex w-full justify-center py-1">
 						<img
+							transition:name="beta"
+							src={beta.src}
+							class="absolute top-0 margin-auto right-14 size-10 opacity-25"
+							alt=""
+						/>
+						<img
 							transition:name="finance"
 							src={finance.src}
 							alt="finance image"
@@ -114,7 +121,7 @@ export const NAVBAR = [
 							class="flex w-full items-center gap-2 rounded-md bg-[--lightblue] px-3 py-2 text-[--darkblue] transition-colors duration-300 ease-in-out hover:bg-[--darkblue] hover:text-[--lightblue]"
 							href="https://bullmarketbrokers.com/funds/main/chooseyourfund">
 							<!-- linkedin svg -->
-							<img src={linkedin.src} alt="" />
+							<img src={linkedin.src} alt="" class="opacity-25" />
 							<span class="text-sm font-bold">LinkedIn</span></a
 						>
 					</li><li class="contents">
@@ -122,9 +129,12 @@ export const NAVBAR = [
 							href="https://discord.gg/MrQdmzd"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="flex w-full items-center gap-2 rounded-md bg-[--lightblue] px-3 py-2 text-[--darkblue] transition-colors duration-300 ease-in-out hover:bg-[--darkblue] hover:text-[--lightblue]"
-							>
-							<img src={discord.src} alt=""><span class="text-sm font-bold">Discord</span></a
+							class="flex w-full items-center gap-2 rounded-md bg-[--lightblue] px-3 py-2 text-[--darkblue] transition-colors duration-300 ease-in-out hover:bg-[--darkblue] hover:text-[--lightblue]">
+							<img
+								src={discord.src}
+								alt=""
+								class="opacity-25"
+							/><span class="text-sm font-bold">Discord</span></a
 						>
 					</li><div
 						class="pointer-events-none transition-opacity duration-500 ease-in-out">

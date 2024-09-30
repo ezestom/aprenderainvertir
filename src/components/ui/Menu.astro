@@ -98,30 +98,27 @@ import { Form } from "../Form/Form.jsx";
 </div>
 
 <script is:inline>
-	const toggleMenu = () => {
+	document.addEventListener("DOMContentLoaded", () => {
 		const navToggle = document.querySelector("#nav-toggle");
 		const menu = document.querySelector("#menu");
-		const open = document.querySelector("#open");
-		const close = document.querySelector("#close");
+		const openIcon = document.querySelector("#open");
+		const closeIcon = document.querySelector("#close");
 
-		if (navToggle && menu && open && close) {
+		const toggleMenu = () => {
 			if (navToggle.checked) {
 				menu.classList.remove("menu-closed");
 				menu.classList.add("menu-open");
-				open.style.opacity = "0";
-				close.style.opacity = "1";
+				openIcon.style.opacity = "0";
+				closeIcon.style.opacity = "1";
 			} else {
 				menu.classList.remove("menu-open");
 				menu.classList.add("menu-closed");
-				open.style.opacity = "1";
-				close.style.opacity = "0";
+				openIcon.style.opacity = "1";
+				closeIcon.style.opacity = "0";
 			}
-		}
-	};
+		};
 
-	document.addEventListener("DOMContentLoaded", () => {
-		const navToggle = document.querySelector("#nav-toggle");
-
+		// Asegúrate de solo añadir un eventListener a navToggle
 		if (navToggle) {
 			navToggle.addEventListener("change", toggleMenu);
 		}

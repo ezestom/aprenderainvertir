@@ -2,9 +2,11 @@
 import PageContent from "../../components/ui/PageContent.astro";
 import header from "../../img/instrumentos-children.png";
 import Link from "@components/ui/Link.astro";
+
+const description = "Aprende qué son los CEDEARs, cómo invertir en empresas de Wall Street (Apple, Tesla, Google) desde Argentina en pesos, qué son los ratios de conversión y cómo influye el dólar CCL.";
 ---
 
-<PageContent title="Introducción a los CEDEARs" headerImage={header}>
+<PageContent title="Introducción a los CEDEARs" headerImage={header} description={description}>
 	<p>
 		Los CEDEARs (Certificados de Depósito Argentinos) son instrumentos
 		financieros que permiten a los inversores argentinos acceder a acciones
@@ -93,13 +95,22 @@ import Link from "@components/ui/Link.astro";
 		certificados.
 	</p>
 
-	<h3>Contado con Liquidación (CCL)</h3>
+	<h3>El Rol del Dólar CCL en el Precio del CEDEAR</h3>
 	<p>
-		El Contado con Liquidación (CCL) es un mecanismo para obtener dólares a
-		través de la compra y venta de activos en pesos y dólares en mercados
-		locales e internacionales. El cálculo del tipo de cambio CCL se realiza
-		a partir de la relación entre el precio del CEDEAR en pesos, el precio
-		de la acción en dólares y el ratio de conversión.
+		El precio de cotización de un CEDEAR en el mercado argentino se rige por la siguiente fórmula matemática:
+	</p>
+	<div class="bg-gray-100 dark:bg-gray-800 p-4 rounded-md my-4 font-mono text-xs sm:text-sm text-center">
+		Precio del CEDEAR (ARS) = [Precio de la Acción en EEUU (USD) x Cotización Dólar CCL (ARS)] / Ratio de Conversión
+	</div>
+	<p>
+		<strong>¿Qué implicancia tiene esto?</strong> Esto significa que estás expuesto a un doble factor de volatilidad:
+	</p>
+	<ul>
+		<li><strong>El rendimiento del negocio (Riesgo Accionario):</strong> Si la empresa en EE.UU. sube o baja de precio en Wall Street.</li>
+		<li><strong>El tipo de cambio (Riesgo Cambiario):</strong> Si el Dólar Contado con Liquidación (CCL) sube o baja en Argentina.</li>
+	</ul>
+	<p>
+		Incluso si una acción como Apple se mantiene estática en dólares en New York, tu CEDEAR en pesos subirá de precio si el dólar CCL sube en Argentina, sirviendo como una cobertura cambiaria muy efectiva.
 	</p>
 
 	<Link

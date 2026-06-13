@@ -10,11 +10,12 @@ import AnchorBack from "./AnchorBack.astro";
 interface PageContentProps {
 	headerImage: string;
 	title: string;
+	description?: string;
 }
-const { headerImage, title } = Astro.props;
+const { headerImage, title, description } = Astro.props;
 ---
 
-<Layout title={title}>
+<Layout title={title} description={description}>
 	<Nav2 />
 	<Content>
 		<!-- <AsideRight /> -->

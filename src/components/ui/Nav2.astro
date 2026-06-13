@@ -2,7 +2,6 @@
 import finance from "../../icons/finance.svg";
 import logoTaller from "../../img/logoTaller.png";
 import Tooltip from "./Tooltip.astro";
-import Layout from "@layouts/Layout.astro";
 import linkedin from "../../icons/linkedin.svg";
 import discord from "../../icons/discord.svg";
 import beta from "../../icons/beta.svg";
@@ -76,8 +75,7 @@ export const NAVBAR = [
 ];
 ---
 
-<Layout title="Nav">
-	<nav
+<nav
 		transition:persist
 		class="pointer-events-none bg-black/5 fixed inset-0 z-90 flex-shrink-0 flex-col transition-opacity duration-300 ease-in-out xl:pointer-events-auto xl:bottom-auto xl:left-0 xl:right-auto xl:top-0 xl:z-[9999] xl:h-screen 2xl:left-6 2xl:top-12 2xl:h-[calc(100vh-6rem)] rounded-md hidden xl:block shadow-md max-w-[310px]"
 		id="nav">
@@ -163,7 +161,6 @@ export const NAVBAR = [
 			</ul>
 		</div>
 	</nav>
-</Layout>
 
 <style>
 	#navbar {

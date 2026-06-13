@@ -36,7 +36,7 @@ import { Form } from "../Form/Form.jsx";
 	</div>
 	<nav
 		id="menu"
-		class="bg-[--lightblue] rounded-md p-4 rounded-tr-none transition-transform duration-300 menu-closed absolute top-8 right-0 min-w-[245px] w-full z-40 shadow-md">
+		class="bg-[--lightblue] dark:bg-[#1a1f26] dark:border dark:border-gray-800 rounded-md p-4 rounded-tr-none transition-transform duration-300 menu-closed absolute top-8 right-0 min-w-[245px] w-full z-40 shadow-md">
 		<ul class="flex flex-col justify-center items-start w-full h-full">
 			<li class="transition-colors group w-full flex items-center m-0">
 				<ThemeIcon transition:persist />
@@ -98,31 +98,39 @@ import { Form } from "../Form/Form.jsx";
 </div>
 
 <script is:inline>
-	document.addEventListener("DOMContentLoaded", () => {
+	const setupMenuToggle = () => {
 		const navToggle = document.querySelector("#nav-toggle");
 		const menu = document.querySelector("#menu");
 		const openIcon = document.querySelector("#open");
 		const closeIcon = document.querySelector("#close");
 
 		const toggleMenu = () => {
-			if (navToggle.checked) {
-				menu.classList.remove("menu-closed");
-				menu.classList.add("menu-open");
-				openIcon.style.opacity = "0";
-				closeIcon.style.opacity = "1";
-			} else {
-				menu.classList.remove("menu-open");
-				menu.classList.add("menu-closed");
-				openIcon.style.opacity = "1";
-				closeIcon.style.opacity = "0";
+			if (navToggle && menu && openIcon && closeIcon) {
+				if (navToggle.checked) {
+					menu.classList.remove("menu-closed");
+					menu.classList.add("menu-open");
+					openIcon.style.opacity = "0";
+					closeIcon.style.opacity = "1";
+				} else {
+					menu.classList.remove("menu-open");
+					menu.classList.add("menu-closed");
+					openIcon.style.opacity = "1";
+					closeIcon.style.opacity = "0";
+				}
 			}
 		};
 
-		// Asegúrate de solo añadir un eventListener a navToggle
-		if (navToggle) {
+		if (navToggle && !navToggle.dataset.hasListener) {
+			navToggle.dataset.hasListener = "true";
 			navToggle.addEventListener("change", toggleMenu);
 		}
-	});
+	};
+
+	// Ejecutar inmediatamente en carga inicial
+	setupMenuToggle();
+
+	// Ejecutar tras transiciones de Astro
+	document.addEventListener("astro:page-load", setupMenuToggle);
 </script>
 
 <style>

@@ -1,9 +1,11 @@
 ---
 import PageContent from "../components/ui/PageContent.astro";
 import header from "../img/dolar-mep.png";
+
+const description = "Aprende qué es el Dólar MEP, cómo funciona la operatoria de compra y venta de bonos en Argentina, sus requisitos, parking y ventajas para resguardar tus ahorros de forma legal.";
 ---
 
-<PageContent title="Dolar MEP" headerImage={header}>
+<PageContent title="Dólar MEP" headerImage={header} description={description}>
 	<h2>¿Qué es el Dólar MEP?</h2>
 	<p>
 		El dólar MEP (Mercado Electrónico de Pagos) es una modalidad de compra
@@ -77,27 +79,39 @@ import header from "../img/dolar-mep.png";
 		al dólar blue, aunque con ciertos costos y riesgos asociados.
 	</p>
 
-	<h3>Cómo Adquirir Dólares MEP</h3>
+	<h3>Cómo Adquirir Dólares MEP (Paso a Paso)</h3>
 	<ol>
 		<li>
-			<strong>Abre una Cuenta:</strong> En un banco o sociedad de bolsa. Necesitas
-			DNI y comprobantes de domicilio.
+			<strong>Abre una Cuenta Comitente:</strong> En una Sociedad de Bolsa (ALyC) autorizada por la CNV o en tu banco de cabecera. Es un trámite digital y gratuito que requiere DNI y foto de validación.
 		</li>
 		<li>
-			<strong>Compra Bonos en Pesos:</strong> Compra bonos en pesos argentinos
-			(por ejemplo, AL30) a través de tu cuenta.
+			<strong>Transfiere Pesos:</strong> Deposita los pesos que deseas cambiar desde tu cuenta bancaria a tu cuenta comitente.
 		</li>
 		<li>
-			<strong>Vende Bonos en Dólares:</strong> Vende los mismos bonos en dólares
-			en el mercado de valores.
+			<strong>Compra Bonos en Pesos (Ej. AL30):</strong> Ordena la compra del bono con liquidez inmediata (plazo de liquidación `CI`). El bono de referencia más utilizado en Argentina es el **AL30** o **GD30**.
 		</li>
 		<li>
-			<strong>Recibe Dólares:</strong> Los dólares obtenidos se depositan en
-			tu cuenta o puedes convertirlos a dólares físicos.
+			<strong>Cumple el Plazo de Parking:</strong> Debes conservar los bonos comprados en tu cartera durante el tiempo regulatorio obligatorio (conocido comercialmente como **Parking**, que actualmente es de **1 día hábil**). Durante este plazo, estás expuesto a la variación de precio del bono en pesos.
+		</li>
+		<li>
+			<strong>Vende los Bonos en Dólares (Ej. AL30D):</strong> Una vez transcurrido el parking, vende la misma cantidad de bonos bajo la especie D (ej. **AL30D** o **GD30D**).
+		</li>
+		<li>
+			<strong>Recibe los Dólares:</strong> Los dólares obtenidos por la venta se acreditarán en tu cuenta comitente y, por regulación del Banco Central, deben ser transferidos automáticamente o retirados a tu caja de ahorro en dólares del banco tradicional.
 		</li>
 	</ol>
+
+	<h3>Principales Restricciones Cambiarias</h3>
 	<p>
-		<strong>Nota:</strong> Ten en cuenta comisiones y gastos asociados a las
-		operaciones.
+		No todos los residentes pueden operar Dólar MEP debido a regulaciones del Banco Central (BCRA). Quedan excluidos quienes:
+	</p>
+	<ul>
+		<li>Hayan comprado "Dólar Solidario/Ahorro" (cupo de USD 200 en el banco) en los últimos 90 días.</li>
+		<li>Sean beneficiarios de subsidios tarifarios de servicios públicos (luz, gas, agua).</li>
+		<li>Hayan cobrado sueldos a través del programa ATP o reciban planes de asistencia social.</li>
+		<li>Hayan refinanciado saldos de tarjetas de crédito o cuotas de créditos hipotecarios/prendarios.</li>
+	</ul>
+	<p>
+		<strong>Nota Importante:</strong> El tipo de cambio final resulta de dividir los pesos invertidos por los dólares netos recibidos tras restar las comisiones de la ALyC.
 	</p>
 </PageContent>

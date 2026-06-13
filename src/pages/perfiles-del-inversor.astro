@@ -2,9 +2,12 @@
 import header from "../img/perfiles.png";
 import PageContent from "../components/ui/PageContent.astro";
 import Link from "@components/ui/Link.astro";
+import InvestorTest from "../components/InteractiveTest/InvestorTest.jsx";
+
+const description = "Identifica tu perfil de inversor (conservador, moderado o agresivo) respondiendo nuestro test gratuito. Conoce tu tolerancia al riesgo y horizonte temporal para armar tu cartera ideal.";
 ---
 
-<PageContent title="Perfiles del Inversor" headerImage={header}>
+<PageContent title="Perfiles del Inversor" headerImage={header} description={description}>
 	<p>
 		Determinar tu perfil de inversor es esencial para tomar decisiones
 		informadas sobre tu cartera de inversiones. Este proceso te ayuda a
@@ -53,127 +56,9 @@ import Link from "@components/ui/Link.astro";
 		a tu tolerancia al riesgo.
 	</p>
 
-	<h3>Test del Inversor</h3>
+	<h3>Test del Inversor Interactivo</h3>
 
-	<p>
-		Responde las siguientes preguntas para conocer mejor tu perfil de
-		inversión. Recuerda, no hay una respuesta correcta o incorrecta, sólo la
-		que mejor se alinea contigo.
-	</p>
-
-	<h3>Sección: Horizonte Temporal</h3>
-
-	<ol>
-		<li>
-			<strong
-				>Planeo iniciar el retiro de fondos de mi cartera dentro de:</strong
-			>
-			<ul>
-				<li>Menos de 3 años</li>
-				<li>Entre 3 y 5 años</li>
-				<li>Entre 6 y 10 años</li>
-				<li>Dentro de 11 o más años</li>
-			</ul>
-		</li>
-		<li>
-			<strong
-				>A partir del momento en que decido empezar a retirar mis
-				fondos, planeo retirarlos en:</strong
-			>
-			<ul>
-				<li>Menos de 2 años</li>
-				<li>Entre 2 y 5 años</li>
-				<li>Entre 6 y 10 años</li>
-				<li>Dentro de 11 o más años</li>
-			</ul>
-		</li>
-	</ol>
-
-	<h3>Sección: Tolerancia al Riesgo</h3>
-
-	<ol>
-		<li>
-			<strong
-				>Describiría mis conocimientos sobre inversiones como:</strong
-			>
-			<ul>
-				<li>Nulos</li>
-				<li>Limitados</li>
-				<li>Buenos</li>
-				<li>Muy buenos</li>
-			</ul>
-		</li>
-		<li>
-			<strong> Cuando invierto mi dinero, estoy:</strong>
-			<ul>
-				<li>Mayormente preocupado por las pérdidas de valor</li>
-				<li>Preocupado por las pérdidas y ganancias</li>
-				<li>Mayormente preocupado por las ganancias</li>
-			</ul>
-		</li>
-		<li>
-			<strong>
-				¿Qué tipo de inversiones realizas o has realizado con mayor
-				frecuencia?</strong
-			>
-			<ul>
-				<li>Cajas de ahorro o plazo fijo</li>
-				<li>Bonos nacionales o fondos de bonos</li>
-				<li>Acciones o fondos de acciones</li>
-				<li>
-					Acciones y/o bonos internacionales o fondos de inversión
-					internacional
-				</li>
-			</ul>
-		</li>
-		<li>
-			<strong
-				>Si el mercado de acciones pierde el 25% de su valor y una
-				acción que posías también pierde el mismo porcentaje, ¿qué
-				harías?</strong
-			>
-			<ul>
-				<li>Vender todas mis acciones</li>
-				<li>Vender parte de mis acciones</li>
-				<li>No hacer nada</li>
-				<li>Comprar más acciones</li>
-			</ul>
-		</li>
-		<li>
-			<strong
-				>Considera la siguiente tabla de inversiones hipotéticas:</strong
-			>
-			<ul>
-				<li>
-					Inversión A: Rendimiento Promedio 7.2%, Mejor Escenario
-					16.3%, Peor Escenario -5.6%
-				</li>
-				<li>
-					Inversión B: Rendimiento Promedio 9.0%, Mejor Escenario
-					25.0%, Peor Escenario -12.1%
-				</li>
-				<li>
-					Inversión C: Rendimiento Promedio 10.4%, Mejor Escenario
-					33.6%, Peor Escenario -18.2%
-				</li>
-				<li>
-					Inversión D: Rendimiento Promedio 11.7%, Mejor Escenario
-					42.8%, Peor Escenario -24.0%
-				</li>
-				<li>
-					Inversión E: Rendimiento Promedio 12.5%, Mejor Escenario
-					50.0%, Peor Escenario -28.2%
-				</li>
-			</ul>
-		</li>
-	</ol>
-	<div class="py-4">
-		<Link
-			nameLink="Hacer test gratis en InvertirOnline"
-			target="_blank"
-			href="https://www.invertironline.com/herramientas/test-del-inversor"
-		/>
-	</div>
+	<InvestorTest client:load />
 
 	<h3>Perfiles de Inversor</h3>
 

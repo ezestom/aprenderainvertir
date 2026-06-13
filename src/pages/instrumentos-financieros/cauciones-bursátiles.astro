@@ -1,9 +1,11 @@
 ---
 import PageContent from "../../components/ui/PageContent.astro";
 import header from "../../img/instrumentos-children.png";
+
+const description = "Entiende qué son las cauciones bursátiles, cómo funcionan como el Plazo Fijo de la bolsa, por qué es uno de los instrumentos más seguros y cómo operar a 1 o 7 días.";
 ---
 
-<PageContent title="Caución Bursátil" headerImage={header}>
+<PageContent title="Caución Bursátil" headerImage={header} description={description}>
 	<h2>¿Qué es la Caución Bursátil?</h2>
 	<p>
 		La caución bursátil es un instrumento financiero utilizado en los
@@ -65,31 +67,25 @@ import header from "../../img/instrumentos-children.png";
 		</li>
 	</ul>
 
-	<h3>Riesgos de la Caución Bursátil</h3>
+	<h3>La Seguridad en la Caución (Garantía de Liquidación)</h3>
+	<p>
+		La caución bursátil es ampliamente considerada <strong>el instrumento más seguro del mercado financiero argentino</strong>. Esto se debe a que cuenta con tres capas de protección para quien presta el dinero (caucionador):
+	</p>
 	<ul>
-		<li>
-			<strong>Riesgo de Mercado:</strong> Si el valor de los títulos cae significativamente,
-			puede haber un riesgo adicional.
-		</li>
-		<li>
-			<strong>Riesgo de Crédito:</strong> Si el caucionado no puede devolver
-			el dinero, el caucionador puede quedarse con los títulos valores.
-		</li>
+		<li><strong>Aforo (Garantía Excedente):</strong> El deudor (caucionado) debe respaldar el préstamo con títulos que valen entre un 120% y 150% del dinero prestado.</li>
+		<li><strong>Margen de Garantía y Margen de Variación:</strong> Si el valor de las acciones del deudor cae, la ALyC realiza un llamado de margen inmediato para solicitar más fondos o liquidar los títulos.</li>
+		<li><strong>Garantía de BYMA:</strong> Bolsas y Mercados Argentinos actúa como garante final de la liquidación, asegurando que el prestamista siempre reciba su capital y sus intereses el día del vencimiento.</li>
 	</ul>
 
-	<h3>Ejemplo Práctico de Caución Bursátil</h3>
-	<p>
-		Supongamos que una empresa necesita liquidez para cubrir necesidades
-		operativas y posee acciones en su cartera. La empresa puede optar por
-		una caución bursátil y utilizar esas acciones como garantía. Un inversor
-		(caucionador) acepta prestar el dinero a la empresa (caucionado) a una
-		tasa del 5% por un plazo de 30 días. Al finalizar el plazo, la empresa
-		devolverá el dinero más los intereses, recuperando sus acciones.
-	</p>
+	<h3>Caución Bursátil vs. Plazo Fijo Bancario</h3>
+	<ul>
+		<li><strong>Plazos Flexibles:</strong> El plazo mínimo de un Plazo Fijo es de 30 días. Las cauciones se pueden operar desde **1 día hábil** (lo que permite hacer rendir el dinero del fin de semana), pasando por 7, 14 o 30 días.</li>
+		<li><strong>Seguridad:</strong> El Plazo Fijo depende de la liquidez y solvencia del banco emisor. La caución bursátil está respaldada por colateral líquido depositado y garantizada por BYMA.</li>
+		<li><strong>Tasa de Interés:</strong> La tasa de la caución suele ser ligeramente menor a la del Plazo Fijo tradicional debido a su extrema liquidez y mayor seguridad.</li>
+	</ul>
 
 	<h3>Conclusión</h3>
 	<p>
-		La caución bursátil es una herramienta flexible y segura para gestionar
-		la liquidez y obtener rendimientos adicionales en el mercado de valores.
+		Para un inversor principiante, **colocar cauciones bursátiles** representa el paso ideal para migrar desde el Plazo Fijo tradicional hacia la Bolsa de Valores, permitiendo rentabilizar excedentes de pesos o dólares con máxima seguridad y plazos a medida (ej. colocar dinero a 1 o 3 días mientras se decide otra inversión).
 	</p>
 </PageContent>

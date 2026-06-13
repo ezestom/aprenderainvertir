@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { toast, Toaster } from "sonner";
 import x from "../../icons/x.svg";
 import "./Form.css";
@@ -89,7 +90,7 @@ export function Form() {
 					onClick={openDialog}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="transition-colors group flex w-full gap-2 hover:bg-[--darkblue] py-2 px-3 rounded-md">
+					className="transition-colors group flex w-full gap-2 hover:bg-[--darkblue] py-2 px-3 rounded-md text-[--darkblue] dark:text-white">
 					<span className="group-hover:scale-105 transition duration-300 gap-2 group-hover:drop-shadow-md w-fit">
 						<img
 							src={pencilFull.src}
@@ -108,10 +109,10 @@ export function Form() {
 				</button>
 			</div>
 
-			{dialog && (
-				<dialog open className="z-50 w-screen h-screen m-auto">
-					<section className="md:bg-black/40 backdrop-blur-md flex items-center justify-center ">
-						<div className="lg:grid h-full min-h-full lg:min-h-screen lg:grid-cols-12 w-full px-4 md:px-0  ">
+			{dialog && typeof window !== "undefined" && createPortal(
+				<dialog open className="fixed inset-0 z-50 w-full h-full border-0 bg-transparent p-0 outline-none overflow-y-auto m-0 max-w-none max-h-none">
+					<section className="w-full min-h-screen bg-black/50 backdrop-blur-md flex items-center justify-center p-4">
+						<div className="lg:grid h-full min-h-full lg:grid-cols-12 w-full px-4 md:px-0">
 							<aside className="relative hidden md:block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
 								<picture>
 									<img
@@ -242,7 +243,8 @@ export function Form() {
 							</main>
 						</div>
 					</section>
-				</dialog>
+				</dialog>,
+				document.body
 			)}
 		</div>
 	);

@@ -45,10 +45,25 @@ export function Form() {
 
 		setIsLoading(true);
 
+		// Convert FormData to a JSON object for FormSubmit's AJAX endpoint
+		const data = {};
+		formData.forEach((value, key) => {
+			data[key] = value;
+		});
+
+		// Use FormSubmit's AJAX endpoint: https://formsubmit.co/ajax/your-email
+		const ajaxAction = form.action.includes("/ajax/")
+			? form.action
+			: form.action.replace("https://formsubmit.co/", "https://formsubmit.co/ajax/");
+
 		try {
-			const response = await fetch(form.action, {
-				method: form.method,
-				body: formData,
+			const response = await fetch(ajaxAction, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					"Accept": "application/json",
+				},
+				body: JSON.stringify(data),
 			});
 
 			if (!response.ok) {
@@ -110,7 +125,7 @@ export function Form() {
 			</div>
 
 			{dialog && typeof window !== "undefined" && createPortal(
-				<dialog open className="fixed inset-0 z-50 w-full h-full border-0 bg-transparent p-0 outline-none overflow-y-auto m-0 max-w-none max-h-none">
+				<dialog open className="fixed inset-0 z-[10000] w-full h-full border-0 bg-transparent p-0 outline-none overflow-y-auto m-0 max-w-none max-h-none">
 					<section className="w-full min-h-screen bg-black/50 backdrop-blur-md flex items-center justify-center p-4">
 						<div className="lg:grid h-full min-h-full lg:grid-cols-12 w-full px-4 md:px-0">
 							<aside className="relative hidden md:block h-16 lg:order-last lg:col-span-5 lg:h-full xl:col-span-6">
@@ -158,7 +173,7 @@ export function Form() {
 										onSubmit={handleSubmit}
 										method="POST"
 										action="https://formsubmit.co/ezequielstom@gmail.com"
-										className="mt-8 gap-6">
+										className="mt-8 grid grid-cols-6 gap-6">
 										<input
 											type="hidden"
 											name="_subject"
@@ -202,7 +217,7 @@ export function Form() {
 												/>
 											</label>
 										</div>
-										<div className="col-span-6 sm:col-span-3">
+										<div className="col-span-6">
 											<label className="block text-sm font-medium text-gray-700">
 												Email
 												<input
@@ -215,7 +230,7 @@ export function Form() {
 												/>
 											</label>
 										</div>
-										<fieldset>
+										<fieldset className="col-span-6">
 											<legend className="block text-sm font-medium text-gray-700">
 												Mensaje
 												<textarea
@@ -229,7 +244,7 @@ export function Form() {
 
 										<div className="col-span-6 sm:flex sm:items-center sm:gap-4">
 											<button
-												className="flex w-full items-center gap-3 rounded-md bg-[--lightblue] px-3 py-2 text-[--darkblue] transition-colors duration-300 ease-in-out hover:bg-[--darkblue] hover:text-[--lightblue]"
+												className="flex w-full sm:w-auto justify-center items-center gap-3 rounded-md bg-[--lightblue] px-3 py-2 text-[--darkblue] transition-colors duration-300 ease-in-out hover:bg-[--darkblue] hover:text-[--lightblue]"
 												type="submit">
 												Enviar
 											</button>
@@ -249,3 +264,4 @@ export function Form() {
 		</div>
 	);
 }
+
